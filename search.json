@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Awesome ESM",
+    "section": "",
+    "text": "A curated collection of resources, papers, tutorials, and community examples for the ESM family of protein language models.\nGet Started Explore Use Cases"
+  },
+  {
+    "objectID": "index.html#quick-links",
+    "href": "index.html#quick-links",
+    "title": "Awesome ESM",
+    "section": "Quick Links",
+    "text": "Quick Links\n\n🌐 Biohubbiohub.ai\n🤗 Hugging Facebiohub models\n💻 GitHubESM Package\n📚 Tutorialsbiohub.ai"
+  },
+  {
+    "objectID": "index.html#featured-sections",
+    "href": "index.html#featured-sections",
+    "title": "Awesome ESM",
+    "section": "Featured Sections",
+    "text": "Featured Sections\n\n\n🚀\n\nGet Started\nChoose your model and get up and running with installation guides and decision trees. Explore →\n\n\n\n📖\n\nUse Cases\nDiscover papers and applications showing how ESM is being used in research. Browse →\n\n\n\n🎓\n\nTutorials\nLearn practical skills with hands-on tutorials and code examples. View →\n\n\n\n❓\n\nFAQ\nGet answers to common questions about ESM, models, and usage. Read →\n\n\n\n🤝\n\nGet Involved\nJoin our community and contribute papers, use cases, and more. Contribute →\n\n\n\n📺\n\nWorkshops\nAccess archived materials from workshops, seminars, and events. Archive →"
+  },
+  {
+    "objectID": "index.html#what-is-awesome-esm",
+    "href": "index.html#what-is-awesome-esm",
+    "title": "Awesome ESM",
+    "section": "What is Awesome ESM?",
+    "text": "What is Awesome ESM?\nThis resource is a community-driven hub for the ESM family of protein language models:\n\nESM-C (ESMC) - The latest sequence representation model\nESM3 - Multimodal protein design and prediction\nESM2 - High-performance sequence representations\nESMFold - Structure prediction from sequence alone\nESMFold2 - State-of-the-art biomolecular complex prediction\n\nWhether you’re predicting protein structures, designing new binders, discovering novel enzymes, or analyzing protein properties, you’ll find resources, examples, and community insights here."
+  },
+  {
+    "objectID": "index.html#recent-additions",
+    "href": "index.html#recent-additions",
+    "title": "Awesome ESM",
+    "section": "Recent Additions",
+    "text": "Recent Additions\nCheck out our latest curated papers and use cases:\n\nProtein design with directed evolution\nAntibody engineering for therapeutics\nGenome mining for novel functions\nDisease variant prediction\nFine-tuning strategies for custom tasks\n\n\n\nHelp Us Grow\nAwesome ESM is built by the community, for the community. Have a paper, use case, or question to add?\nContribute Now"
+  },
+  {
     "objectID": "docs/getting-started/index.html",
     "href": "docs/getting-started/index.html",
     "title": "Get Started",
@@ -390,5 +425,19 @@
     "title": "Model Comparison",
     "section": "",
     "text": "Full Decision Tree\nChoose Your Model Guide\nModel Specifications\n\n\n\nFound an error or have a suggestion?\n📝 Suggest changes"
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing to Awesome ESM",
+    "section": "",
+    "text": "We’re excited to have you contribute! This resource is built by and for the ESM community.\n\n\n\n\nFound a great paper using ESM? Share it!\nOpen an issue with: - Title - Link to paper - Brief summary (2-3 sentences) - Which ESM model(s) were used - Your name/affiliation\n\n\n\nIs something confusing? Help us improve documentation.\nOpen an issue with: - Your question (in user language) - Suggested answer - Code example (if applicable)\n\n\n\nFound a typo, broken link, or outdated info?\nOpen an issue and let us know what needs fixing.\n\n\n\nWant to see a tutorial on a specific topic?\nOpen an issue to request one.\nTo contribute a tutorial: - Check that it’s not already listed - Open a pull request with the tutorial notebook/script - Link to the tutorial from the Tutorials page"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#ways-to-contribute",
+    "href": "CONTRIBUTING.html#ways-to-contribute",
+    "title": "Contributing to Awesome ESM",
+    "section": "",
+    "text": "Found a great paper using ESM? Share it!\nOpen an issue with: - Title - Link to paper - Brief summary (2-3 sentences) - Which ESM model(s) were used - Your name/affiliation\n\n\n\nIs something confusing? Help us improve documentation.\nOpen an issue with: - Your question (in user language) - Suggested answer - Code example (if applicable)\n\n\n\nFound a typo, broken link, or outdated info?\nOpen an issue and let us know what needs fixing.\n\n\n\nWant to see a tutorial on a specific topic?\nOpen an issue to request one.\nTo contribute a tutorial: - Check that it’s not already listed - Open a pull request with the tutorial notebook/script - Link to the tutorial from the Tutorials page"
   }
 ]

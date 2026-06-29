@@ -1,43 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://dgmccart.github.io/awesome_esm/index.html</loc>
+    <lastmod>2026-06-29T21:24:20.947Z</lastmod>
+  </url>
+  <url>
     <loc>https://dgmccart.github.io/awesome_esm/docs/getting-started/index.html</loc>
-    <lastmod>2026-06-29T21:21:56.088Z</lastmod>
+    <lastmod>2026-06-29T21:24:20.946Z</lastmod>
   </url>
   <url>
     <loc>https://dgmccart.github.io/awesome_esm/docs/getting-started/decision-tree.html</loc>
-    <lastmod>2026-06-29T21:21:56.088Z</lastmod>
+    <lastmod>2026-06-29T21:24:20.946Z</lastmod>
   </url>
   <url>
     <loc>https://dgmccart.github.io/awesome_esm/docs/workshops.html</loc>
-    <lastmod>2026-06-29T21:21:56.088Z</lastmod>
+    <lastmod>2026-06-29T21:24:20.947Z</lastmod>
   </url>
   <url>
     <loc>https://dgmccart.github.io/awesome_esm/docs/use-cases/model-development.html</loc>
-    <lastmod>2026-06-29T21:21:56.088Z</lastmod>
+    <lastmod>2026-06-29T21:24:20.947Z</lastmod>
   </url>
   <url>
     <loc>https://dgmccart.github.io/awesome_esm/docs/get-involved.html</loc>
-    <lastmod>2026-06-29T21:21:56.088Z</lastmod>
+    <lastmod>2026-06-29T21:24:20.946Z</lastmod>
   </url>
   <url>
     <loc>https://dgmccart.github.io/awesome_esm/docs/faq.html</loc>
-    <lastmod>2026-06-29T21:21:56.087Z</lastmod>
+    <lastmod>2026-06-29T21:24:20.945Z</lastmod>
   </url>
   <url>
     <loc>https://dgmccart.github.io/awesome_esm/docs/use-cases/model-applications.html</loc>
-    <lastmod>2026-06-29T21:21:56.088Z</lastmod>
+    <lastmod>2026-06-29T21:24:20.947Z</lastmod>
   </url>
   <url>
     <loc>https://dgmccart.github.io/awesome_esm/docs/use-cases/index.html</loc>
-    <lastmod>2026-06-29T21:21:56.088Z</lastmod>
+    <lastmod>2026-06-29T21:24:20.946Z</lastmod>
   </url>
   <url>
     <loc>https://dgmccart.github.io/awesome_esm/docs/tutorials.html</loc>
-    <lastmod>2026-06-29T21:21:56.088Z</lastmod>
+    <lastmod>2026-06-29T21:24:20.946Z</lastmod>
   </url>
   <url>
     <loc>https://dgmccart.github.io/awesome_esm/docs/getting-started/model-comparison.html</loc>
-    <lastmod>2026-06-29T21:21:56.088Z</lastmod>
+    <lastmod>2026-06-29T21:24:20.946Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dgmccart.github.io/awesome_esm/CONTRIBUTING.html</loc>
+    <lastmod>2026-06-29T21:24:20.944Z</lastmod>
   </url>
 </urlset>
