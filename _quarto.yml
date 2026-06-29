@@ -1,9 +1,6 @@
 project:
   type: website
-  output-dir: _site
-  render:
-    - docs/**/*.qmd
-    - docs/*.qmd
+  output-dir: docs
 
 website:
   title: "Awesome ESM"
