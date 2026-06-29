@@ -1,0 +1,105 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Awesome ESM"
+  description: "A curated collection of ESM resources, papers, and community examples"
+  
+  # Favicon
+  favicon: assets/images/esm-favicon.png
+  
+  # Search
+  search: true
+  
+  # Navigation bar
+  navbar:
+    background: "#FFFFFF"
+    logo: assets/images/awesome-esm-logo.png
+    logo-alt: "Awesome ESM Logo"
+    
+    left:
+      - text: "Get Started"
+        href: docs/get-started/index.qmd
+      - text: "Use Cases"
+        href: docs/use-cases/index.qmd
+      - text: "Tutorials"
+        href: docs/tutorials.qmd
+      - text: "Workshops"
+        href: docs/workshops.qmd
+      - text: "FAQ"
+        href: docs/faq.qmd
+      - text: "Get Involved"
+        href: docs/get-involved.qmd
+    
+    right:
+      - icon: github
+        href: https://github.com/Biohub/awesome-esm
+        aria-label: GitHub
+      - icon: twitter
+        href: https://twitter.com/biohubcz
+        aria-label: Twitter
+
+  # Footer
+  footer:
+    background: "#F9FAFB"
+    left: |
+      © 2025 Biohub. Made with ❤️ by the community.
+    center: |
+      Part of the [ESM project](https://biohub.ai) • [License](https://github.com/Biohub/awesome-esm/blob/main/LICENSE)
+    right: |
+      [GitHub](https://github.com/Biohub/awesome-esm) • [Slack](https://biohub.slack.com) • [Contact](https://biohub.ai/contact)
+
+  # Sidebar for nested pages
+  sidebar:
+    - id: get-started
+      contents:
+        - docs/get-started/index.qmd
+        - docs/get-started/model-comparison.qmd
+        - docs/get-started/decision-tree.qmd
+    
+    - id: use-cases
+      contents:
+        - docs/use-cases/index.qmd
+        - docs/use-cases/model-development.qmd
+        - docs/use-cases/model-applications.qmd
+
+# Styling
+format:
+  html:
+    theme:
+      light: 
+        primary: "#6366F1"        # Indigo (matches biohub.ai)
+        secondary: "#8B5CF6"      # Purple
+      dark:
+        primary: "#818CF8"
+        secondary: "#A78BFA"
+    
+    # CSS overrides
+    include-in-header:
+      - file: assets/css/custom.scss
+    
+    # Layout
+    page-layout: full
+    toc: true
+    toc-depth: 2
+    toc-expand: 1
+    
+    # Code formatting
+    highlight-style: atom-one
+    code-block-border-left: true
+    code-copy: true
+    
+    # Typography
+    mainfont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+    
+    # Spacing
+    margin-top: 1rem
+    margin-bottom: 1rem
+
+# Metadata
+execute:
+  freeze: auto
+
+filters:
+  - line-highlight
