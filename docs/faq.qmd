@@ -68,3 +68,255 @@ ESM3 is best when you need to generate new sequences or make conditional predict
 
 ```bash
 pip install esm
+```
+
+Or for the latest development version:
+
+```bash
+pip install git+https://github.com/Biohub/esm.git@main
+```
+
+**Requirements:**
+- Python 3.10+
+- PyTorch 2.0+
+- CUDA 11.8+ (for GPU acceleration)
+
+**Related:** [Getting Started](docs/get-started/index.qmd) | [Tutorials](docs/tutorials.qmd)
+
+---
+
+### Q: Do I need an API key to use ESM locally?
+
+**A:** No. You can download ESMC and ESMFold2 from HuggingFace and run them locally without authentication.
+
+You only need an API key if you're using the Biohub web platform.
+
+**Links:** [HuggingFace Models](https://huggingface.co/biohub) | [Biohub API](https://biohub.ai)
+
+---
+
+### Q: What are the hardware requirements?
+
+**A:**
+- **Embeddings (ESMC):** Can run on CPU, but GPU (4GB VRAM) much faster
+- **Structure Prediction (ESMFold2):** GPU recommended (16GB+ VRAM for large complexes)
+- **Design:** Depends on inference-time search budget
+
+For production use, 24GB VRAM GPU recommended.
+
+**Related:** [Model Comparison](docs/get-started/model-comparison.qmd)
+
+:::
+
+---
+
+## Usage & Troubleshooting
+
+::: {.accordion}
+
+### Q: How do I get embeddings with ESMC?
+
+**A:** See our [Embeddings Tutorial](https://biohub.ai/resources/tutorials).
+
+Quick code:
+
+```python
+import esm
+
+model = esm.pretrained.esmfold_v1()
+sequences = ["MKFLK...", "MKVLA..."]
+embeddings = model(sequences)
+```
+
+**Related:** [Tutorial](https://biohub.ai/resources/tutorials) | [Decision Tree](docs/get-started/decision-tree.qmd)
+
+---
+
+### Q: How long does ESMFold2 take to predict a structure?
+
+**A:**
+- **Single chain (1024 aa):** ~15 seconds (ESMFold2), ~10 seconds (ESMFold2-Fast) on H100 GPU
+- **Complex (2x 300 aa):** ~30 seconds
+- **CPU:** 10-100x slower
+
+Time scales roughly linearly with sequence length.
+
+**Related:** [Model Comparison](docs/get-started/model-comparison.qmd) | [Performance Benchmarks](docs/get-started/model-comparison.qmd)
+
+---
+
+### Q: Can I use ESMFold2 for proteins longer than 2048 residues?
+
+**A:** ESMFold2 has a 2048 token limit total (all chains combined).
+
+Options:
+1. Predict individual chains separately, then dock
+2. Use overlapping window approach
+3. Request support in Biohub for longer sequences
+
+**Related:** [Known Limitations](docs/faq.qmd) | [Decision Tree](docs/get-started/decision-tree.qmd)
+
+---
+
+### Q: How do I score mutations with ESMC?
+
+**A:** Use log-likelihood ratio approach:
+
+```python
+# Get likelihood for wild-type and mutant
+wt_likelihood = model(sequence)["logits"][position, wt_aa]
+mut_likelihood = model(mutant_seq)["logits"][position, mut_aa]
+
+# Compute log-likelihood ratio
+score = mut_likelihood - wt_likelihood
+```
+
+See our [Mutation Scoring Tutorial](https://biohub.ai/resources/tutorials).
+
+**Related:** [Tutorial](https://biohub.ai/resources/tutorials) | [Use Cases](docs/use-cases/model-applications.qmd)
+
+:::
+
+---
+
+## Design & Predictions
+
+::: {.accordion}
+
+### Q: Can I use ESM models to design proteins from scratch?
+
+**A:** Yes, use **ESM3**. It generates novel protein sequences conditioned on structure and function properties.
+
+See our [Design Tutorial](https://biohub.ai/resources/tutorials) and [Design Use Cases](docs/use-cases/model-applications.qmd#protein-design).
+
+**Related:** [Decision Tree](docs/get-started/decision-tree.qmd) | [Use Cases](docs/use-cases/index.qmd)
+
+---
+
+### Q: How accurate are structure predictions from ESMFold2?
+
+**A:**
+- **Antibody-antigen:** 50-55% DockQ ≥ 0.23 (single sequence), 55%+ with MSA
+- **Protein-protein:** 70-76% success rate
+- **Single chains:** Very high accuracy (similar to AlphaFold)
+
+Accuracy depends on sequence quality and complexity.
+
+**Related:** [Model Comparison](docs/get-started/model-comparison.qmd) | [Benchmarks](docs/get-started/model-comparison.qmd)
+
+---
+
+### Q: How do I predict ligand binding?
+
+**A:** ESMFold2 supports small molecule ligands as SMILES strings.
+
+See our [Ligand Binding Tutorial](https://biohub.ai/resources/tutorials).
+
+**Related:** [Tutorial](https://biohub.ai/resources/tutorials) | [Use Cases](docs/use-cases/model-applications.qmd)
+
+:::
+
+---
+
+## Fine-tuning & Adaptation
+
+::: {.accordion}
+
+### Q: Can I fine-tune ESMC for my specific task?
+
+**A:** Yes. ESMC fine-tunes well with modest amounts of task-specific data.
+
+Best practices:
+- Use smaller models (300M or 600M) for faster iteration
+- Start with a small learning rate
+- Use parameter-efficient methods (LoRA)
+
+See our [Fine-tuning Tutorial](https://biohub.ai/resources/tutorials).
+
+**Related:** [Tutorial](https://biohub.ai/resources/tutorials) | [Use Cases](docs/use-cases/model-applications.qmd)
+
+---
+
+### Q: How much data do I need to fine-tune?
+
+**A:** It depends on your task:
+- **Simple properties** (e.g., solubility): 100-1000 examples
+- **Complex properties** (e.g., binding): 1000-10000 examples
+- **Rare tasks:** May need more
+
+Start small and scale up based on performance.
+
+**Related:** [Fine-tuning Tutorial](https://biohub.ai/resources/tutorials)
+
+:::
+
+---
+
+## Licensing & Access
+
+::: {.accordion}
+
+### Q: What's the license for ESM models?
+
+**A:**
+- **ESMC, ESM3, ESMFold2:** MIT License (open source)
+- **ESM2:** MIT License
+- **Check official repository for latest:** [github.com/Biohub/esm](https://github.com/Biohub/esm)
+
+See [LICENSE](https://github.com/Biohub/awesome-esm/blob/main/LICENSE) for details.
+
+---
+
+### Q: Can I use these models commercially?
+
+**A:** Yes. ESM models are released under MIT License, which permits commercial use.
+
+See the [license file](https://github.com/Biohub/awesome-esm/blob/main/LICENSE) for full terms.
+
+:::
+
+---
+
+## Community & Support
+
+::: {.accordion}
+
+### Q: Where can I ask questions?
+
+**A:**
+- **GitHub Issues:** [Report bugs or ask questions](https://github.com/Biohub/awesome-esm/issues)
+- **GitHub Discussions:** [Join the community discussion](https://github.com/Biohub/awesome-esm/discussions)
+- **Slack:** [Join our community](https://biohub.slack.com)
+- **Biohub:** [Contact support](https://biohub.ai/contact)
+
+---
+
+### Q: How can I contribute?
+
+**A:** We welcome contributions of:
+- **Papers** using ESM models
+- **Code examples** and notebooks
+- **FAQ entries** with common questions
+- **Bug reports** and feature requests
+- **Documentation improvements**
+
+See [CONTRIBUTING.md](https://github.com/Biohub/awesome-esm/blob/main/CONTRIBUTING.md).
+
+:::
+
+---
+
+## Still Have Questions?
+
+- **Browse [Use Cases](docs/use-cases/index.qmd)** to see real examples
+- **Check [Decision Tree](docs/get-started/decision-tree.qmd)** for model selection
+- **Read [Tutorials](docs/tutorials.qmd)** for step-by-step guides
+- **Join [Community](https://biohub.slack.com)** to ask questions
+
+:::{.cta-section}
+### Can't Find Your Answer?
+
+Help us improve this FAQ!
+
+[📝 Suggest a question](https://github.com/Biohub/awesome-esm/issues/new?template=add-faq.md){.btn .btn-light}
+:::
