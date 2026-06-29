@@ -1,1 +1,214 @@
+---
 
+## 3. `docs/get-started/model-comparison.qmd`
+
+```yaml
+---
+title: "Model Comparison"
+description: "Detailed comparison of ESM models."
+format: html
+---
+
+# Model Comparison
+
+## Sequence Representation Models
+
+### ESMC (ESM Cambrian)
+
+**Status:** Latest (2025)  
+**Parameters:** 300M, 600M, 6B  
+**Training Data:** 2.8B metagenomic sequences  
+
+**Best For:**
+- Sequence embeddings and representations
+- Function prediction
+- Fine-tuning for custom tasks
+- Mutation scoring
+- Zero-shot variant effect prediction
+
+**Key Features:**
+- Trained on metagenomic data (more diverse)
+- Log-linear scaling with compute
+- Better representations than ESM2
+- Supported via Biohub API
+
+**Access:** [Biohub](https://biohub.ai/models/esmc) | [HuggingFace](https://huggingface.co/biohub) | [GitHub](https://github.com/Biohub/esm)
+
+---
+
+### ESM2
+
+**Status:** Previous generation (2023)  
+**Parameters:** 8M - 15B  
+**Training Data:** 50M UniProt sequences  
+
+**Best For:**
+- Legacy workflows
+- Projects using existing ESM2 code
+- When you have established pipelines
+
+**Key Features:**
+- Well-established
+- Large community resources
+- Lots of published examples
+
+**Migration Note:** ESMC is a drop-in replacement but with some API differences. See [Migration Guide](decision-tree.qmd).
+
+**Access:** [HuggingFace](https://huggingface.co/facebook/esm2) | [GitHub](https://github.com/facebookresearch/esm)
+
+---
+
+## Structure Prediction Models
+
+### ESMFold2
+
+**Status:** Latest (2025)  
+**Architecture:** Stable recurrent folding layers  
+**Modes:** Single sequence or MSA-augmented  
+
+**Best For:**
+- Protein complex prediction
+- Antibody-antigen interactions
+- Protein-protein interactions
+- Multi-chain systems
+- When accuracy is critical
+
+**Key Features:**
+- State-of-the-art accuracy
+- Inference-time scaling
+- Faster than AlphaFold3
+- Supports ligand binding
+
+**Input Limits:**
+- Single sequence: up to 768 residues
+- Complex mode: sum of chains ≤ 768 residues
+
+**Performance:**
+- Antibody-antigen: 50-55% DockQ pass rate
+- Protein-protein: 70-76% pass rate
+- Protein-ligand: 63-66% pass rate
+
+**Access:** [Biohub](https://biohub.ai/models/esmfold2) | [Tutorials](https://biohub.ai/resources/tutorials)
+
+---
+
+### ESMFold2-Fast
+
+**Status:** Latest (2025)  
+**Architecture:** Simplified, optimized for speed  
+
+**Best For:**
+- High-throughput structure prediction
+- Screening large sequence sets
+- When speed matters more than maximum accuracy
+- Monomer or simple predictions
+
+**Key Features:**
+- 50% fewer layers than ESMFold2
+- No MSA requirement
+- 1.3x faster than ESMFold2
+- Minimal accuracy trade-off
+
+**Performance:**
+- Antibody-antigen: 50% DockQ pass rate
+- Protein-protein: 68% pass rate
+- Protein-ligand: 63% pass rate
+
+**Access:** [Biohub](https://biohub.ai/models/esmfold2) | [Tutorials](https://biohub.ai/resources/tutorials)
+
+---
+
+### ESMFold (Original)
+
+**Status:** First generation (2022)  
+
+**Best For:**
+- Legacy workflows
+- When ESMFold2 is unavailable
+
+**Note:** Use ESMFold2 instead—it's faster and more accurate.
+
+**Access:** [GitHub](https://github.com/Biohub/esm)
+
+---
+
+## Multimodal Models
+
+### ESM3
+
+**Status:** Latest (2025)  
+**Modalities:** Sequence, structure, function  
+
+**Best For:**
+- De novo protein design
+- Sequence generation
+- Conditional structure prediction
+- Protein engineering
+
+**Key Features:**
+- Multimodal (seq + structure + function)
+- Can generate from partial inputs
+- Great for design workflows
+
+**Access:** [Biohub](https://biohub.ai/models/esm3) | [Paper](https://www.science.org/doi/10.1126/science.adk2211) | [Tutorials](https://biohub.ai/resources/tutorials)
+
+---
+
+## Quick Decision Matrix
+
+| Task | ESMC | ESM2 | ESM3 | ESMFold2 | ESMFold2-Fast |
+|------|------|------|------|----------|---------------|
+| Get embeddings | ✅ Best | ✅ Good | ❌ | ❌ | ❌ |
+| Fine-tune model | ✅ Best | ✅ Good | ⚠️ Limited | ❌ | ❌ |
+| Predict structure | ❌ | ❌ | ✅ | ✅ Best | ✅ Fast |
+| Design proteins | ❌ | ❌ | ✅ Best | ❌ | ❌ |
+| Score mutations | ✅ Best | ✅ Good | ❌ | ❌ | ❌ |
+| Predict function | ✅ Best | ✅ Good | ⚠️ | ❌ | ❌ |
+| High throughput | ✅ | ✅ | ❌ | ⚠️ | ✅ Best |
+| Maximum accuracy | ✅ Good | ✅ Good | ✅ | ✅ Best | ✅ |
+
+---
+
+## Performance Benchmarks
+
+### Structure Prediction (ESMFold2)
+
+**Antibody-Antigen:**
+- Single sequence: 50% DockQ ≥ 0.23
+- With MSA: 53% DockQ ≥ 0.23
+- With 20 loops: 55% DockQ ≥ 0.23
+
+**Protein-Protein:**
+- Single sequence: 70% pass rate
+- With MSA: 76% pass rate
+
+**Inference Speed (1024 aa):**
+- ESMFold2: 15.8 seconds
+- ESMFold2-Fast: 9.4 seconds
+- AlphaFold3: 20+ seconds
+
+---
+
+## Training Data Comparison
+
+| Model | Size | Source | Diversity |
+|-------|------|--------|-----------|
+| ESMC | 2.8B sequences | UniRef + JGI + MGnify | High (metagenomic) |
+| ESM2 | 50M sequences | UniRef50 | Medium |
+| ESM3 | 2.8B sequences | UniRef + metagenomic | High |
+
+---
+
+## See Also
+
+- [Full Decision Tree](decision-tree.qmd)
+- [Choose Your Model Guide](index.qmd)
+- [Model Specifications](https://biohub.ai/models)
+
+:::{.cta-section}
+### Help Improve This Comparison
+
+Found an error or have a suggestion?
+
+[📝 Suggest changes](https://github.com/Biohub/awesome-esm/issues/new?template=contribute.md){.btn .btn-light}
+:::
