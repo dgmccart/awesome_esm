@@ -75,3 +75,25 @@ pip install esm
 
 # Or from GitHub for latest version
 pip install git+https://github.com/Biohub/esm.git@main
+```
+
+Requirements
+
+Python 3.10+
+PyTorch 2.0+
+CUDA 11.8+ (for GPU acceleration)
+
+For detailed setup instructions, see the Installation Guide.
+
+Next Steps
+Once you've chosen your model:
+
+Read the Full Decision Tree for detailed guidance
+Check the Model Comparison for specs
+Follow a Tutorial to learn by doing
+Browse Use Cases to see real examples
+
+
+Contribute to This Page
+Help us improve this guide!
+🔗 Suggest improvements{.btn .btn-secondary}
