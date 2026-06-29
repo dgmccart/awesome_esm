@@ -5,6 +5,7 @@ project:
 website:
   title: "Awesome ESM"
   description: "A curated collection of ESM resources, papers, and community examples"
+  site-url: https://dgmccart.github.io/awesome_esm/
   
   # Favicon
   favicon: assets/images/biohub-favicon.png
@@ -34,7 +35,7 @@ website:
     
     right:
       - icon: github
-        href: https://github.com/dgmccart/awesome-esm
+        href: https://github.com/dgmccart/awesome_esm
         aria-label: GitHub
       - icon: twitter
         href: https://twitter.com/biohubcz
