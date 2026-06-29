@@ -49,186 +49,39 @@
     "text": "Decision Tree - Choose the right model\nUse Cases - See real-world applications\nFAQ - Get answers to common questions\n\n\n\nHead to Biohub to explore our full tutorial library and start learning!\n🚀 Browse Tutorials"
   },
   {
-    "objectID": "docs/getting-started/model-comparison.html",
-    "href": "docs/getting-started/model-comparison.html",
-    "title": "Model Comparison",
+    "objectID": "docs/getting-started/index.html",
+    "href": "docs/getting-started/index.html",
+    "title": "Get Started",
     "section": "",
-    "text": "Status: Latest (2025)\nParameters: 300M, 600M, 6B\nTraining Data: 2.8B metagenomic sequences\nBest For: - Sequence embeddings and representations - Function prediction - Fine-tuning for custom tasks - Mutation scoring - Zero-shot variant effect prediction\nKey Features: - Trained on metagenomic data (more diverse) - Log-linear scaling with compute - Better representations than ESM2 - Supported via Biohub API\nAccess: Biohub | HuggingFace | GitHub\n\n\n\n\nStatus: Previous generation (2023)\nParameters: 8M - 15B\nTraining Data: 50M UniProt sequences\nBest For: - Legacy workflows - Projects using existing ESM2 code - When you have established pipelines\nKey Features: - Well-established - Large community resources - Lots of published examples\nMigration Note: ESMC is a drop-in replacement but with some API differences. See Migration Guide.\nAccess: HuggingFace | GitHub\n\n\n\n\n\n\n\nStatus: Latest (2025)\nArchitecture: Stable recurrent folding layers\nModes: Single sequence or MSA-augmented\nBest For: - Protein complex prediction - Antibody-antigen interactions - Protein-protein interactions - Multi-chain systems - When accuracy is critical\nKey Features: - State-of-the-art accuracy - Inference-time scaling - Faster than AlphaFold3 - Supports ligand binding\nInput Limits: - Single sequence: up to 768 residues - Complex mode: sum of chains ≤ 768 residues\nPerformance: - Antibody-antigen: 50-55% DockQ pass rate - Protein-protein: 70-76% pass rate - Protein-ligand: 63-66% pass rate\nAccess: Biohub | Tutorials\n\n\n\n\nStatus: Latest (2025)\nArchitecture: Simplified, optimized for speed\nBest For: - High-throughput structure prediction - Screening large sequence sets - When speed matters more than maximum accuracy - Monomer or simple predictions\nKey Features: - 50% fewer layers than ESMFold2 - No MSA requirement - 1.3x faster than ESMFold2 - Minimal accuracy trade-off\nPerformance: - Antibody-antigen: 50% DockQ pass rate - Protein-protein: 68% pass rate - Protein-ligand: 63% pass rate\nAccess: Biohub | Tutorials\n\n\n\n\nStatus: First generation (2022)\nBest For: - Legacy workflows - When ESMFold2 is unavailable\nNote: Use ESMFold2 instead—it’s faster and more accurate.\nAccess: GitHub\n\n\n\n\n\n\n\nStatus: Latest (2025)\nModalities: Sequence, structure, function\nBest For: - De novo protein design - Sequence generation - Conditional structure prediction - Protein engineering\nKey Features: - Multimodal (seq + structure + function) - Can generate from partial inputs - Great for design workflows\nAccess: Biohub | Paper | Tutorials\n\n\n\n\n\n\n\n\nTask\nESMC\nESM2\nESM3\nESMFold2\nESMFold2-Fast\n\n\n\n\nGet embeddings\n✅ Best\n✅ Good\n❌\n❌\n❌\n\n\nFine-tune model\n✅ Best\n✅ Good\n⚠️ Limited\n❌\n❌\n\n\nPredict structure\n❌\n❌\n✅\n✅ Best\n✅ Fast\n\n\nDesign proteins\n❌\n❌\n✅ Best\n❌\n❌\n\n\nScore mutations\n✅ Best\n✅ Good\n❌\n❌\n❌\n\n\nPredict function\n✅ Best\n✅ Good\n⚠️\n❌\n❌\n\n\nHigh throughput\n✅\n✅\n❌\n⚠️\n✅ Best\n\n\nMaximum accuracy\n✅ Good\n✅ Good\n✅\n✅ Best\n✅\n\n\n\n\n\n\n\n\n\nAntibody-Antigen: - Single sequence: 50% DockQ ≥ 0.23 - With MSA: 53% DockQ ≥ 0.23 - With 20 loops: 55% DockQ ≥ 0.23\nProtein-Protein: - Single sequence: 70% pass rate - With MSA: 76% pass rate\nInference Speed (1024 aa): - ESMFold2: 15.8 seconds - ESMFold2-Fast: 9.4 seconds - AlphaFold3: 20+ seconds\n\n\n\n\n\n\n\n\nModel\nSize\nSource\nDiversity\n\n\n\n\nESMC\n2.8B sequences\nUniRef + JGI + MGnify\nHigh (metagenomic)\n\n\nESM2\n50M sequences\nUniRef50\nMedium\n\n\nESM3\n2.8B sequences\nUniRef + metagenomic\nHigh\n\n\n\n\n\n\n\n\nFull Decision Tree\nChoose Your Model Guide\nModel Specifications\n\n\n\nFound an error or have a suggestion?\n📝 Suggest changes"
+    "text": "Welcome! This section will help you choose the right ESM model for your work and get it installed.\n\n\n\n🌐 Biohubbiohub.ai\n🤗 Hugging Facebiohub models\n💻 GitHubESM Package\n📚 TutorialsLearn by doing\n\n\n\n\n\nNot sure which model to use? This comparison will help:\n\n\n\nModel\nPurpose\nBest For\nInput Limit\nSpeed\nLinks\n\n\n\n\nESMC\nSequence representation\nEmbeddings, function prediction, fine-tuning\n2,048 aa\nFast\nCard | Paper | HuggingFace\n\n\nESM3\nMultimodal design\nSequence generation, structure prediction\n2,048 aa\nMedium\nCard | Paper\n\n\nESM2\nSequence representation\nLegacy code, established workflows\n2,048 aa\nFast\nCard | Paper\n\n\nESMFold\nStructure prediction\nQuick structure predictions\nSingle chain\nVery Fast\nCard\n\n\nESMFold2\nComplex prediction\nAntibody-antigen, multimers\nUp to 768 aa\nFast\nCard\n\n\nESMFold2-Fast\nFast structure prediction\nHigh-throughput screening\nSingle chain\nFastest\nCard\n\n\n\n\n\n\n\n\n\n\nI need protein sequence embeddings or representations → Use ESMC or ESM2 (Embeddings Tutorial)\nI want to design new proteins or generate sequences → Use ESM3 (Design Tutorial)\nI need to predict protein 3D structure\n\nSingle chain? → Use ESMFold or ESMFold2 (Structure Tutorial)\nComplex (antibody-antigen, multimer)? → Use ESMFold2 (Complex Prediction Tutorial)\nNeed maximum speed? → Use ESMFold2-Fast (Performance Guide)\n\nI’m working with legacy code → Use ESM2 (Migration Guide)\nI want to fine-tune a model → Use ESMC (Fine-tuning Guide)\n\n\n\n\n\n\n\n\n# Install the ESM package\npip install esm\n\n# Or from GitHub for latest version\npip install git+https://github.com/Biohub/esm.git@main\nRequirements\nPython 3.10+ PyTorch 2.0+ CUDA 11.8+ (for GPU acceleration)\nFor detailed setup instructions, see the Installation Guide.\nNext Steps Once you’ve chosen your model:\nRead the Full Decision Tree for detailed guidance Check the Model Comparison for specs Follow a Tutorial to learn by doing Browse Use Cases to see real examples\nContribute to This Page Help us improve this guide! 🔗 Suggest improvements{.btn .btn-secondary}"
   },
   {
-    "objectID": "docs/getting-started/model-comparison.html#sequence-representation-models",
-    "href": "docs/getting-started/model-comparison.html#sequence-representation-models",
-    "title": "Model Comparison",
+    "objectID": "docs/getting-started/index.html#quick-links",
+    "href": "docs/getting-started/index.html#quick-links",
+    "title": "Get Started",
     "section": "",
-    "text": "Status: Latest (2025)\nParameters: 300M, 600M, 6B\nTraining Data: 2.8B metagenomic sequences\nBest For: - Sequence embeddings and representations - Function prediction - Fine-tuning for custom tasks - Mutation scoring - Zero-shot variant effect prediction\nKey Features: - Trained on metagenomic data (more diverse) - Log-linear scaling with compute - Better representations than ESM2 - Supported via Biohub API\nAccess: Biohub | HuggingFace | GitHub\n\n\n\n\nStatus: Previous generation (2023)\nParameters: 8M - 15B\nTraining Data: 50M UniProt sequences\nBest For: - Legacy workflows - Projects using existing ESM2 code - When you have established pipelines\nKey Features: - Well-established - Large community resources - Lots of published examples\nMigration Note: ESMC is a drop-in replacement but with some API differences. See Migration Guide.\nAccess: HuggingFace | GitHub"
+    "text": "🌐 Biohubbiohub.ai\n🤗 Hugging Facebiohub models\n💻 GitHubESM Package\n📚 TutorialsLearn by doing"
   },
   {
-    "objectID": "docs/getting-started/model-comparison.html#structure-prediction-models",
-    "href": "docs/getting-started/model-comparison.html#structure-prediction-models",
-    "title": "Model Comparison",
+    "objectID": "docs/getting-started/index.html#model-overview",
+    "href": "docs/getting-started/index.html#model-overview",
+    "title": "Get Started",
     "section": "",
-    "text": "Status: Latest (2025)\nArchitecture: Stable recurrent folding layers\nModes: Single sequence or MSA-augmented\nBest For: - Protein complex prediction - Antibody-antigen interactions - Protein-protein interactions - Multi-chain systems - When accuracy is critical\nKey Features: - State-of-the-art accuracy - Inference-time scaling - Faster than AlphaFold3 - Supports ligand binding\nInput Limits: - Single sequence: up to 768 residues - Complex mode: sum of chains ≤ 768 residues\nPerformance: - Antibody-antigen: 50-55% DockQ pass rate - Protein-protein: 70-76% pass rate - Protein-ligand: 63-66% pass rate\nAccess: Biohub | Tutorials\n\n\n\n\nStatus: Latest (2025)\nArchitecture: Simplified, optimized for speed\nBest For: - High-throughput structure prediction - Screening large sequence sets - When speed matters more than maximum accuracy - Monomer or simple predictions\nKey Features: - 50% fewer layers than ESMFold2 - No MSA requirement - 1.3x faster than ESMFold2 - Minimal accuracy trade-off\nPerformance: - Antibody-antigen: 50% DockQ pass rate - Protein-protein: 68% pass rate - Protein-ligand: 63% pass rate\nAccess: Biohub | Tutorials\n\n\n\n\nStatus: First generation (2022)\nBest For: - Legacy workflows - When ESMFold2 is unavailable\nNote: Use ESMFold2 instead—it’s faster and more accurate.\nAccess: GitHub"
+    "text": "Not sure which model to use? This comparison will help:\n\n\n\nModel\nPurpose\nBest For\nInput Limit\nSpeed\nLinks\n\n\n\n\nESMC\nSequence representation\nEmbeddings, function prediction, fine-tuning\n2,048 aa\nFast\nCard | Paper | HuggingFace\n\n\nESM3\nMultimodal design\nSequence generation, structure prediction\n2,048 aa\nMedium\nCard | Paper\n\n\nESM2\nSequence representation\nLegacy code, established workflows\n2,048 aa\nFast\nCard | Paper\n\n\nESMFold\nStructure prediction\nQuick structure predictions\nSingle chain\nVery Fast\nCard\n\n\nESMFold2\nComplex prediction\nAntibody-antigen, multimers\nUp to 768 aa\nFast\nCard\n\n\nESMFold2-Fast\nFast structure prediction\nHigh-throughput screening\nSingle chain\nFastest\nCard"
   },
   {
-    "objectID": "docs/getting-started/model-comparison.html#multimodal-models",
-    "href": "docs/getting-started/model-comparison.html#multimodal-models",
-    "title": "Model Comparison",
+    "objectID": "docs/getting-started/index.html#choose-your-model",
+    "href": "docs/getting-started/index.html#choose-your-model",
+    "title": "Get Started",
     "section": "",
-    "text": "Status: Latest (2025)\nModalities: Sequence, structure, function\nBest For: - De novo protein design - Sequence generation - Conditional structure prediction - Protein engineering\nKey Features: - Multimodal (seq + structure + function) - Can generate from partial inputs - Great for design workflows\nAccess: Biohub | Paper | Tutorials"
+    "text": "I need protein sequence embeddings or representations → Use ESMC or ESM2 (Embeddings Tutorial)\nI want to design new proteins or generate sequences → Use ESM3 (Design Tutorial)\nI need to predict protein 3D structure\n\nSingle chain? → Use ESMFold or ESMFold2 (Structure Tutorial)\nComplex (antibody-antigen, multimer)? → Use ESMFold2 (Complex Prediction Tutorial)\nNeed maximum speed? → Use ESMFold2-Fast (Performance Guide)\n\nI’m working with legacy code → Use ESM2 (Migration Guide)\nI want to fine-tune a model → Use ESMC (Fine-tuning Guide)"
   },
   {
-    "objectID": "docs/getting-started/model-comparison.html#quick-decision-matrix",
-    "href": "docs/getting-started/model-comparison.html#quick-decision-matrix",
-    "title": "Model Comparison",
+    "objectID": "docs/getting-started/index.html#installation",
+    "href": "docs/getting-started/index.html#installation",
+    "title": "Get Started",
     "section": "",
-    "text": "Task\nESMC\nESM2\nESM3\nESMFold2\nESMFold2-Fast\n\n\n\n\nGet embeddings\n✅ Best\n✅ Good\n❌\n❌\n❌\n\n\nFine-tune model\n✅ Best\n✅ Good\n⚠️ Limited\n❌\n❌\n\n\nPredict structure\n❌\n❌\n✅\n✅ Best\n✅ Fast\n\n\nDesign proteins\n❌\n❌\n✅ Best\n❌\n❌\n\n\nScore mutations\n✅ Best\n✅ Good\n❌\n❌\n❌\n\n\nPredict function\n✅ Best\n✅ Good\n⚠️\n❌\n❌\n\n\nHigh throughput\n✅\n✅\n❌\n⚠️\n✅ Best\n\n\nMaximum accuracy\n✅ Good\n✅ Good\n✅\n✅ Best\n✅"
-  },
-  {
-    "objectID": "docs/getting-started/model-comparison.html#performance-benchmarks",
-    "href": "docs/getting-started/model-comparison.html#performance-benchmarks",
-    "title": "Model Comparison",
-    "section": "",
-    "text": "Antibody-Antigen: - Single sequence: 50% DockQ ≥ 0.23 - With MSA: 53% DockQ ≥ 0.23 - With 20 loops: 55% DockQ ≥ 0.23\nProtein-Protein: - Single sequence: 70% pass rate - With MSA: 76% pass rate\nInference Speed (1024 aa): - ESMFold2: 15.8 seconds - ESMFold2-Fast: 9.4 seconds - AlphaFold3: 20+ seconds"
-  },
-  {
-    "objectID": "docs/getting-started/model-comparison.html#training-data-comparison",
-    "href": "docs/getting-started/model-comparison.html#training-data-comparison",
-    "title": "Model Comparison",
-    "section": "",
-    "text": "Model\nSize\nSource\nDiversity\n\n\n\n\nESMC\n2.8B sequences\nUniRef + JGI + MGnify\nHigh (metagenomic)\n\n\nESM2\n50M sequences\nUniRef50\nMedium\n\n\nESM3\n2.8B sequences\nUniRef + metagenomic\nHigh"
-  },
-  {
-    "objectID": "docs/getting-started/model-comparison.html#see-also",
-    "href": "docs/getting-started/model-comparison.html#see-also",
-    "title": "Model Comparison",
-    "section": "",
-    "text": "Full Decision Tree\nChoose Your Model Guide\nModel Specifications\n\n\n\nFound an error or have a suggestion?\n📝 Suggest changes"
-  },
-  {
-    "objectID": "docs/getting-started/decision-tree.html",
-    "href": "docs/getting-started/decision-tree.html",
-    "title": "Decision Tree",
-    "section": "",
-    "text": "Use this interactive guide to find the right ESM model for your project.\n\n\n\n\n\n\n→ Go to Section 2A\n\n\n\n→ Go to Section 2B\n\n\n\n→ Go to Section 2C\n\n\n\n→ Go to Section 2D\n\n\n\n\n\n\n\n\nI’m doing research and want the best representations → Use ESMC (latest, best quality, metagenomic training) - Model Card - Tutorial: Getting Embeddings - GitHub\nI have existing ESM2 code and want to upgrade → Use ESMC (drop-in replacement, but see migration guide) - Migration Guide - Comparison Table\nI’m using legacy code tied to ESM2 → Stay with ESM2 (for now) - ESM2 Docs - Plan migration to ESMC when ready\nI want to fine-tune on my own data → Use ESMC - Fine-tuning Tutorial - Larger models (6B) work best, but 300M is faster for experiments\nI need this to be very fast → Use ESMC-300M - Smallest model, still high quality - Much faster inference than larger models\n\n\n\n\n\n\n\nDe novo proteins (completely new sequences) → Use ESM3 - Model Card - Design Tutorial - Paper\nProtein binders (antibodies, miniproteins) → Use ESM3 with ESMFold2 - Generate sequences with ESM3 - Validate structures with ESMFold2 - Binder Design Example\nEnzyme variants (improving existing proteins) → Use ESMC + ESMFold2 - Score mutations with ESMC embeddings - Validate with structure prediction - Directed Evolution Example\n\n\n\n\n\n\n\nSingle protein chain (monomers) → Use ESMFold2-Fast - Fastest option - Excellent accuracy - Tutorial\nProtein complexes (antibody-antigen, PPIs, multimers) → Use ESMFold2 - State-of-the-art accuracy - Handles up to 768 residues (all chains combined) - Complex Prediction Tutorial\nLarge complexes (&gt;768 residues) → Use ESMFold2-Fast on individual chains, then dock manually - Or use Docking Tools - Future versions may support longer sequences\nI need maximum accuracy → Use ESMFold2 with MSA - Request on Biohub - 3-5% better accuracy with multiple sequence alignment\nI need to screen thousands of structures quickly → Use ESMFold2-Fast - 1.3x faster than ESMFold2 - Minimal accuracy trade-off\n\n\n\n\n\n\n\nPredict effects of all possible mutations (variant effect prediction) → Use ESMC with log-likelihood ratios - Mutation Scoring Tutorial - Variant Prediction Example\nFind stabilizing mutations for protein engineering → Use ESMC + ESMFold2 - Score with ESMC - Validate stability with structure - Stability Engineering Example\nUnderstand disease-causing mutations → Use ESMC - Disease Prediction Tutorial - Compare wild-type vs. mutant log-likelihood\nProtein function prediction → Use ESMC - Function information in layer 50-60 - Function Prediction Example\n\n\n\n\n\n\n\n\nGoal\nRecommended\nSpeed\nAccuracy\n\n\n\n\nEmbeddings\nESMC\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n\n\nFine-tuning\nESMC\n⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n\n\nDesign\nESM3\n⭐⭐⭐\n⭐⭐⭐⭐\n\n\nSingle Structure\nESMFold2-Fast\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐\n\n\nComplex Structure\nESMFold2\n⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n\n\nMutation Scoring\nESMC\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐\n\n\nFunction Prediction\nESMC\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐\n\n\n\n\n\n\n\n\n🌐 Try on Biohubbiohub.ai\n🤗 Download from HFhuggingface.co\n💻 Open Sourcegithub.com/Biohub\n📚 All Tutorialsbiohub.ai\n\n\n\n\n\n\nFAQ: See answers to common questions\nTutorials: Learn by doing\nCompare Models: Detailed comparison table\nCommunity: Join the discussion\n\n\n\nThis decision tree should help, but if you have specific questions, we’re here to help!\n📝 Ask the community"
-  },
-  {
-    "objectID": "docs/getting-started/decision-tree.html#whats-your-primary-goal",
-    "href": "docs/getting-started/decision-tree.html#whats-your-primary-goal",
-    "title": "Decision Tree",
-    "section": "",
-    "text": "→ Go to Section 2A\n\n\n\n→ Go to Section 2B\n\n\n\n→ Go to Section 2C\n\n\n\n→ Go to Section 2D"
-  },
-  {
-    "objectID": "docs/getting-started/decision-tree.html#a.-sequence-representations-embeddings",
-    "href": "docs/getting-started/decision-tree.html#a.-sequence-representations-embeddings",
-    "title": "Decision Tree",
-    "section": "",
-    "text": "I’m doing research and want the best representations → Use ESMC (latest, best quality, metagenomic training) - Model Card - Tutorial: Getting Embeddings - GitHub\nI have existing ESM2 code and want to upgrade → Use ESMC (drop-in replacement, but see migration guide) - Migration Guide - Comparison Table\nI’m using legacy code tied to ESM2 → Stay with ESM2 (for now) - ESM2 Docs - Plan migration to ESMC when ready\nI want to fine-tune on my own data → Use ESMC - Fine-tuning Tutorial - Larger models (6B) work best, but 300M is faster for experiments\nI need this to be very fast → Use ESMC-300M - Smallest model, still high quality - Much faster inference than larger models"
-  },
-  {
-    "objectID": "docs/getting-started/decision-tree.html#b.-protein-design-generation",
-    "href": "docs/getting-started/decision-tree.html#b.-protein-design-generation",
-    "title": "Decision Tree",
-    "section": "",
-    "text": "De novo proteins (completely new sequences) → Use ESM3 - Model Card - Design Tutorial - Paper\nProtein binders (antibodies, miniproteins) → Use ESM3 with ESMFold2 - Generate sequences with ESM3 - Validate structures with ESMFold2 - Binder Design Example\nEnzyme variants (improving existing proteins) → Use ESMC + ESMFold2 - Score mutations with ESMC embeddings - Validate with structure prediction - Directed Evolution Example"
-  },
-  {
-    "objectID": "docs/getting-started/decision-tree.html#c.-structure-prediction",
-    "href": "docs/getting-started/decision-tree.html#c.-structure-prediction",
-    "title": "Decision Tree",
-    "section": "",
-    "text": "Single protein chain (monomers) → Use ESMFold2-Fast - Fastest option - Excellent accuracy - Tutorial\nProtein complexes (antibody-antigen, PPIs, multimers) → Use ESMFold2 - State-of-the-art accuracy - Handles up to 768 residues (all chains combined) - Complex Prediction Tutorial\nLarge complexes (&gt;768 residues) → Use ESMFold2-Fast on individual chains, then dock manually - Or use Docking Tools - Future versions may support longer sequences\nI need maximum accuracy → Use ESMFold2 with MSA - Request on Biohub - 3-5% better accuracy with multiple sequence alignment\nI need to screen thousands of structures quickly → Use ESMFold2-Fast - 1.3x faster than ESMFold2 - Minimal accuracy trade-off"
-  },
-  {
-    "objectID": "docs/getting-started/decision-tree.html#d.-mutation-scoring-variant-effects",
-    "href": "docs/getting-started/decision-tree.html#d.-mutation-scoring-variant-effects",
-    "title": "Decision Tree",
-    "section": "",
-    "text": "Predict effects of all possible mutations (variant effect prediction) → Use ESMC with log-likelihood ratios - Mutation Scoring Tutorial - Variant Prediction Example\nFind stabilizing mutations for protein engineering → Use ESMC + ESMFold2 - Score with ESMC - Validate stability with structure - Stability Engineering Example\nUnderstand disease-causing mutations → Use ESMC - Disease Prediction Tutorial - Compare wild-type vs. mutant log-likelihood\nProtein function prediction → Use ESMC - Function information in layer 50-60 - Function Prediction Example"
-  },
-  {
-    "objectID": "docs/getting-started/decision-tree.html#summary-table",
-    "href": "docs/getting-started/decision-tree.html#summary-table",
-    "title": "Decision Tree",
-    "section": "",
-    "text": "Goal\nRecommended\nSpeed\nAccuracy\n\n\n\n\nEmbeddings\nESMC\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n\n\nFine-tuning\nESMC\n⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n\n\nDesign\nESM3\n⭐⭐⭐\n⭐⭐⭐⭐\n\n\nSingle Structure\nESMFold2-Fast\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐\n\n\nComplex Structure\nESMFold2\n⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n\n\nMutation Scoring\nESMC\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐\n\n\nFunction Prediction\nESMC\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐"
-  },
-  {
-    "objectID": "docs/getting-started/decision-tree.html#access-resources",
-    "href": "docs/getting-started/decision-tree.html#access-resources",
-    "title": "Decision Tree",
-    "section": "",
-    "text": "🌐 Try on Biohubbiohub.ai\n🤗 Download from HFhuggingface.co\n💻 Open Sourcegithub.com/Biohub\n📚 All Tutorialsbiohub.ai"
-  },
-  {
-    "objectID": "docs/getting-started/decision-tree.html#questions",
-    "href": "docs/getting-started/decision-tree.html#questions",
-    "title": "Decision Tree",
-    "section": "",
-    "text": "FAQ: See answers to common questions\nTutorials: Learn by doing\nCompare Models: Detailed comparison table\nCommunity: Join the discussion\n\n\n\nThis decision tree should help, but if you have specific questions, we’re here to help!\n📝 Ask the community"
-  },
-  {
-    "objectID": "docs/faq.html",
-    "href": "docs/faq.html",
-    "title": "FAQ",
-    "section": "",
-    "text": "A: Use ESMC for new projects. It’s the latest, trained on 2.8B diverse metagenomic sequences, and provides higher-quality representations than ESM2.\nIf you have existing ESM2 code, ESMC is a drop-in replacement with similar API. See our Decision Tree for detailed guidance.\nRelated: Model Comparison | Getting Started\n\n\n\n\nA: - ESMC: Newer (2025), trained on 2.8B metagenomic + UniRef sequences, better quality, log-linear scaling - ESM2: Older (2023), trained on 50M UniRef sequences, still good for many tasks\nFor new projects, use ESMC. ESM2 is good for legacy workflows.\nRelated: Model Comparison | Migration Guide\n\n\n\n\nA: - ESMFold2: State-of-the-art accuracy (best for publications, critical applications) - ESMFold2-Fast: 1.3x faster with minimal accuracy loss (best for screening, high-throughput)\nMinimal difference on simple single-chain predictions. Complex predictions (antibody-antigen) benefit more from ESMFold2.\nRelated: Model Comparison | Decision Tree\n\n\n\n\nA: No. ESM3 is designed for protein design and generation. For structure prediction alone, use ESMFold2. For embeddings, use ESMC.\nESM3 is best when you need to generate new sequences or make conditional predictions.\nRelated: Decision Tree | Use Cases\n\n\n\n\n\n\n\n\n\nA:\npip install esm\nOr for the latest development version:\npip install git+https://github.com/Biohub/esm.git@main\nRequirements: - Python 3.10+ - PyTorch 2.0+ - CUDA 11.8+ (for GPU acceleration)\nRelated: Getting Started | Tutorials\n\n\n\n\nA: No. You can download ESMC and ESMFold2 from HuggingFace and run them locally without authentication.\nYou only need an API key if you’re using the Biohub web platform.\nLinks: HuggingFace Models | Biohub API\n\n\n\n\nA: - Embeddings (ESMC): Can run on CPU, but GPU (4GB VRAM) much faster - Structure Prediction (ESMFold2): GPU recommended (16GB+ VRAM for large complexes) - Design: Depends on inference-time search budget\nFor production use, 24GB VRAM GPU recommended.\nRelated: Model Comparison\n\n\n\n\n\n\n\n\n\nA: See our Embeddings Tutorial.\nQuick code:\nimport esm\n\nmodel = esm.pretrained.esmfold_v1()\nsequences = [\"MKFLK...\", \"MKVLA...\"]\nembeddings = model(sequences)\nRelated: Tutorial | Decision Tree\n\n\n\n\nA: - Single chain (1024 aa): ~15 seconds (ESMFold2), ~10 seconds (ESMFold2-Fast) on H100 GPU - Complex (2x 300 aa): ~30 seconds - CPU: 10-100x slower\nTime scales roughly linearly with sequence length.\nRelated: Model Comparison | Performance Benchmarks\n\n\n\n\nA: ESMFold2 has a 2048 token limit total (all chains combined).\nOptions: 1. Predict individual chains separately, then dock 2. Use overlapping window approach 3. Request support in Biohub for longer sequences\nRelated: Known Limitations | Decision Tree\n\n\n\n\nA: Use log-likelihood ratio approach:\n# Get likelihood for wild-type and mutant\nwt_likelihood = model(sequence)[\"logits\"][position, wt_aa]\nmut_likelihood = model(mutant_seq)[\"logits\"][position, mut_aa]\n\n# Compute log-likelihood ratio\nscore = mut_likelihood - wt_likelihood\nSee our Mutation Scoring Tutorial.\nRelated: Tutorial | Use Cases\n\n\n\n\n\n\n\n\n\nA: Yes, use ESM3. It generates novel protein sequences conditioned on structure and function properties.\nSee our Design Tutorial and Design Use Cases.\nRelated: Decision Tree | Use Cases\n\n\n\n\nA: - Antibody-antigen: 50-55% DockQ ≥ 0.23 (single sequence), 55%+ with MSA - Protein-protein: 70-76% success rate - Single chains: Very high accuracy (similar to AlphaFold)\nAccuracy depends on sequence quality and complexity.\nRelated: Model Comparison | Benchmarks\n\n\n\n\nA: ESMFold2 supports small molecule ligands as SMILES strings.\nSee our Ligand Binding Tutorial.\nRelated: Tutorial | Use Cases\n\n\n\n\n\n\n\n\n\nA: Yes. ESMC fine-tunes well with modest amounts of task-specific data.\nBest practices: - Use smaller models (300M or 600M) for faster iteration - Start with a small learning rate - Use parameter-efficient methods (LoRA)\nSee our Fine-tuning Tutorial.\nRelated: Tutorial | Use Cases\n\n\n\n\nA: It depends on your task: - Simple properties (e.g., solubility): 100-1000 examples - Complex properties (e.g., binding): 1000-10000 examples - Rare tasks: May need more\nStart small and scale up based on performance.\nRelated: Fine-tuning Tutorial\n\n\n\n\n\n\n\n\n\nA: - ESMC, ESM3, ESMFold2: MIT License (open source) - ESM2: MIT License - Check official repository for latest: github.com/Biohub/esm\nSee LICENSE for details.\n\n\n\n\nA: Yes. ESM models are released under MIT License, which permits commercial use.\nSee the license file for full terms.\n\n\n\n\n\n\n\n\n\nA: - GitHub Issues: Report bugs or ask questions - GitHub Discussions: Join the community discussion - Slack: Join our community - Biohub: Contact support\n\n\n\n\nA: We welcome contributions of: - Papers using ESM models - Code examples and notebooks - FAQ entries with common questions - Bug reports and feature requests - Documentation improvements\nSee CONTRIBUTING.md.\n\n\n\n\n\n\n\nBrowse Use Cases to see real examples\nCheck Decision Tree for model selection\nRead Tutorials for step-by-step guides\nJoin Community to ask questions\n\n\n\nHelp us improve this FAQ!\n📝 Suggest a question"
-  },
-  {
-    "objectID": "docs/faq.html#model-selection",
-    "href": "docs/faq.html#model-selection",
-    "title": "FAQ",
-    "section": "",
-    "text": "A: Use ESMC for new projects. It’s the latest, trained on 2.8B diverse metagenomic sequences, and provides higher-quality representations than ESM2.\nIf you have existing ESM2 code, ESMC is a drop-in replacement with similar API. See our Decision Tree for detailed guidance.\nRelated: Model Comparison | Getting Started\n\n\n\n\nA: - ESMC: Newer (2025), trained on 2.8B metagenomic + UniRef sequences, better quality, log-linear scaling - ESM2: Older (2023), trained on 50M UniRef sequences, still good for many tasks\nFor new projects, use ESMC. ESM2 is good for legacy workflows.\nRelated: Model Comparison | Migration Guide\n\n\n\n\nA: - ESMFold2: State-of-the-art accuracy (best for publications, critical applications) - ESMFold2-Fast: 1.3x faster with minimal accuracy loss (best for screening, high-throughput)\nMinimal difference on simple single-chain predictions. Complex predictions (antibody-antigen) benefit more from ESMFold2.\nRelated: Model Comparison | Decision Tree\n\n\n\n\nA: No. ESM3 is designed for protein design and generation. For structure prediction alone, use ESMFold2. For embeddings, use ESMC.\nESM3 is best when you need to generate new sequences or make conditional predictions.\nRelated: Decision Tree | Use Cases"
-  },
-  {
-    "objectID": "docs/faq.html#installation-setup",
-    "href": "docs/faq.html#installation-setup",
-    "title": "FAQ",
-    "section": "",
-    "text": "A:\npip install esm\nOr for the latest development version:\npip install git+https://github.com/Biohub/esm.git@main\nRequirements: - Python 3.10+ - PyTorch 2.0+ - CUDA 11.8+ (for GPU acceleration)\nRelated: Getting Started | Tutorials\n\n\n\n\nA: No. You can download ESMC and ESMFold2 from HuggingFace and run them locally without authentication.\nYou only need an API key if you’re using the Biohub web platform.\nLinks: HuggingFace Models | Biohub API\n\n\n\n\nA: - Embeddings (ESMC): Can run on CPU, but GPU (4GB VRAM) much faster - Structure Prediction (ESMFold2): GPU recommended (16GB+ VRAM for large complexes) - Design: Depends on inference-time search budget\nFor production use, 24GB VRAM GPU recommended.\nRelated: Model Comparison"
-  },
-  {
-    "objectID": "docs/faq.html#usage-troubleshooting",
-    "href": "docs/faq.html#usage-troubleshooting",
-    "title": "FAQ",
-    "section": "",
-    "text": "A: See our Embeddings Tutorial.\nQuick code:\nimport esm\n\nmodel = esm.pretrained.esmfold_v1()\nsequences = [\"MKFLK...\", \"MKVLA...\"]\nembeddings = model(sequences)\nRelated: Tutorial | Decision Tree\n\n\n\n\nA: - Single chain (1024 aa): ~15 seconds (ESMFold2), ~10 seconds (ESMFold2-Fast) on H100 GPU - Complex (2x 300 aa): ~30 seconds - CPU: 10-100x slower\nTime scales roughly linearly with sequence length.\nRelated: Model Comparison | Performance Benchmarks\n\n\n\n\nA: ESMFold2 has a 2048 token limit total (all chains combined).\nOptions: 1. Predict individual chains separately, then dock 2. Use overlapping window approach 3. Request support in Biohub for longer sequences\nRelated: Known Limitations | Decision Tree\n\n\n\n\nA: Use log-likelihood ratio approach:\n# Get likelihood for wild-type and mutant\nwt_likelihood = model(sequence)[\"logits\"][position, wt_aa]\nmut_likelihood = model(mutant_seq)[\"logits\"][position, mut_aa]\n\n# Compute log-likelihood ratio\nscore = mut_likelihood - wt_likelihood\nSee our Mutation Scoring Tutorial.\nRelated: Tutorial | Use Cases"
-  },
-  {
-    "objectID": "docs/faq.html#design-predictions",
-    "href": "docs/faq.html#design-predictions",
-    "title": "FAQ",
-    "section": "",
-    "text": "A: Yes, use ESM3. It generates novel protein sequences conditioned on structure and function properties.\nSee our Design Tutorial and Design Use Cases.\nRelated: Decision Tree | Use Cases\n\n\n\n\nA: - Antibody-antigen: 50-55% DockQ ≥ 0.23 (single sequence), 55%+ with MSA - Protein-protein: 70-76% success rate - Single chains: Very high accuracy (similar to AlphaFold)\nAccuracy depends on sequence quality and complexity.\nRelated: Model Comparison | Benchmarks\n\n\n\n\nA: ESMFold2 supports small molecule ligands as SMILES strings.\nSee our Ligand Binding Tutorial.\nRelated: Tutorial | Use Cases"
-  },
-  {
-    "objectID": "docs/faq.html#fine-tuning-adaptation",
-    "href": "docs/faq.html#fine-tuning-adaptation",
-    "title": "FAQ",
-    "section": "",
-    "text": "A: Yes. ESMC fine-tunes well with modest amounts of task-specific data.\nBest practices: - Use smaller models (300M or 600M) for faster iteration - Start with a small learning rate - Use parameter-efficient methods (LoRA)\nSee our Fine-tuning Tutorial.\nRelated: Tutorial | Use Cases\n\n\n\n\nA: It depends on your task: - Simple properties (e.g., solubility): 100-1000 examples - Complex properties (e.g., binding): 1000-10000 examples - Rare tasks: May need more\nStart small and scale up based on performance.\nRelated: Fine-tuning Tutorial"
-  },
-  {
-    "objectID": "docs/faq.html#licensing-access",
-    "href": "docs/faq.html#licensing-access",
-    "title": "FAQ",
-    "section": "",
-    "text": "A: - ESMC, ESM3, ESMFold2: MIT License (open source) - ESM2: MIT License - Check official repository for latest: github.com/Biohub/esm\nSee LICENSE for details.\n\n\n\n\nA: Yes. ESM models are released under MIT License, which permits commercial use.\nSee the license file for full terms."
-  },
-  {
-    "objectID": "docs/faq.html#community-support",
-    "href": "docs/faq.html#community-support",
-    "title": "FAQ",
-    "section": "",
-    "text": "A: - GitHub Issues: Report bugs or ask questions - GitHub Discussions: Join the community discussion - Slack: Join our community - Biohub: Contact support\n\n\n\n\nA: We welcome contributions of: - Papers using ESM models - Code examples and notebooks - FAQ entries with common questions - Bug reports and feature requests - Documentation improvements\nSee CONTRIBUTING.md."
-  },
-  {
-    "objectID": "docs/faq.html#still-have-questions",
-    "href": "docs/faq.html#still-have-questions",
-    "title": "FAQ",
-    "section": "",
-    "text": "Browse Use Cases to see real examples\nCheck Decision Tree for model selection\nRead Tutorials for step-by-step guides\nJoin Community to ask questions\n\n\n\nHelp us improve this FAQ!\n📝 Suggest a question"
+    "text": "# Install the ESM package\npip install esm\n\n# Or from GitHub for latest version\npip install git+https://github.com/Biohub/esm.git@main\nRequirements\nPython 3.10+ PyTorch 2.0+ CUDA 11.8+ (for GPU acceleration)\nFor detailed setup instructions, see the Installation Guide.\nNext Steps Once you’ve chosen your model:\nRead the Full Decision Tree for detailed guidance Check the Model Comparison for specs Follow a Tutorial to learn by doing Browse Use Cases to see real examples\nContribute to This Page Help us improve this guide! 🔗 Suggest improvements{.btn .btn-secondary}"
   },
   {
     "objectID": "docs/get-involved.html",
@@ -294,74 +147,186 @@
     "text": "Every contribution—big or small—helps grow this resource for the entire ESM community.\nReady to get started? Pick a contribution type above and click the button!\n\n\nWhether you’re contributing or just learning, we’d love to have you here.\n🤝 Join Slack ⭐ Star on GitHub"
   },
   {
-    "objectID": "docs/getting-started/index.html",
-    "href": "docs/getting-started/index.html",
-    "title": "Get Started",
+    "objectID": "docs/faq.html",
+    "href": "docs/faq.html",
+    "title": "FAQ",
     "section": "",
-    "text": "Welcome! This section will help you choose the right ESM model for your work and get it installed.\n\n\n\n🌐 Biohubbiohub.ai\n🤗 Hugging Facebiohub models\n💻 GitHubESM Package\n📚 TutorialsLearn by doing\n\n\n\n\n\nNot sure which model to use? This comparison will help:\n\n\n\nModel\nPurpose\nBest For\nInput Limit\nSpeed\nLinks\n\n\n\n\nESMC\nSequence representation\nEmbeddings, function prediction, fine-tuning\n2,048 aa\nFast\nCard | Paper | HuggingFace\n\n\nESM3\nMultimodal design\nSequence generation, structure prediction\n2,048 aa\nMedium\nCard | Paper\n\n\nESM2\nSequence representation\nLegacy code, established workflows\n2,048 aa\nFast\nCard | Paper\n\n\nESMFold\nStructure prediction\nQuick structure predictions\nSingle chain\nVery Fast\nCard\n\n\nESMFold2\nComplex prediction\nAntibody-antigen, multimers\nUp to 768 aa\nFast\nCard\n\n\nESMFold2-Fast\nFast structure prediction\nHigh-throughput screening\nSingle chain\nFastest\nCard\n\n\n\n\n\n\n\n\n\n\nI need protein sequence embeddings or representations → Use ESMC or ESM2 (Embeddings Tutorial)\nI want to design new proteins or generate sequences → Use ESM3 (Design Tutorial)\nI need to predict protein 3D structure\n\nSingle chain? → Use ESMFold or ESMFold2 (Structure Tutorial)\nComplex (antibody-antigen, multimer)? → Use ESMFold2 (Complex Prediction Tutorial)\nNeed maximum speed? → Use ESMFold2-Fast (Performance Guide)\n\nI’m working with legacy code → Use ESM2 (Migration Guide)\nI want to fine-tune a model → Use ESMC (Fine-tuning Guide)\n\n\n\n\n\n\n\n\n# Install the ESM package\npip install esm\n\n# Or from GitHub for latest version\npip install git+https://github.com/Biohub/esm.git@main\nRequirements\nPython 3.10+ PyTorch 2.0+ CUDA 11.8+ (for GPU acceleration)\nFor detailed setup instructions, see the Installation Guide.\nNext Steps Once you’ve chosen your model:\nRead the Full Decision Tree for detailed guidance Check the Model Comparison for specs Follow a Tutorial to learn by doing Browse Use Cases to see real examples\nContribute to This Page Help us improve this guide! 🔗 Suggest improvements{.btn .btn-secondary}"
+    "text": "A: Use ESMC for new projects. It’s the latest, trained on 2.8B diverse metagenomic sequences, and provides higher-quality representations than ESM2.\nIf you have existing ESM2 code, ESMC is a drop-in replacement with similar API. See our Decision Tree for detailed guidance.\nRelated: Model Comparison | Getting Started\n\n\n\n\nA: - ESMC: Newer (2025), trained on 2.8B metagenomic + UniRef sequences, better quality, log-linear scaling - ESM2: Older (2023), trained on 50M UniRef sequences, still good for many tasks\nFor new projects, use ESMC. ESM2 is good for legacy workflows.\nRelated: Model Comparison | Migration Guide\n\n\n\n\nA: - ESMFold2: State-of-the-art accuracy (best for publications, critical applications) - ESMFold2-Fast: 1.3x faster with minimal accuracy loss (best for screening, high-throughput)\nMinimal difference on simple single-chain predictions. Complex predictions (antibody-antigen) benefit more from ESMFold2.\nRelated: Model Comparison | Decision Tree\n\n\n\n\nA: No. ESM3 is designed for protein design and generation. For structure prediction alone, use ESMFold2. For embeddings, use ESMC.\nESM3 is best when you need to generate new sequences or make conditional predictions.\nRelated: Decision Tree | Use Cases\n\n\n\n\n\n\n\n\n\nA:\npip install esm\nOr for the latest development version:\npip install git+https://github.com/Biohub/esm.git@main\nRequirements: - Python 3.10+ - PyTorch 2.0+ - CUDA 11.8+ (for GPU acceleration)\nRelated: Getting Started | Tutorials\n\n\n\n\nA: No. You can download ESMC and ESMFold2 from HuggingFace and run them locally without authentication.\nYou only need an API key if you’re using the Biohub web platform.\nLinks: HuggingFace Models | Biohub API\n\n\n\n\nA: - Embeddings (ESMC): Can run on CPU, but GPU (4GB VRAM) much faster - Structure Prediction (ESMFold2): GPU recommended (16GB+ VRAM for large complexes) - Design: Depends on inference-time search budget\nFor production use, 24GB VRAM GPU recommended.\nRelated: Model Comparison\n\n\n\n\n\n\n\n\n\nA: See our Embeddings Tutorial.\nQuick code:\nimport esm\n\nmodel = esm.pretrained.esmfold_v1()\nsequences = [\"MKFLK...\", \"MKVLA...\"]\nembeddings = model(sequences)\nRelated: Tutorial | Decision Tree\n\n\n\n\nA: - Single chain (1024 aa): ~15 seconds (ESMFold2), ~10 seconds (ESMFold2-Fast) on H100 GPU - Complex (2x 300 aa): ~30 seconds - CPU: 10-100x slower\nTime scales roughly linearly with sequence length.\nRelated: Model Comparison | Performance Benchmarks\n\n\n\n\nA: ESMFold2 has a 2048 token limit total (all chains combined).\nOptions: 1. Predict individual chains separately, then dock 2. Use overlapping window approach 3. Request support in Biohub for longer sequences\nRelated: Known Limitations | Decision Tree\n\n\n\n\nA: Use log-likelihood ratio approach:\n# Get likelihood for wild-type and mutant\nwt_likelihood = model(sequence)[\"logits\"][position, wt_aa]\nmut_likelihood = model(mutant_seq)[\"logits\"][position, mut_aa]\n\n# Compute log-likelihood ratio\nscore = mut_likelihood - wt_likelihood\nSee our Mutation Scoring Tutorial.\nRelated: Tutorial | Use Cases\n\n\n\n\n\n\n\n\n\nA: Yes, use ESM3. It generates novel protein sequences conditioned on structure and function properties.\nSee our Design Tutorial and Design Use Cases.\nRelated: Decision Tree | Use Cases\n\n\n\n\nA: - Antibody-antigen: 50-55% DockQ ≥ 0.23 (single sequence), 55%+ with MSA - Protein-protein: 70-76% success rate - Single chains: Very high accuracy (similar to AlphaFold)\nAccuracy depends on sequence quality and complexity.\nRelated: Model Comparison | Benchmarks\n\n\n\n\nA: ESMFold2 supports small molecule ligands as SMILES strings.\nSee our Ligand Binding Tutorial.\nRelated: Tutorial | Use Cases\n\n\n\n\n\n\n\n\n\nA: Yes. ESMC fine-tunes well with modest amounts of task-specific data.\nBest practices: - Use smaller models (300M or 600M) for faster iteration - Start with a small learning rate - Use parameter-efficient methods (LoRA)\nSee our Fine-tuning Tutorial.\nRelated: Tutorial | Use Cases\n\n\n\n\nA: It depends on your task: - Simple properties (e.g., solubility): 100-1000 examples - Complex properties (e.g., binding): 1000-10000 examples - Rare tasks: May need more\nStart small and scale up based on performance.\nRelated: Fine-tuning Tutorial\n\n\n\n\n\n\n\n\n\nA: - ESMC, ESM3, ESMFold2: MIT License (open source) - ESM2: MIT License - Check official repository for latest: github.com/Biohub/esm\nSee LICENSE for details.\n\n\n\n\nA: Yes. ESM models are released under MIT License, which permits commercial use.\nSee the license file for full terms.\n\n\n\n\n\n\n\n\n\nA: - GitHub Issues: Report bugs or ask questions - GitHub Discussions: Join the community discussion - Slack: Join our community - Biohub: Contact support\n\n\n\n\nA: We welcome contributions of: - Papers using ESM models - Code examples and notebooks - FAQ entries with common questions - Bug reports and feature requests - Documentation improvements\nSee CONTRIBUTING.md.\n\n\n\n\n\n\n\nBrowse Use Cases to see real examples\nCheck Decision Tree for model selection\nRead Tutorials for step-by-step guides\nJoin Community to ask questions\n\n\n\nHelp us improve this FAQ!\n📝 Suggest a question"
   },
   {
-    "objectID": "docs/getting-started/index.html#quick-links",
-    "href": "docs/getting-started/index.html#quick-links",
-    "title": "Get Started",
+    "objectID": "docs/faq.html#model-selection",
+    "href": "docs/faq.html#model-selection",
+    "title": "FAQ",
     "section": "",
-    "text": "🌐 Biohubbiohub.ai\n🤗 Hugging Facebiohub models\n💻 GitHubESM Package\n📚 TutorialsLearn by doing"
+    "text": "A: Use ESMC for new projects. It’s the latest, trained on 2.8B diverse metagenomic sequences, and provides higher-quality representations than ESM2.\nIf you have existing ESM2 code, ESMC is a drop-in replacement with similar API. See our Decision Tree for detailed guidance.\nRelated: Model Comparison | Getting Started\n\n\n\n\nA: - ESMC: Newer (2025), trained on 2.8B metagenomic + UniRef sequences, better quality, log-linear scaling - ESM2: Older (2023), trained on 50M UniRef sequences, still good for many tasks\nFor new projects, use ESMC. ESM2 is good for legacy workflows.\nRelated: Model Comparison | Migration Guide\n\n\n\n\nA: - ESMFold2: State-of-the-art accuracy (best for publications, critical applications) - ESMFold2-Fast: 1.3x faster with minimal accuracy loss (best for screening, high-throughput)\nMinimal difference on simple single-chain predictions. Complex predictions (antibody-antigen) benefit more from ESMFold2.\nRelated: Model Comparison | Decision Tree\n\n\n\n\nA: No. ESM3 is designed for protein design and generation. For structure prediction alone, use ESMFold2. For embeddings, use ESMC.\nESM3 is best when you need to generate new sequences or make conditional predictions.\nRelated: Decision Tree | Use Cases"
   },
   {
-    "objectID": "docs/getting-started/index.html#model-overview",
-    "href": "docs/getting-started/index.html#model-overview",
-    "title": "Get Started",
+    "objectID": "docs/faq.html#installation-setup",
+    "href": "docs/faq.html#installation-setup",
+    "title": "FAQ",
     "section": "",
-    "text": "Not sure which model to use? This comparison will help:\n\n\n\nModel\nPurpose\nBest For\nInput Limit\nSpeed\nLinks\n\n\n\n\nESMC\nSequence representation\nEmbeddings, function prediction, fine-tuning\n2,048 aa\nFast\nCard | Paper | HuggingFace\n\n\nESM3\nMultimodal design\nSequence generation, structure prediction\n2,048 aa\nMedium\nCard | Paper\n\n\nESM2\nSequence representation\nLegacy code, established workflows\n2,048 aa\nFast\nCard | Paper\n\n\nESMFold\nStructure prediction\nQuick structure predictions\nSingle chain\nVery Fast\nCard\n\n\nESMFold2\nComplex prediction\nAntibody-antigen, multimers\nUp to 768 aa\nFast\nCard\n\n\nESMFold2-Fast\nFast structure prediction\nHigh-throughput screening\nSingle chain\nFastest\nCard"
+    "text": "A:\npip install esm\nOr for the latest development version:\npip install git+https://github.com/Biohub/esm.git@main\nRequirements: - Python 3.10+ - PyTorch 2.0+ - CUDA 11.8+ (for GPU acceleration)\nRelated: Getting Started | Tutorials\n\n\n\n\nA: No. You can download ESMC and ESMFold2 from HuggingFace and run them locally without authentication.\nYou only need an API key if you’re using the Biohub web platform.\nLinks: HuggingFace Models | Biohub API\n\n\n\n\nA: - Embeddings (ESMC): Can run on CPU, but GPU (4GB VRAM) much faster - Structure Prediction (ESMFold2): GPU recommended (16GB+ VRAM for large complexes) - Design: Depends on inference-time search budget\nFor production use, 24GB VRAM GPU recommended.\nRelated: Model Comparison"
   },
   {
-    "objectID": "docs/getting-started/index.html#choose-your-model",
-    "href": "docs/getting-started/index.html#choose-your-model",
-    "title": "Get Started",
+    "objectID": "docs/faq.html#usage-troubleshooting",
+    "href": "docs/faq.html#usage-troubleshooting",
+    "title": "FAQ",
     "section": "",
-    "text": "I need protein sequence embeddings or representations → Use ESMC or ESM2 (Embeddings Tutorial)\nI want to design new proteins or generate sequences → Use ESM3 (Design Tutorial)\nI need to predict protein 3D structure\n\nSingle chain? → Use ESMFold or ESMFold2 (Structure Tutorial)\nComplex (antibody-antigen, multimer)? → Use ESMFold2 (Complex Prediction Tutorial)\nNeed maximum speed? → Use ESMFold2-Fast (Performance Guide)\n\nI’m working with legacy code → Use ESM2 (Migration Guide)\nI want to fine-tune a model → Use ESMC (Fine-tuning Guide)"
+    "text": "A: See our Embeddings Tutorial.\nQuick code:\nimport esm\n\nmodel = esm.pretrained.esmfold_v1()\nsequences = [\"MKFLK...\", \"MKVLA...\"]\nembeddings = model(sequences)\nRelated: Tutorial | Decision Tree\n\n\n\n\nA: - Single chain (1024 aa): ~15 seconds (ESMFold2), ~10 seconds (ESMFold2-Fast) on H100 GPU - Complex (2x 300 aa): ~30 seconds - CPU: 10-100x slower\nTime scales roughly linearly with sequence length.\nRelated: Model Comparison | Performance Benchmarks\n\n\n\n\nA: ESMFold2 has a 2048 token limit total (all chains combined).\nOptions: 1. Predict individual chains separately, then dock 2. Use overlapping window approach 3. Request support in Biohub for longer sequences\nRelated: Known Limitations | Decision Tree\n\n\n\n\nA: Use log-likelihood ratio approach:\n# Get likelihood for wild-type and mutant\nwt_likelihood = model(sequence)[\"logits\"][position, wt_aa]\nmut_likelihood = model(mutant_seq)[\"logits\"][position, mut_aa]\n\n# Compute log-likelihood ratio\nscore = mut_likelihood - wt_likelihood\nSee our Mutation Scoring Tutorial.\nRelated: Tutorial | Use Cases"
   },
   {
-    "objectID": "docs/getting-started/index.html#installation",
-    "href": "docs/getting-started/index.html#installation",
-    "title": "Get Started",
+    "objectID": "docs/faq.html#design-predictions",
+    "href": "docs/faq.html#design-predictions",
+    "title": "FAQ",
     "section": "",
-    "text": "# Install the ESM package\npip install esm\n\n# Or from GitHub for latest version\npip install git+https://github.com/Biohub/esm.git@main\nRequirements\nPython 3.10+ PyTorch 2.0+ CUDA 11.8+ (for GPU acceleration)\nFor detailed setup instructions, see the Installation Guide.\nNext Steps Once you’ve chosen your model:\nRead the Full Decision Tree for detailed guidance Check the Model Comparison for specs Follow a Tutorial to learn by doing Browse Use Cases to see real examples\nContribute to This Page Help us improve this guide! 🔗 Suggest improvements{.btn .btn-secondary}"
+    "text": "A: Yes, use ESM3. It generates novel protein sequences conditioned on structure and function properties.\nSee our Design Tutorial and Design Use Cases.\nRelated: Decision Tree | Use Cases\n\n\n\n\nA: - Antibody-antigen: 50-55% DockQ ≥ 0.23 (single sequence), 55%+ with MSA - Protein-protein: 70-76% success rate - Single chains: Very high accuracy (similar to AlphaFold)\nAccuracy depends on sequence quality and complexity.\nRelated: Model Comparison | Benchmarks\n\n\n\n\nA: ESMFold2 supports small molecule ligands as SMILES strings.\nSee our Ligand Binding Tutorial.\nRelated: Tutorial | Use Cases"
   },
   {
-    "objectID": "docs/index.html",
-    "href": "docs/index.html",
-    "title": "Awesome ESM",
+    "objectID": "docs/faq.html#fine-tuning-adaptation",
+    "href": "docs/faq.html#fine-tuning-adaptation",
+    "title": "FAQ",
     "section": "",
-    "text": "A curated collection of resources, papers, tutorials, and community examples for the ESM family of protein language models.\nGet Started Explore Use Cases"
+    "text": "A: Yes. ESMC fine-tunes well with modest amounts of task-specific data.\nBest practices: - Use smaller models (300M or 600M) for faster iteration - Start with a small learning rate - Use parameter-efficient methods (LoRA)\nSee our Fine-tuning Tutorial.\nRelated: Tutorial | Use Cases\n\n\n\n\nA: It depends on your task: - Simple properties (e.g., solubility): 100-1000 examples - Complex properties (e.g., binding): 1000-10000 examples - Rare tasks: May need more\nStart small and scale up based on performance.\nRelated: Fine-tuning Tutorial"
   },
   {
-    "objectID": "docs/index.html#quick-links",
-    "href": "docs/index.html#quick-links",
-    "title": "Awesome ESM",
-    "section": "Quick Links",
-    "text": "Quick Links\n\n🌐 Biohubbiohub.ai\n🤗 Hugging Facebiohub models\n💻 GitHubESM Package\n📚 Tutorialsbiohub.ai"
+    "objectID": "docs/faq.html#licensing-access",
+    "href": "docs/faq.html#licensing-access",
+    "title": "FAQ",
+    "section": "",
+    "text": "A: - ESMC, ESM3, ESMFold2: MIT License (open source) - ESM2: MIT License - Check official repository for latest: github.com/Biohub/esm\nSee LICENSE for details.\n\n\n\n\nA: Yes. ESM models are released under MIT License, which permits commercial use.\nSee the license file for full terms."
   },
   {
-    "objectID": "docs/index.html#featured-sections",
-    "href": "docs/index.html#featured-sections",
-    "title": "Awesome ESM",
-    "section": "Featured Sections",
-    "text": "Featured Sections\n\n\n🚀\n\nGet Started\nChoose your model and get up and running with installation guides and decision trees. Explore →\n\n\n\n📖\n\nUse Cases\nDiscover papers and applications showing how ESM is being used in research. Browse →\n\n\n\n🎓\n\nTutorials\nLearn practical skills with hands-on tutorials and code examples. View →\n\n\n\n❓\n\nFAQ\nGet answers to common questions about ESM, models, and usage. Read →\n\n\n\n🤝\n\nGet Involved\nJoin our community and contribute papers, use cases, and more. Contribute →\n\n\n\n📺\n\nWorkshops\nAccess archived materials from workshops, seminars, and events. Archive →"
+    "objectID": "docs/faq.html#community-support",
+    "href": "docs/faq.html#community-support",
+    "title": "FAQ",
+    "section": "",
+    "text": "A: - GitHub Issues: Report bugs or ask questions - GitHub Discussions: Join the community discussion - Slack: Join our community - Biohub: Contact support\n\n\n\n\nA: We welcome contributions of: - Papers using ESM models - Code examples and notebooks - FAQ entries with common questions - Bug reports and feature requests - Documentation improvements\nSee CONTRIBUTING.md."
   },
   {
-    "objectID": "docs/index.html#what-is-awesome-esm",
-    "href": "docs/index.html#what-is-awesome-esm",
-    "title": "Awesome ESM",
-    "section": "What is Awesome ESM?",
-    "text": "What is Awesome ESM?\nThis resource is a community-driven hub for the ESM family of protein language models:\n\nESM-C (ESMC) - The latest sequence representation model\nESM3 - Multimodal protein design and prediction\nESM2 - High-performance sequence representations\nESMFold - Structure prediction from sequence alone\nESMFold2 - State-of-the-art biomolecular complex prediction\n\nWhether you’re predicting protein structures, designing new binders, discovering novel enzymes, or analyzing protein properties, you’ll find resources, examples, and community insights here."
+    "objectID": "docs/faq.html#still-have-questions",
+    "href": "docs/faq.html#still-have-questions",
+    "title": "FAQ",
+    "section": "",
+    "text": "Browse Use Cases to see real examples\nCheck Decision Tree for model selection\nRead Tutorials for step-by-step guides\nJoin Community to ask questions\n\n\n\nHelp us improve this FAQ!\n📝 Suggest a question"
   },
   {
-    "objectID": "docs/index.html#recent-additions",
-    "href": "docs/index.html#recent-additions",
-    "title": "Awesome ESM",
-    "section": "Recent Additions",
-    "text": "Recent Additions\nCheck out our latest curated papers and use cases:\n\nProtein design with directed evolution\nAntibody engineering for therapeutics\nGenome mining for novel functions\nDisease variant prediction\nFine-tuning strategies for custom tasks\n\n\n\nHelp Us Grow\nAwesome ESM is built by the community, for the community. Have a paper, use case, or question to add?\nContribute Now"
+    "objectID": "docs/getting-started/decision-tree.html",
+    "href": "docs/getting-started/decision-tree.html",
+    "title": "Decision Tree",
+    "section": "",
+    "text": "Use this interactive guide to find the right ESM model for your project.\n\n\n\n\n\n\n→ Go to Section 2A\n\n\n\n→ Go to Section 2B\n\n\n\n→ Go to Section 2C\n\n\n\n→ Go to Section 2D\n\n\n\n\n\n\n\n\nI’m doing research and want the best representations → Use ESMC (latest, best quality, metagenomic training) - Model Card - Tutorial: Getting Embeddings - GitHub\nI have existing ESM2 code and want to upgrade → Use ESMC (drop-in replacement, but see migration guide) - Migration Guide - Comparison Table\nI’m using legacy code tied to ESM2 → Stay with ESM2 (for now) - ESM2 Docs - Plan migration to ESMC when ready\nI want to fine-tune on my own data → Use ESMC - Fine-tuning Tutorial - Larger models (6B) work best, but 300M is faster for experiments\nI need this to be very fast → Use ESMC-300M - Smallest model, still high quality - Much faster inference than larger models\n\n\n\n\n\n\n\nDe novo proteins (completely new sequences) → Use ESM3 - Model Card - Design Tutorial - Paper\nProtein binders (antibodies, miniproteins) → Use ESM3 with ESMFold2 - Generate sequences with ESM3 - Validate structures with ESMFold2 - Binder Design Example\nEnzyme variants (improving existing proteins) → Use ESMC + ESMFold2 - Score mutations with ESMC embeddings - Validate with structure prediction - Directed Evolution Example\n\n\n\n\n\n\n\nSingle protein chain (monomers) → Use ESMFold2-Fast - Fastest option - Excellent accuracy - Tutorial\nProtein complexes (antibody-antigen, PPIs, multimers) → Use ESMFold2 - State-of-the-art accuracy - Handles up to 768 residues (all chains combined) - Complex Prediction Tutorial\nLarge complexes (&gt;768 residues) → Use ESMFold2-Fast on individual chains, then dock manually - Or use Docking Tools - Future versions may support longer sequences\nI need maximum accuracy → Use ESMFold2 with MSA - Request on Biohub - 3-5% better accuracy with multiple sequence alignment\nI need to screen thousands of structures quickly → Use ESMFold2-Fast - 1.3x faster than ESMFold2 - Minimal accuracy trade-off\n\n\n\n\n\n\n\nPredict effects of all possible mutations (variant effect prediction) → Use ESMC with log-likelihood ratios - Mutation Scoring Tutorial - Variant Prediction Example\nFind stabilizing mutations for protein engineering → Use ESMC + ESMFold2 - Score with ESMC - Validate stability with structure - Stability Engineering Example\nUnderstand disease-causing mutations → Use ESMC - Disease Prediction Tutorial - Compare wild-type vs. mutant log-likelihood\nProtein function prediction → Use ESMC - Function information in layer 50-60 - Function Prediction Example\n\n\n\n\n\n\n\n\nGoal\nRecommended\nSpeed\nAccuracy\n\n\n\n\nEmbeddings\nESMC\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n\n\nFine-tuning\nESMC\n⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n\n\nDesign\nESM3\n⭐⭐⭐\n⭐⭐⭐⭐\n\n\nSingle Structure\nESMFold2-Fast\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐\n\n\nComplex Structure\nESMFold2\n⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n\n\nMutation Scoring\nESMC\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐\n\n\nFunction Prediction\nESMC\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐\n\n\n\n\n\n\n\n\n🌐 Try on Biohubbiohub.ai\n🤗 Download from HFhuggingface.co\n💻 Open Sourcegithub.com/Biohub\n📚 All Tutorialsbiohub.ai\n\n\n\n\n\n\nFAQ: See answers to common questions\nTutorials: Learn by doing\nCompare Models: Detailed comparison table\nCommunity: Join the discussion\n\n\n\nThis decision tree should help, but if you have specific questions, we’re here to help!\n📝 Ask the community"
+  },
+  {
+    "objectID": "docs/getting-started/decision-tree.html#whats-your-primary-goal",
+    "href": "docs/getting-started/decision-tree.html#whats-your-primary-goal",
+    "title": "Decision Tree",
+    "section": "",
+    "text": "→ Go to Section 2A\n\n\n\n→ Go to Section 2B\n\n\n\n→ Go to Section 2C\n\n\n\n→ Go to Section 2D"
+  },
+  {
+    "objectID": "docs/getting-started/decision-tree.html#a.-sequence-representations-embeddings",
+    "href": "docs/getting-started/decision-tree.html#a.-sequence-representations-embeddings",
+    "title": "Decision Tree",
+    "section": "",
+    "text": "I’m doing research and want the best representations → Use ESMC (latest, best quality, metagenomic training) - Model Card - Tutorial: Getting Embeddings - GitHub\nI have existing ESM2 code and want to upgrade → Use ESMC (drop-in replacement, but see migration guide) - Migration Guide - Comparison Table\nI’m using legacy code tied to ESM2 → Stay with ESM2 (for now) - ESM2 Docs - Plan migration to ESMC when ready\nI want to fine-tune on my own data → Use ESMC - Fine-tuning Tutorial - Larger models (6B) work best, but 300M is faster for experiments\nI need this to be very fast → Use ESMC-300M - Smallest model, still high quality - Much faster inference than larger models"
+  },
+  {
+    "objectID": "docs/getting-started/decision-tree.html#b.-protein-design-generation",
+    "href": "docs/getting-started/decision-tree.html#b.-protein-design-generation",
+    "title": "Decision Tree",
+    "section": "",
+    "text": "De novo proteins (completely new sequences) → Use ESM3 - Model Card - Design Tutorial - Paper\nProtein binders (antibodies, miniproteins) → Use ESM3 with ESMFold2 - Generate sequences with ESM3 - Validate structures with ESMFold2 - Binder Design Example\nEnzyme variants (improving existing proteins) → Use ESMC + ESMFold2 - Score mutations with ESMC embeddings - Validate with structure prediction - Directed Evolution Example"
+  },
+  {
+    "objectID": "docs/getting-started/decision-tree.html#c.-structure-prediction",
+    "href": "docs/getting-started/decision-tree.html#c.-structure-prediction",
+    "title": "Decision Tree",
+    "section": "",
+    "text": "Single protein chain (monomers) → Use ESMFold2-Fast - Fastest option - Excellent accuracy - Tutorial\nProtein complexes (antibody-antigen, PPIs, multimers) → Use ESMFold2 - State-of-the-art accuracy - Handles up to 768 residues (all chains combined) - Complex Prediction Tutorial\nLarge complexes (&gt;768 residues) → Use ESMFold2-Fast on individual chains, then dock manually - Or use Docking Tools - Future versions may support longer sequences\nI need maximum accuracy → Use ESMFold2 with MSA - Request on Biohub - 3-5% better accuracy with multiple sequence alignment\nI need to screen thousands of structures quickly → Use ESMFold2-Fast - 1.3x faster than ESMFold2 - Minimal accuracy trade-off"
+  },
+  {
+    "objectID": "docs/getting-started/decision-tree.html#d.-mutation-scoring-variant-effects",
+    "href": "docs/getting-started/decision-tree.html#d.-mutation-scoring-variant-effects",
+    "title": "Decision Tree",
+    "section": "",
+    "text": "Predict effects of all possible mutations (variant effect prediction) → Use ESMC with log-likelihood ratios - Mutation Scoring Tutorial - Variant Prediction Example\nFind stabilizing mutations for protein engineering → Use ESMC + ESMFold2 - Score with ESMC - Validate stability with structure - Stability Engineering Example\nUnderstand disease-causing mutations → Use ESMC - Disease Prediction Tutorial - Compare wild-type vs. mutant log-likelihood\nProtein function prediction → Use ESMC - Function information in layer 50-60 - Function Prediction Example"
+  },
+  {
+    "objectID": "docs/getting-started/decision-tree.html#summary-table",
+    "href": "docs/getting-started/decision-tree.html#summary-table",
+    "title": "Decision Tree",
+    "section": "",
+    "text": "Goal\nRecommended\nSpeed\nAccuracy\n\n\n\n\nEmbeddings\nESMC\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n\n\nFine-tuning\nESMC\n⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n\n\nDesign\nESM3\n⭐⭐⭐\n⭐⭐⭐⭐\n\n\nSingle Structure\nESMFold2-Fast\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐\n\n\nComplex Structure\nESMFold2\n⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n\n\nMutation Scoring\nESMC\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐\n\n\nFunction Prediction\nESMC\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐"
+  },
+  {
+    "objectID": "docs/getting-started/decision-tree.html#access-resources",
+    "href": "docs/getting-started/decision-tree.html#access-resources",
+    "title": "Decision Tree",
+    "section": "",
+    "text": "🌐 Try on Biohubbiohub.ai\n🤗 Download from HFhuggingface.co\n💻 Open Sourcegithub.com/Biohub\n📚 All Tutorialsbiohub.ai"
+  },
+  {
+    "objectID": "docs/getting-started/decision-tree.html#questions",
+    "href": "docs/getting-started/decision-tree.html#questions",
+    "title": "Decision Tree",
+    "section": "",
+    "text": "FAQ: See answers to common questions\nTutorials: Learn by doing\nCompare Models: Detailed comparison table\nCommunity: Join the discussion\n\n\n\nThis decision tree should help, but if you have specific questions, we’re here to help!\n📝 Ask the community"
+  },
+  {
+    "objectID": "docs/getting-started/model-comparison.html",
+    "href": "docs/getting-started/model-comparison.html",
+    "title": "Model Comparison",
+    "section": "",
+    "text": "Status: Latest (2025)\nParameters: 300M, 600M, 6B\nTraining Data: 2.8B metagenomic sequences\nBest For: - Sequence embeddings and representations - Function prediction - Fine-tuning for custom tasks - Mutation scoring - Zero-shot variant effect prediction\nKey Features: - Trained on metagenomic data (more diverse) - Log-linear scaling with compute - Better representations than ESM2 - Supported via Biohub API\nAccess: Biohub | HuggingFace | GitHub\n\n\n\n\nStatus: Previous generation (2023)\nParameters: 8M - 15B\nTraining Data: 50M UniProt sequences\nBest For: - Legacy workflows - Projects using existing ESM2 code - When you have established pipelines\nKey Features: - Well-established - Large community resources - Lots of published examples\nMigration Note: ESMC is a drop-in replacement but with some API differences. See Migration Guide.\nAccess: HuggingFace | GitHub\n\n\n\n\n\n\n\nStatus: Latest (2025)\nArchitecture: Stable recurrent folding layers\nModes: Single sequence or MSA-augmented\nBest For: - Protein complex prediction - Antibody-antigen interactions - Protein-protein interactions - Multi-chain systems - When accuracy is critical\nKey Features: - State-of-the-art accuracy - Inference-time scaling - Faster than AlphaFold3 - Supports ligand binding\nInput Limits: - Single sequence: up to 768 residues - Complex mode: sum of chains ≤ 768 residues\nPerformance: - Antibody-antigen: 50-55% DockQ pass rate - Protein-protein: 70-76% pass rate - Protein-ligand: 63-66% pass rate\nAccess: Biohub | Tutorials\n\n\n\n\nStatus: Latest (2025)\nArchitecture: Simplified, optimized for speed\nBest For: - High-throughput structure prediction - Screening large sequence sets - When speed matters more than maximum accuracy - Monomer or simple predictions\nKey Features: - 50% fewer layers than ESMFold2 - No MSA requirement - 1.3x faster than ESMFold2 - Minimal accuracy trade-off\nPerformance: - Antibody-antigen: 50% DockQ pass rate - Protein-protein: 68% pass rate - Protein-ligand: 63% pass rate\nAccess: Biohub | Tutorials\n\n\n\n\nStatus: First generation (2022)\nBest For: - Legacy workflows - When ESMFold2 is unavailable\nNote: Use ESMFold2 instead—it’s faster and more accurate.\nAccess: GitHub\n\n\n\n\n\n\n\nStatus: Latest (2025)\nModalities: Sequence, structure, function\nBest For: - De novo protein design - Sequence generation - Conditional structure prediction - Protein engineering\nKey Features: - Multimodal (seq + structure + function) - Can generate from partial inputs - Great for design workflows\nAccess: Biohub | Paper | Tutorials\n\n\n\n\n\n\n\n\nTask\nESMC\nESM2\nESM3\nESMFold2\nESMFold2-Fast\n\n\n\n\nGet embeddings\n✅ Best\n✅ Good\n❌\n❌\n❌\n\n\nFine-tune model\n✅ Best\n✅ Good\n⚠️ Limited\n❌\n❌\n\n\nPredict structure\n❌\n❌\n✅\n✅ Best\n✅ Fast\n\n\nDesign proteins\n❌\n❌\n✅ Best\n❌\n❌\n\n\nScore mutations\n✅ Best\n✅ Good\n❌\n❌\n❌\n\n\nPredict function\n✅ Best\n✅ Good\n⚠️\n❌\n❌\n\n\nHigh throughput\n✅\n✅\n❌\n⚠️\n✅ Best\n\n\nMaximum accuracy\n✅ Good\n✅ Good\n✅\n✅ Best\n✅\n\n\n\n\n\n\n\n\n\nAntibody-Antigen: - Single sequence: 50% DockQ ≥ 0.23 - With MSA: 53% DockQ ≥ 0.23 - With 20 loops: 55% DockQ ≥ 0.23\nProtein-Protein: - Single sequence: 70% pass rate - With MSA: 76% pass rate\nInference Speed (1024 aa): - ESMFold2: 15.8 seconds - ESMFold2-Fast: 9.4 seconds - AlphaFold3: 20+ seconds\n\n\n\n\n\n\n\n\nModel\nSize\nSource\nDiversity\n\n\n\n\nESMC\n2.8B sequences\nUniRef + JGI + MGnify\nHigh (metagenomic)\n\n\nESM2\n50M sequences\nUniRef50\nMedium\n\n\nESM3\n2.8B sequences\nUniRef + metagenomic\nHigh\n\n\n\n\n\n\n\n\nFull Decision Tree\nChoose Your Model Guide\nModel Specifications\n\n\n\nFound an error or have a suggestion?\n📝 Suggest changes"
+  },
+  {
+    "objectID": "docs/getting-started/model-comparison.html#sequence-representation-models",
+    "href": "docs/getting-started/model-comparison.html#sequence-representation-models",
+    "title": "Model Comparison",
+    "section": "",
+    "text": "Status: Latest (2025)\nParameters: 300M, 600M, 6B\nTraining Data: 2.8B metagenomic sequences\nBest For: - Sequence embeddings and representations - Function prediction - Fine-tuning for custom tasks - Mutation scoring - Zero-shot variant effect prediction\nKey Features: - Trained on metagenomic data (more diverse) - Log-linear scaling with compute - Better representations than ESM2 - Supported via Biohub API\nAccess: Biohub | HuggingFace | GitHub\n\n\n\n\nStatus: Previous generation (2023)\nParameters: 8M - 15B\nTraining Data: 50M UniProt sequences\nBest For: - Legacy workflows - Projects using existing ESM2 code - When you have established pipelines\nKey Features: - Well-established - Large community resources - Lots of published examples\nMigration Note: ESMC is a drop-in replacement but with some API differences. See Migration Guide.\nAccess: HuggingFace | GitHub"
+  },
+  {
+    "objectID": "docs/getting-started/model-comparison.html#structure-prediction-models",
+    "href": "docs/getting-started/model-comparison.html#structure-prediction-models",
+    "title": "Model Comparison",
+    "section": "",
+    "text": "Status: Latest (2025)\nArchitecture: Stable recurrent folding layers\nModes: Single sequence or MSA-augmented\nBest For: - Protein complex prediction - Antibody-antigen interactions - Protein-protein interactions - Multi-chain systems - When accuracy is critical\nKey Features: - State-of-the-art accuracy - Inference-time scaling - Faster than AlphaFold3 - Supports ligand binding\nInput Limits: - Single sequence: up to 768 residues - Complex mode: sum of chains ≤ 768 residues\nPerformance: - Antibody-antigen: 50-55% DockQ pass rate - Protein-protein: 70-76% pass rate - Protein-ligand: 63-66% pass rate\nAccess: Biohub | Tutorials\n\n\n\n\nStatus: Latest (2025)\nArchitecture: Simplified, optimized for speed\nBest For: - High-throughput structure prediction - Screening large sequence sets - When speed matters more than maximum accuracy - Monomer or simple predictions\nKey Features: - 50% fewer layers than ESMFold2 - No MSA requirement - 1.3x faster than ESMFold2 - Minimal accuracy trade-off\nPerformance: - Antibody-antigen: 50% DockQ pass rate - Protein-protein: 68% pass rate - Protein-ligand: 63% pass rate\nAccess: Biohub | Tutorials\n\n\n\n\nStatus: First generation (2022)\nBest For: - Legacy workflows - When ESMFold2 is unavailable\nNote: Use ESMFold2 instead—it’s faster and more accurate.\nAccess: GitHub"
+  },
+  {
+    "objectID": "docs/getting-started/model-comparison.html#multimodal-models",
+    "href": "docs/getting-started/model-comparison.html#multimodal-models",
+    "title": "Model Comparison",
+    "section": "",
+    "text": "Status: Latest (2025)\nModalities: Sequence, structure, function\nBest For: - De novo protein design - Sequence generation - Conditional structure prediction - Protein engineering\nKey Features: - Multimodal (seq + structure + function) - Can generate from partial inputs - Great for design workflows\nAccess: Biohub | Paper | Tutorials"
+  },
+  {
+    "objectID": "docs/getting-started/model-comparison.html#quick-decision-matrix",
+    "href": "docs/getting-started/model-comparison.html#quick-decision-matrix",
+    "title": "Model Comparison",
+    "section": "",
+    "text": "Task\nESMC\nESM2\nESM3\nESMFold2\nESMFold2-Fast\n\n\n\n\nGet embeddings\n✅ Best\n✅ Good\n❌\n❌\n❌\n\n\nFine-tune model\n✅ Best\n✅ Good\n⚠️ Limited\n❌\n❌\n\n\nPredict structure\n❌\n❌\n✅\n✅ Best\n✅ Fast\n\n\nDesign proteins\n❌\n❌\n✅ Best\n❌\n❌\n\n\nScore mutations\n✅ Best\n✅ Good\n❌\n❌\n❌\n\n\nPredict function\n✅ Best\n✅ Good\n⚠️\n❌\n❌\n\n\nHigh throughput\n✅\n✅\n❌\n⚠️\n✅ Best\n\n\nMaximum accuracy\n✅ Good\n✅ Good\n✅\n✅ Best\n✅"
+  },
+  {
+    "objectID": "docs/getting-started/model-comparison.html#performance-benchmarks",
+    "href": "docs/getting-started/model-comparison.html#performance-benchmarks",
+    "title": "Model Comparison",
+    "section": "",
+    "text": "Antibody-Antigen: - Single sequence: 50% DockQ ≥ 0.23 - With MSA: 53% DockQ ≥ 0.23 - With 20 loops: 55% DockQ ≥ 0.23\nProtein-Protein: - Single sequence: 70% pass rate - With MSA: 76% pass rate\nInference Speed (1024 aa): - ESMFold2: 15.8 seconds - ESMFold2-Fast: 9.4 seconds - AlphaFold3: 20+ seconds"
+  },
+  {
+    "objectID": "docs/getting-started/model-comparison.html#training-data-comparison",
+    "href": "docs/getting-started/model-comparison.html#training-data-comparison",
+    "title": "Model Comparison",
+    "section": "",
+    "text": "Model\nSize\nSource\nDiversity\n\n\n\n\nESMC\n2.8B sequences\nUniRef + JGI + MGnify\nHigh (metagenomic)\n\n\nESM2\n50M sequences\nUniRef50\nMedium\n\n\nESM3\n2.8B sequences\nUniRef + metagenomic\nHigh"
+  },
+  {
+    "objectID": "docs/getting-started/model-comparison.html#see-also",
+    "href": "docs/getting-started/model-comparison.html#see-also",
+    "title": "Model Comparison",
+    "section": "",
+    "text": "Full Decision Tree\nChoose Your Model Guide\nModel Specifications\n\n\n\nFound an error or have a suggestion?\n📝 Suggest changes"
   },
   {
     "objectID": "docs/use-cases/index.html",
