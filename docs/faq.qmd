@@ -1,1 +1,70 @@
+---
+title: "FAQ"
+description: "Frequently asked questions about ESM models."
+format: html
+---
 
+# Frequently Asked Questions
+
+---
+
+## Model Selection
+
+::: {.accordion}
+
+### Q: Which model should I use for getting protein embeddings?
+
+**A:** Use **ESMC** for new projects. It's the latest, trained on 2.8B diverse metagenomic sequences, and provides higher-quality representations than ESM2.
+
+If you have existing ESM2 code, ESMC is a drop-in replacement with similar API. See our [Decision Tree](docs/get-started/decision-tree.qmd) for detailed guidance.
+
+**Related:** [Model Comparison](docs/get-started/model-comparison.qmd) | [Getting Started](docs/get-started/index.qmd)
+
+---
+
+### Q: What's the difference between ESMC and ESM2?
+
+**A:** 
+- **ESMC:** Newer (2025), trained on 2.8B metagenomic + UniRef sequences, better quality, log-linear scaling
+- **ESM2:** Older (2023), trained on 50M UniRef sequences, still good for many tasks
+
+For new projects, use ESMC. ESM2 is good for legacy workflows.
+
+**Related:** [Model Comparison](docs/get-started/model-comparison.qmd) | [Migration Guide](docs/use-cases/model-development.qmd)
+
+---
+
+### Q: Should I use ESMFold2 or ESMFold2-Fast?
+
+**A:**
+- **ESMFold2:** State-of-the-art accuracy (best for publications, critical applications)
+- **ESMFold2-Fast:** 1.3x faster with minimal accuracy loss (best for screening, high-throughput)
+
+Minimal difference on simple single-chain predictions. Complex predictions (antibody-antigen) benefit more from ESMFold2.
+
+**Related:** [Model Comparison](docs/get-started/model-comparison.qmd) | [Decision Tree](docs/get-started/decision-tree.qmd)
+
+---
+
+### Q: Can I use ESM3 for everything?
+
+**A:** No. ESM3 is designed for protein design and generation. For structure prediction alone, use ESMFold2. For embeddings, use ESMC.
+
+ESM3 is best when you need to generate new sequences or make conditional predictions.
+
+**Related:** [Decision Tree](docs/get-started/decision-tree.qmd) | [Use Cases](docs/use-cases/index.qmd)
+
+:::
+
+---
+
+## Installation & Setup
+
+::: {.accordion}
+
+### Q: How do I install the ESM package?
+
+**A:**
+
+```bash
+pip install esm
