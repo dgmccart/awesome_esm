@@ -1,1 +1,37 @@
+---
+title: "Workshops & Events"
+description: "Archived materials from workshops, seminars, and events."
+format: html
+---
 
+# Workshops & Events Archive
+
+Access materials from workshops, seminars, and community events.
+
+---
+
+**Coming soon...**
+
+We're collecting archived materials from workshops and events. Check back soon for:
+
+- Workshop slides and materials
+- Seminar recordings
+- Office hours archives
+- Hackathon results and code
+- Event photos and summaries
+
+---
+
+## Stay Updated
+
+- **Slack:** [Join our community](https://biohub.slack.com)
+- **Email:** [Subscribe to updates](mailto:resources@biohub.ai)
+- **GitHub:** [Watch for announcements](https://github.com/Biohub/awesome-esm)
+
+:::{.cta-section}
+### Have Materials to Share?
+
+If you've run a workshop or event using ESM, we'd love to archive it!
+
+[📤 Share materials](https://github.com/Biohub/awesome-esm/issues/new?template=contribute.md){.btn .btn-light}
+:::
