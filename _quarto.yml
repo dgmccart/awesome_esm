@@ -15,7 +15,7 @@ website:
   # Navigation bar
   navbar:
     background: "#FFFFFF"
-    logo: assets/images/biohub-black-logo.png
+    logo: assets/images/esm_header.png
     logo-alt: "Awesome ESM Logo"
     
     left:
@@ -34,7 +34,7 @@ website:
     
     right:
       - icon: github
-        href: https://github.com/Biohub/awesome-esm
+        href: https://github.com/dgmccart/awesome-esm
         aria-label: GitHub
       - icon: twitter
         href: https://twitter.com/biohubcz
