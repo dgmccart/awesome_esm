@@ -72,10 +72,12 @@ format:
       light:
         - cosmo
         - assets/css/styles.scss
+        - assets/css/custom.scss
       dark:
         - darkly
         - assets/css/styles.scss
-    
+        - assets/css/custom.scss
+        
     # Layout
     page-layout: full
     toc: true
