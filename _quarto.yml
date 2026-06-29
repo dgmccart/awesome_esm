@@ -20,7 +20,7 @@ website:
     
     left:
       - text: "Get Started"
-        href: get-started/index.qmd
+        href: getting-started/index.qmd
       - text: "Use Cases"
         href: use-cases/index.qmd
       - text: "Tutorials"
@@ -52,11 +52,11 @@ website:
 
   # Sidebar for nested pages
   sidebar:
-    - id: get-started
+    - id: getting-started
       contents:
-        - get-started/index.qmd
-        - get-started/model-comparison.qmd
-        - get-started/decision-tree.qmd
+        - getting-started/index.qmd
+        - getting-started/model-comparison.qmd
+        - getting-started/decision-tree.qmd
     
     - id: use-cases
       contents:
