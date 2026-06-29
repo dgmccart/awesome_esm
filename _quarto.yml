@@ -41,7 +41,7 @@ website:
         aria-label: Twitter
 
   # Footer
-  footer:
+  page-footer:
     background: "#F9FAFB"
     left: |
       © 2025 Biohub. Made with ❤️ by the community.
@@ -68,16 +68,12 @@ website:
 format:
   html:
     theme:
-      light: 
-        primary: "#6366F1"        # Indigo (matches biohub.ai)
-        secondary: "#8B5CF6"      # Purple
+      light:
+        - cosmo
+        - assets/css/styles.scss
       dark:
-        primary: "#818CF8"
-        secondary: "#A78BFA"
-    
-    # CSS overrides
-    include-in-header:
-      - file: assets/css/custom.scss
+        - darkly
+        - assets/css/styles.scss
     
     # Layout
     page-layout: full
@@ -90,8 +86,9 @@ format:
     code-block-border-left: true
     code-copy: true
     
-    # Typography
-    mainfont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+    # Font Size
+    fontsize: 14px
+    # mainfont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
     
     # Spacing
     margin-top: 1rem
