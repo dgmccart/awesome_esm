@@ -1,1 +1,120 @@
+---
+title: "Awesome ESM"
+description: "A curated collection of resources, papers, tutorials, and community examples for the ESM family of protein language models."
+format: html
+page-layout: full
+---
 
+:::{style="text-align: center; margin-bottom: 3rem;"}
+# Awesome ESM
+
+A curated collection of resources, papers, tutorials, and community examples for the ESM family of protein language models.
+
+[Get Started](#get-started){.btn .btn-primary} [Explore Use Cases](#use-cases){.btn .btn-secondary}
+:::
+
+---
+
+## Quick Links
+
+:::{.quick-links}
+[🌐 **Biohub**<br/>biohub.ai](https://biohub.ai)
+
+[🤗 **Hugging Face**<br/>biohub models](https://huggingface.co/biohub)
+
+[💻 **GitHub**<br/>ESM Package](https://github.com/Biohub/esm)
+
+[📚 **Tutorials**<br/>biohub.ai](https://biohub.ai/resources/tutorials)
+:::
+
+---
+
+## Featured Sections
+
+:::{.tile-grid}
+
+:::{.tile}
+🚀
+
+### Get Started
+Choose your model and get up and running with installation guides and decision trees.
+[Explore →](docs/get-started/index.qmd)
+:::
+
+:::{.tile}
+📖
+
+### Use Cases
+Discover papers and applications showing how ESM is being used in research.
+[Browse →](docs/use-cases/index.qmd)
+:::
+
+:::{.tile}
+🎓
+
+### Tutorials
+Learn practical skills with hands-on tutorials and code examples.
+[View →](docs/tutorials.qmd)
+:::
+
+:::{.tile}
+❓
+
+### FAQ
+Get answers to common questions about ESM, models, and usage.
+[Read →](docs/faq.qmd)
+:::
+
+:::{.tile}
+🤝
+
+### Get Involved
+Join our community and contribute papers, use cases, and more.
+[Contribute →](docs/get-involved.qmd)
+:::
+
+:::{.tile}
+📺
+
+### Workshops
+Access archived materials from workshops, seminars, and events.
+[Archive →](docs/workshops.qmd)
+:::
+
+:::
+
+---
+
+## What is Awesome ESM?
+
+This resource is a **community-driven hub** for the ESM family of protein language models:
+
+- **ESM-C (ESMC)** - The latest sequence representation model
+- **ESM3** - Multimodal protein design and prediction
+- **ESM2** - High-performance sequence representations
+- **ESMFold** - Structure prediction from sequence alone
+- **ESMFold2** - State-of-the-art biomolecular complex prediction
+
+Whether you're predicting protein structures, designing new binders, discovering novel enzymes, or analyzing protein properties, you'll find resources, examples, and community insights here.
+
+---
+
+## Recent Additions
+
+Check out our latest curated papers and use cases:
+
+- Protein design with directed evolution
+- Antibody engineering for therapeutics
+- Genome mining for novel functions
+- Disease variant prediction
+- Fine-tuning strategies for custom tasks
+
+---
+
+:::{.cta-section}
+### Help Us Grow
+
+Awesome ESM is built by the community, for the community. Have a paper, use case, or question to add?
+
+[Contribute Now](docs/get-involved.qmd){.btn .btn-light}
+:::
