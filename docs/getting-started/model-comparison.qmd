@@ -1,9 +1,4 @@
 ---
-
-## 3. `docs/get-started/model-comparison.qmd`
-
-```yaml
----
 title: "Model Comparison"
 description: "Detailed comparison of ESM models."
 format: html
