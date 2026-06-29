@@ -1,1 +1,77 @@
+---
+title: "Get Started"
+description: "Choose your ESM model and get started with installation guides."
+format: html
+---
 
+# Get Started with ESM
+
+Welcome! This section will help you choose the right ESM model for your work and get it installed.
+
+## Quick Links
+
+:::{.quick-links}
+[🌐 **Biohub**<br/>biohub.ai](https://biohub.ai)
+
+[🤗 **Hugging Face**<br/>biohub models](https://huggingface.co/biohub)
+
+[💻 **GitHub**<br/>ESM Package](https://github.com/Biohub/esm)
+
+[📚 **Tutorials**<br/>Learn by doing](https://biohub.ai/resources/tutorials)
+:::
+
+---
+
+## Model Overview
+
+Not sure which model to use? This comparison will help:
+
+| Model | Purpose | Best For | Input Limit | Speed | Links |
+|-------|---------|----------|-------------|-------|-------|
+| **ESMC** | Sequence representation | Embeddings, function prediction, fine-tuning | 2,048 aa | Fast | [Card](https://biohub.ai/models/esmc) \| [Paper](https://www.biorxiv.org/content/10.1101/2025.01.09.632079v1) \| [HuggingFace](https://huggingface.co/biohub) |
+| **ESM3** | Multimodal design | Sequence generation, structure prediction | 2,048 aa | Medium | [Card](https://biohub.ai/models/esm3) \| [Paper](https://www.science.org/doi/10.1126/science.adk2211) |
+| **ESM2** | Sequence representation | Legacy code, established workflows | 2,048 aa | Fast | [Card](https://biohub.ai/models/esm2) \| [Paper](https://www.biorxiv.org/content/10.1101/2022.07.20.500902v1) |
+| **ESMFold** | Structure prediction | Quick structure predictions | Single chain | Very Fast | [Card](https://biohub.ai/models/esmfold) |
+| **ESMFold2** | Complex prediction | Antibody-antigen, multimers | Up to 768 aa | Fast | [Card](https://biohub.ai/models/esmfold2) |
+| **ESMFold2-Fast** | Fast structure prediction | High-throughput screening | Single chain | Fastest | [Card](https://biohub.ai/models/esmfold2) |
+
+---
+
+## Choose Your Model
+
+:::{#decision-tree}
+
+### What do you want to do?
+
+**I need protein sequence embeddings or representations**
+→ Use **ESMC** or **ESM2** ([Embeddings Tutorial](https://biohub.ai/resources/tutorials))
+
+**I want to design new proteins or generate sequences**
+→ Use **ESM3** ([Design Tutorial](https://biohub.ai/resources/tutorials))
+
+**I need to predict protein 3D structure**
+
+- *Single chain?* → Use **ESMFold** or **ESMFold2** ([Structure Tutorial](https://biohub.ai/resources/tutorials))
+- *Complex (antibody-antigen, multimer)?* → Use **ESMFold2** ([Complex Prediction Tutorial](https://biohub.ai/resources/tutorials))
+- *Need maximum speed?* → Use **ESMFold2-Fast** ([Performance Guide](https://biohub.ai/resources/tutorials))
+
+**I'm working with legacy code**
+→ Use **ESM2** ([Migration Guide](docs/get-started/decision-tree.qmd))
+
+**I want to fine-tune a model**
+→ Use **ESMC** ([Fine-tuning Guide](https://biohub.ai/resources/tutorials))
+
+:::
+
+---
+
+## Installation
+
+### Quick Start
+
+```bash
+# Install the ESM package
+pip install esm
+
+# Or from GitHub for latest version
+pip install git+https://github.com/Biohub/esm.git@main
