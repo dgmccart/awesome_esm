@@ -1,1 +1,194 @@
+---
+title: "Decision Tree"
+description: "Interactive guide to choosing the right ESM model."
+format: html
+---
 
+# ESM Model Decision Tree
+
+Use this interactive guide to find the right ESM model for your project.
+
+---
+
+## 1. What's your primary goal?
+
+:::{.decision-tree}
+
+### A. I need protein sequence representations or embeddings
+
+**→ Go to Section 2A**
+
+### B. I want to design or generate protein sequences
+
+**→ Go to Section 2B**
+
+### C. I need to predict 3D protein structures
+
+**→ Go to Section 2C**
+
+### D. I want to understand or score protein mutations
+
+**→ Go to Section 2D**
+
+:::
+
+---
+
+## 2A. Sequence Representations & Embeddings
+
+### What's your use case?
+
+**I'm doing research and want the best representations**
+→ **Use ESMC** (latest, best quality, metagenomic training)
+- [Model Card](https://biohub.ai/models/esmc)
+- [Tutorial: Getting Embeddings](https://biohub.ai/resources/tutorials)
+- [GitHub](https://github.com/Biohub/esm)
+
+**I have existing ESM2 code and want to upgrade**
+→ **Use ESMC** (drop-in replacement, but see migration guide)
+- [Migration Guide](../use-cases/model-development.qmd#esm2-migration)
+- [Comparison Table](model-comparison.qmd)
+
+**I'm using legacy code tied to ESM2**
+→ **Stay with ESM2** (for now)
+- [ESM2 Docs](https://huggingface.co/facebook/esm2)
+- Plan migration to ESMC when ready
+
+**I want to fine-tune on my own data**
+→ **Use ESMC**
+- [Fine-tuning Tutorial](https://biohub.ai/resources/tutorials)
+- Larger models (6B) work best, but 300M is faster for experiments
+
+**I need this to be very fast**
+→ **Use ESMC-300M**
+- Smallest model, still high quality
+- Much faster inference than larger models
+
+---
+
+## 2B. Protein Design & Generation
+
+### What do you want to design?
+
+**De novo proteins (completely new sequences)**
+→ **Use ESM3**
+- [Model Card](https://biohub.ai/models/esm3)
+- [Design Tutorial](https://biohub.ai/resources/tutorials)
+- [Paper](https://www.science.org/doi/10.1126/science.adk2211)
+
+**Protein binders (antibodies, miniproteins)**
+→ **Use ESM3 with ESMFold2**
+- Generate sequences with ESM3
+- Validate structures with ESMFold2
+- [Binder Design Example](../use-cases/model-applications.qmd#antibody-engineering)
+
+**Enzyme variants (improving existing proteins)**
+→ **Use ESMC + ESMFold2**
+- Score mutations with ESMC embeddings
+- Validate with structure prediction
+- [Directed Evolution Example](../use-cases/model-applications.qmd#directed-evolution)
+
+---
+
+## 2C. Structure Prediction
+
+### What type of structure do you need?
+
+**Single protein chain (monomers)**
+→ **Use ESMFold2-Fast**
+- Fastest option
+- Excellent accuracy
+- [Tutorial](https://biohub.ai/resources/tutorials)
+
+**Protein complexes (antibody-antigen, PPIs, multimers)**
+→ **Use ESMFold2**
+- State-of-the-art accuracy
+- Handles up to 768 residues (all chains combined)
+- [Complex Prediction Tutorial](https://biohub.ai/resources/tutorials)
+
+**Large complexes (>768 residues)**
+→ **Use ESMFold2-Fast on individual chains, then dock manually**
+- Or use [Docking Tools](../use-cases/model-applications.qmd)
+- Future versions may support longer sequences
+
+**I need maximum accuracy**
+→ **Use ESMFold2 with MSA**
+- Request on [Biohub](https://biohub.ai)
+- 3-5% better accuracy with multiple sequence alignment
+
+**I need to screen thousands of structures quickly**
+→ **Use ESMFold2-Fast**
+- 1.3x faster than ESMFold2
+- Minimal accuracy trade-off
+
+---
+
+## 2D. Mutation Scoring & Variant Effects
+
+### What's your goal?
+
+**Predict effects of all possible mutations (variant effect prediction)**
+→ **Use ESMC with log-likelihood ratios**
+- [Mutation Scoring Tutorial](https://biohub.ai/resources/tutorials)
+- [Variant Prediction Example](../use-cases/model-applications.qmd#disease-variant-prediction)
+
+**Find stabilizing mutations for protein engineering**
+→ **Use ESMC + ESMFold2**
+- Score with ESMC
+- Validate stability with structure
+- [Stability Engineering Example](../use-cases/model-applications.qmd)
+
+**Understand disease-causing mutations**
+→ **Use ESMC**
+- [Disease Prediction Tutorial](https://biohub.ai/resources/tutorials)
+- Compare wild-type vs. mutant log-likelihood
+
+**Protein function prediction**
+→ **Use ESMC**
+- Function information in layer 50-60
+- [Function Prediction Example](../use-cases/model-applications.qmd)
+
+---
+
+## Summary Table
+
+| Goal | Recommended | Speed | Accuracy |
+|------|-------------|-------|----------|
+| Embeddings | ESMC | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| Fine-tuning | ESMC | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| Design | ESM3 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Single Structure | ESMFold2-Fast | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Complex Structure | ESMFold2 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| Mutation Scoring | ESMC | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Function Prediction | ESMC | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+
+---
+
+## Access & Resources
+
+:::{.quick-links}
+[🌐 **Try on Biohub**<br/>biohub.ai](https://biohub.ai)
+
+[🤗 **Download from HF**<br/>huggingface.co](https://huggingface.co/biohub)
+
+[💻 **Open Source**<br/>github.com/Biohub](https://github.com/Biohub/esm)
+
+[📚 **All Tutorials**<br/>biohub.ai](https://biohub.ai/resources/tutorials)
+:::
+
+---
+
+## Questions?
+
+- **FAQ:** [See answers to common questions](../faq.qmd)
+- **Tutorials:** [Learn by doing](https://biohub.ai/resources/tutorials)
+- **Compare Models:** [Detailed comparison table](model-comparison.qmd)
+- **Community:** [Join the discussion](../get-involved.qmd)
+
+:::{.cta-section}
+### Still Unsure?
+
+This decision tree should help, but if you have specific questions, we're here to help!
+
+[📝 Ask the community](https://github.com/Biohub/awesome-esm/discussions){.btn .btn-light}
+:::
