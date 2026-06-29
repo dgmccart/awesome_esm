@@ -21,17 +21,17 @@ website:
     
     left:
       - text: "Get Started"
-        href: docs/getting-started/index.qmd
+        href: getting-started/index.qmd
       - text: "Use Cases"
-        href: docs/use-cases/index.qmd
+        href: use-cases/index.qmd
       - text: "Tutorials"
-        href: docs/tutorials.qmd
+        href: tutorials.qmd
       - text: "Workshops"
-        href: docs/workshops.qmd
+        href: workshops.qmd
       - text: "FAQ"
-        href: docs/faq.qmd
+        href: faq.qmd
       - text: "Get Involved"
-        href: docs/get-involved.qmd
+        href: get-involved.qmd
     
     right:
       - icon: github
@@ -55,15 +55,15 @@ website:
   sidebar:
     - id: getting-started
       contents:
-        - docs/getting-started/index.qmd
-        - docs/getting-started/model-comparison.qmd
-        - docs/getting-started/decision-tree.qmd
+        - getting-started/index.qmd
+        - getting-started/model-comparison.qmd
+        - getting-started/decision-tree.qmd
     
     - id: use-cases
       contents:
-        - docs/use-cases/index.qmd
-        - docs/use-cases/model-development.qmd
-        - docs/use-cases/model-applications.qmd
+        - use-cases/index.qmd
+        - use-cases/model-development.qmd
+        - use-cases/model-applications.qmd
 
 # Styling
 format:
