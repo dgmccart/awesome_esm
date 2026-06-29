@@ -31,3 +31,30 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines 
 ```bash
 git clone https://github.com/Biohub/awesome-esm.git
 cd awesome-esm
+```
+
+### Preview Site Locally
+
+```bash
+quarto preview
+```
+
+This will open the site at `http://localhost:3456` and auto-refresh on changes.
+
+### Render Site
+
+```bash
+quarto render
+```
+
+This generates the static site in `_site/`.
+
+## License
+
+This project is licensed under CC-BY 4.0. See [LICENSE](LICENSE) for details.
+
+## Questions?
+
+- **GitHub Issues:** [Report a bug or request a feature](https://github.com/Biohub/awesome-esm/issues)
+- **Slack:** [Join our community](https://biohub.slack.com)
+- **Email:** [resources@biohub.ai](mailto:resources@biohub.ai)
