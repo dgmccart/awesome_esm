@@ -1,1 +1,42 @@
+---
+title: "Model Development"
+description: "Papers on developing and advancing ESM models."
+format: html
+---
 
+# Model Development
+
+Research focused on developing new ESM models, improving architectures, and advancing protein language modeling.
+
+Papers in this section describe the models themselves and methodological advances that enable better representations of protein biology.
+
+---
+
+## All Papers
+
+| Title | Authors | Journal | Year | ESM Model(s) | Contributor | Summary |
+|-------|---------|---------|------|-------------|-------------|---------|
+| **Language Modeling Materializes a World Model of Protein Biology** | Candido et al. | BioRxiv | 2026 | ESM3, ESMC, ESMFold2 | Biohub | Introduces ESMC (trained on 2.8B metagenomic sequences) and ESMFold2 with state-of-the-art structure prediction. Demonstrates that language models learn a systematic organization of protein biology aligned with empirical science. Maps 6.8B proteins and 1.1B predicted structures. |
+
+---
+
+## Sort & Filter
+
+To find papers by specific criteria:
+
+- **By Model:** ESMC, ESM3, ESM2, ESMFold2
+- **By Topic:** Scaling laws, architecture design, training methodology
+- **By Lab Validation:** Experimentally validated designs
+- **By Year:** 2025, 2026
+
+See [Model Applications](model-applications.qmd) for papers using ESM models to solve biological problems.
+
+---
+
+:::{.cta-section}
+### Know of a Paper We're Missing?
+
+Help us keep this comprehensive!
+
+[📝 Add a paper](https://github.com/Biohub/awesome-esm/issues/new?template=add-paper.md){.btn .btn-light}
+:::
