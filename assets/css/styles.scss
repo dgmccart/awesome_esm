@@ -1,57 +1,101 @@
+/* ==========================================================================
+   Biohub Design System
+   ========================================================================== */
+
 /*-- scss:defaults --*/
 
-/* Fonts */
+/* Typography */
 $font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont,
   "Segoe UI", Helvetica, Arial, sans-serif;
 
-/* Brand colors */
+$headings-font-family: $font-family-sans-serif;
+$headings-font-weight: 600;
+
+/* Biohub colors */
 $primary: #6E4FF9;
 $secondary: #F1F0FF;
 
-/* Light theme */
 $body-bg: #FFFFFF;
 $body-color: #000000;
+
+$border-color: #DFDFDF;
+
+$link-color: $primary;
+$link-hover-color: darken($primary, 8%);
+
+/* Code */
 $code-bg: #F5F5F5;
 $code-color: #000000;
 
-/* Links */
-$link-color: #6E4FF9;
+/* Border radius */
+$border-radius: 10px;
 
-/* Headings */
-$headings-font-weight: 600;
+/* Buttons */
+$btn-font-weight: 600;
+$btn-border-radius: 10px;
+
+/* Navbar */
+$navbar-bg: #F5F5F5;
+$navbar-light-color: #767676;
+$navbar-light-hover-color: #000000;
+$navbar-light-active-color: #6E4FF9;
+
+/* Cards */
+$card-border-color: #DFDFDF;
+$card-border-radius: 12px;
 
 /*-- scss:rules --*/
+
+/* Body */
 
 body {
   font-size: 14px;
   line-height: 24px;
 }
 
+/* H1 */
+
 h1 {
   font-size: 26px;
-  line-height: 34px;
   font-weight: 600;
+  line-height: 34px;
+
+  margin-bottom: 1rem;
 }
+
+/* H2 */
 
 h2 {
   font-size: 18px;
-  line-height: 28px;
   font-weight: 600;
+  line-height: 28px;
+
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
 }
 
-/* Dark mode */
-[data-bs-theme="dark"] {
-  --bs-body-bg: #181818;
-  --bs-body-color: #F5F5F5;
+/* H3 */
 
-  --bs-primary: #6E4FF9;
-  --bs-secondary: #1D004D;
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
 
-  --bs-border-color: #494949;
+/* H4 */
 
-  pre,
-  code {
-    background: #242424;
-    color: #F5F5F5;
-  }
+h4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
