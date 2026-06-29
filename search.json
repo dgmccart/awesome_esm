@@ -151,33 +151,21 @@
     "href": "docs/use-cases/model-development.html",
     "title": "Model Development",
     "section": "",
-    "text": "Research focused on developing new ESM models, improving architectures, and advancing protein language modeling.\nPapers in this section describe the models themselves and methodological advances that enable better representations of protein biology.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTitle\nAuthors\nJournal\nYear\nESM Model(s)\nContributor\nSummary\n\n\n\n\nLanguage Modeling Materializes a World Model of Protein Biology\nCandido et al.\nBioRxiv\n2026\nESM3, ESMC, ESMFold2\nBiohub\nIntroduces ESMC (trained on 2.8B metagenomic sequences) and ESMFold2 with state-of-the-art structure prediction. Demonstrates that language models learn a systematic organization of protein biology aligned with empirical science. Maps 6.8B proteins and 1.1B predicted structures.\n\n\n\n\n\n\n\nTo find papers by specific criteria:\n\nBy Model: ESMC, ESM3, ESM2, ESMFold2\nBy Topic: Scaling laws, architecture design, training methodology\nBy Lab Validation: Experimentally validated designs\nBy Year: 2025, 2026\n\nSee Model Applications for papers using ESM models to solve biological problems.\n\n\n\nHelp us keep this comprehensive!\n📝 Add a paper",
-    "crumbs": [
-      "Use Cases",
-      "Model Development"
-    ]
+    "text": "Research focused on developing new ESM models, improving architectures, and advancing protein language modeling.\nPapers in this section describe the models themselves and methodological advances that enable better representations of protein biology.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTitle\nAuthors\nJournal\nYear\nESM Model(s)\nContributor\nSummary\n\n\n\n\nLanguage Modeling Materializes a World Model of Protein Biology\nCandido et al.\nBioRxiv\n2026\nESM3, ESMC, ESMFold2\nBiohub\nIntroduces ESMC (trained on 2.8B metagenomic sequences) and ESMFold2 with state-of-the-art structure prediction. Demonstrates that language models learn a systematic organization of protein biology aligned with empirical science. Maps 6.8B proteins and 1.1B predicted structures.\n\n\n\n\n\n\n\nTo find papers by specific criteria:\n\nBy Model: ESMC, ESM3, ESM2, ESMFold2\nBy Topic: Scaling laws, architecture design, training methodology\nBy Lab Validation: Experimentally validated designs\nBy Year: 2025, 2026\n\nSee Model Applications for papers using ESM models to solve biological problems.\n\n\n\nHelp us keep this comprehensive!\n📝 Add a paper"
   },
   {
     "objectID": "docs/use-cases/model-development.html#all-papers",
     "href": "docs/use-cases/model-development.html#all-papers",
     "title": "Model Development",
     "section": "",
-    "text": "Title\nAuthors\nJournal\nYear\nESM Model(s)\nContributor\nSummary\n\n\n\n\nLanguage Modeling Materializes a World Model of Protein Biology\nCandido et al.\nBioRxiv\n2026\nESM3, ESMC, ESMFold2\nBiohub\nIntroduces ESMC (trained on 2.8B metagenomic sequences) and ESMFold2 with state-of-the-art structure prediction. Demonstrates that language models learn a systematic organization of protein biology aligned with empirical science. Maps 6.8B proteins and 1.1B predicted structures.",
-    "crumbs": [
-      "Use Cases",
-      "Model Development"
-    ]
+    "text": "Title\nAuthors\nJournal\nYear\nESM Model(s)\nContributor\nSummary\n\n\n\n\nLanguage Modeling Materializes a World Model of Protein Biology\nCandido et al.\nBioRxiv\n2026\nESM3, ESMC, ESMFold2\nBiohub\nIntroduces ESMC (trained on 2.8B metagenomic sequences) and ESMFold2 with state-of-the-art structure prediction. Demonstrates that language models learn a systematic organization of protein biology aligned with empirical science. Maps 6.8B proteins and 1.1B predicted structures."
   },
   {
     "objectID": "docs/use-cases/model-development.html#sort-filter",
     "href": "docs/use-cases/model-development.html#sort-filter",
     "title": "Model Development",
     "section": "",
-    "text": "To find papers by specific criteria:\n\nBy Model: ESMC, ESM3, ESM2, ESMFold2\nBy Topic: Scaling laws, architecture design, training methodology\nBy Lab Validation: Experimentally validated designs\nBy Year: 2025, 2026\n\nSee Model Applications for papers using ESM models to solve biological problems.\n\n\n\nHelp us keep this comprehensive!\n📝 Add a paper",
-    "crumbs": [
-      "Use Cases",
-      "Model Development"
-    ]
+    "text": "To find papers by specific criteria:\n\nBy Model: ESMC, ESM3, ESM2, ESMFold2\nBy Topic: Scaling laws, architecture design, training methodology\nBy Lab Validation: Experimentally validated designs\nBy Year: 2025, 2026\n\nSee Model Applications for papers using ESM models to solve biological problems.\n\n\n\nHelp us keep this comprehensive!\n📝 Add a paper"
   },
   {
     "objectID": "docs/get-involved.html",
@@ -310,60 +298,42 @@
     "href": "docs/use-cases/index.html",
     "title": "Use Cases",
     "section": "",
-    "text": "Discover how ESM models are being used in real research and applications.\n\n\n\nPapers and projects focused on developing new models or improving ESM architectures.\n\n\n🏗️\n\n\nLearn about advances in protein language model design, training, and evaluation.\nExplore Papers →\n\n\n\n\n\n\n\nResearch applying ESM models to solve real biological problems.\n\n\n🧬\n\n\nDe novo design, binder discovery, and protein engineering.\nExplore Papers →\n\n\n\n🎯\n\n\nTherapeutic antibody design and optimization.\nExplore Papers →\n\n\n\n🔬\n\n\nDiscovery of novel enzymes and proteins from metagenomic data.\nExplore Papers →\n\n\n\n⚕️\n\n\nDisease variant prediction and protein function discovery.\nExplore Papers →\n\n\n\n🔄\n\n\nComputational protein optimization and iterative improvement.\nExplore Papers →\n\n\n\n🧪\n\n\nDesigning proteins with improved thermal stability.\nExplore Papers →\n\n\n\n\n\n\n\n\nESMC: View papers using ESMC for embeddings, design, and analysis\nESM3: View papers using ESM3 for design and generation\nESM2: View papers using ESM2 (established workflows)\nESMFold2: View papers using ESMFold2 for structure prediction\nMultiple Models: View papers combining multiple ESM models\n\n\n\n\n\nFound a great paper using ESM? Help us build this collection!\n📝 Add a paper\nOr submit a pull request if you prefer.\n\n\n\n\nEach paper includes: - Title & authors - Publication details (journal, prestige, lab validation status) - Summary (2-3 sentences) - ESM model(s) used (specific techniques) - Impact (why it matters) - Tags (research areas) - Links (paper, code, data if available)\n\n\n\nHelp us grow this collection by suggesting papers and use cases from your research.\n✨ Add a paper",
-    "crumbs": [
-      "Use Cases"
-    ]
+    "text": "Discover how ESM models are being used in real research and applications.\n\n\n\nPapers and projects focused on developing new models or improving ESM architectures.\n\n\n🏗️\n\n\nLearn about advances in protein language model design, training, and evaluation.\nExplore Papers →\n\n\n\n\n\n\n\nResearch applying ESM models to solve real biological problems.\n\n\n🧬\n\n\nDe novo design, binder discovery, and protein engineering.\nExplore Papers →\n\n\n\n🎯\n\n\nTherapeutic antibody design and optimization.\nExplore Papers →\n\n\n\n🔬\n\n\nDiscovery of novel enzymes and proteins from metagenomic data.\nExplore Papers →\n\n\n\n⚕️\n\n\nDisease variant prediction and protein function discovery.\nExplore Papers →\n\n\n\n🔄\n\n\nComputational protein optimization and iterative improvement.\nExplore Papers →\n\n\n\n🧪\n\n\nDesigning proteins with improved thermal stability.\nExplore Papers →\n\n\n\n\n\n\n\n\nESMC: View papers using ESMC for embeddings, design, and analysis\nESM3: View papers using ESM3 for design and generation\nESM2: View papers using ESM2 (established workflows)\nESMFold2: View papers using ESMFold2 for structure prediction\nMultiple Models: View papers combining multiple ESM models\n\n\n\n\n\nFound a great paper using ESM? Help us build this collection!\n📝 Add a paper\nOr submit a pull request if you prefer.\n\n\n\n\nEach paper includes: - Title & authors - Publication details (journal, prestige, lab validation status) - Summary (2-3 sentences) - ESM model(s) used (specific techniques) - Impact (why it matters) - Tags (research areas) - Links (paper, code, data if available)\n\n\n\nHelp us grow this collection by suggesting papers and use cases from your research.\n✨ Add a paper"
   },
   {
     "objectID": "docs/use-cases/index.html#model-development",
     "href": "docs/use-cases/index.html#model-development",
     "title": "Use Cases",
     "section": "",
-    "text": "Papers and projects focused on developing new models or improving ESM architectures.\n\n\n🏗️\n\n\nLearn about advances in protein language model design, training, and evaluation.\nExplore Papers →",
-    "crumbs": [
-      "Use Cases"
-    ]
+    "text": "Papers and projects focused on developing new models or improving ESM architectures.\n\n\n🏗️\n\n\nLearn about advances in protein language model design, training, and evaluation.\nExplore Papers →"
   },
   {
     "objectID": "docs/use-cases/index.html#model-applications",
     "href": "docs/use-cases/index.html#model-applications",
     "title": "Use Cases",
     "section": "",
-    "text": "Research applying ESM models to solve real biological problems.\n\n\n🧬\n\n\nDe novo design, binder discovery, and protein engineering.\nExplore Papers →\n\n\n\n🎯\n\n\nTherapeutic antibody design and optimization.\nExplore Papers →\n\n\n\n🔬\n\n\nDiscovery of novel enzymes and proteins from metagenomic data.\nExplore Papers →\n\n\n\n⚕️\n\n\nDisease variant prediction and protein function discovery.\nExplore Papers →\n\n\n\n🔄\n\n\nComputational protein optimization and iterative improvement.\nExplore Papers →\n\n\n\n🧪\n\n\nDesigning proteins with improved thermal stability.\nExplore Papers →",
-    "crumbs": [
-      "Use Cases"
-    ]
+    "text": "Research applying ESM models to solve real biological problems.\n\n\n🧬\n\n\nDe novo design, binder discovery, and protein engineering.\nExplore Papers →\n\n\n\n🎯\n\n\nTherapeutic antibody design and optimization.\nExplore Papers →\n\n\n\n🔬\n\n\nDiscovery of novel enzymes and proteins from metagenomic data.\nExplore Papers →\n\n\n\n⚕️\n\n\nDisease variant prediction and protein function discovery.\nExplore Papers →\n\n\n\n🔄\n\n\nComputational protein optimization and iterative improvement.\nExplore Papers →\n\n\n\n🧪\n\n\nDesigning proteins with improved thermal stability.\nExplore Papers →"
   },
   {
     "objectID": "docs/use-cases/index.html#browse-by-model",
     "href": "docs/use-cases/index.html#browse-by-model",
     "title": "Use Cases",
     "section": "",
-    "text": "ESMC: View papers using ESMC for embeddings, design, and analysis\nESM3: View papers using ESM3 for design and generation\nESM2: View papers using ESM2 (established workflows)\nESMFold2: View papers using ESMFold2 for structure prediction\nMultiple Models: View papers combining multiple ESM models",
-    "crumbs": [
-      "Use Cases"
-    ]
+    "text": "ESMC: View papers using ESMC for embeddings, design, and analysis\nESM3: View papers using ESM3 for design and generation\nESM2: View papers using ESM2 (established workflows)\nESMFold2: View papers using ESMFold2 for structure prediction\nMultiple Models: View papers combining multiple ESM models"
   },
   {
     "objectID": "docs/use-cases/index.html#contribute-your-paper",
     "href": "docs/use-cases/index.html#contribute-your-paper",
     "title": "Use Cases",
     "section": "",
-    "text": "Found a great paper using ESM? Help us build this collection!\n📝 Add a paper\nOr submit a pull request if you prefer.",
-    "crumbs": [
-      "Use Cases"
-    ]
+    "text": "Found a great paper using ESM? Help us build this collection!\n📝 Add a paper\nOr submit a pull request if you prefer."
   },
   {
     "objectID": "docs/use-cases/index.html#how-papers-are-organized",
     "href": "docs/use-cases/index.html#how-papers-are-organized",
     "title": "Use Cases",
     "section": "",
-    "text": "Each paper includes: - Title & authors - Publication details (journal, prestige, lab validation status) - Summary (2-3 sentences) - ESM model(s) used (specific techniques) - Impact (why it matters) - Tags (research areas) - Links (paper, code, data if available)\n\n\n\nHelp us grow this collection by suggesting papers and use cases from your research.\n✨ Add a paper",
-    "crumbs": [
-      "Use Cases"
-    ]
+    "text": "Each paper includes: - Title & authors - Publication details (journal, prestige, lab validation status) - Summary (2-3 sentences) - ESM model(s) used (specific techniques) - Impact (why it matters) - Tags (research areas) - Links (paper, code, data if available)\n\n\n\nHelp us grow this collection by suggesting papers and use cases from your research.\n✨ Add a paper"
   },
   {
     "objectID": "docs/tutorials.html",
