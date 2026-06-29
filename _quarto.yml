@@ -7,7 +7,7 @@ website:
   description: "A curated collection of ESM resources, papers, and community examples"
   
   # Favicon
-  favicon: assets/images/esm-favicon.png
+  favicon: assets/images/biohub-favicon.png
   
   # Search
   search: true
@@ -15,7 +15,7 @@ website:
   # Navigation bar
   navbar:
     background: "#FFFFFF"
-    logo: assets/images/awesome-esm-logo.png
+    logo: assets/images/biohub-black-logo.png
     logo-alt: "Awesome ESM Logo"
     
     left:
@@ -97,6 +97,3 @@ format:
 # Metadata
 execute:
   freeze: auto
-
-filters:
-  - line-highlight
