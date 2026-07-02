@@ -339,7 +339,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./getting-started/model-comparison.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Model Comparison</span></a>
+ <span class="menu-text">Choose Your Model</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -374,7 +374,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./use-cases/model-applications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">model-applications.html</span></a>
+ <span class="menu-text">Model Applications</span></a>
   </div>
 </li>
       </ul>
@@ -422,9 +422,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#frequently-asked-questions" id="toc-frequently-asked-questions" class="nav-link active" data-scroll-target="#frequently-asked-questions">Frequently Asked Questions</a>
-  <ul class="collapse">
-  <li><a href="#model-selection" id="toc-model-selection" class="nav-link" data-scroll-target="#model-selection">Model Selection</a></li>
+  <li><a href="#model-selection" id="toc-model-selection" class="nav-link active" data-scroll-target="#model-selection">Model Selection</a></li>
   <li><a href="#installation-setup" id="toc-installation-setup" class="nav-link" data-scroll-target="#installation-setup">Installation &amp; Setup</a></li>
   <li><a href="#usage-troubleshooting" id="toc-usage-troubleshooting" class="nav-link" data-scroll-target="#usage-troubleshooting">Usage &amp; Troubleshooting</a></li>
   <li><a href="#design-predictions" id="toc-design-predictions" class="nav-link" data-scroll-target="#design-predictions">Design &amp; Predictions</a></li>
@@ -432,7 +430,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#licensing-access" id="toc-licensing-access" class="nav-link" data-scroll-target="#licensing-access">Licensing &amp; Access</a></li>
   <li><a href="#community-support" id="toc-community-support" class="nav-link" data-scroll-target="#community-support">Community &amp; Support</a></li>
   <li><a href="#still-have-questions" id="toc-still-have-questions" class="nav-link" data-scroll-target="#still-have-questions">Still Have Questions?</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/dgmccart/awesome_esm/blob/main/faq.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
@@ -464,19 +461,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="frequently-asked-questions" class="level1">
-<h1>Frequently Asked Questions</h1>
-<hr>
 <section id="model-selection" class="level2">
 <h2 class="anchored" data-anchor-id="model-selection">Model Selection</h2>
-<div class="accordion">
-<section id="q-which-model-should-i-use-for-getting-protein-embeddings" class="level3">
-<h3 class="anchored" data-anchor-id="q-which-model-should-i-use-for-getting-protein-embeddings">Q: Which model should I use for getting protein embeddings?</h3>
-<p><strong>A:</strong> Use <strong>ESMC</strong> for new projects. It’s the latest, trained on 2.8B diverse metagenomic sequences, and provides higher-quality representations than ESM2.</p>
-<p>If you have existing ESM2 code, ESMC is a drop-in replacement with similar API. See our <a href="docs/get-started/decision-tree.qmd">Decision Tree</a> for detailed guidance.</p>
-<p><strong>Related:</strong> <a href="docs/get-started/model-comparison.qmd">Model Comparison</a> | <a href="docs/get-started/index.qmd">Getting Started</a></p>
-<hr>
+<section id="which-model-should-i-use-for-getting-protein-embeddings" class="level3 accordion" open="false">
+<h3 class="anchored" data-anchor-id="which-model-should-i-use-for-getting-protein-embeddings">Which model should I use for getting protein embeddings?</h3>
+<p>Use <strong>ESMC</strong> for new projects. It’s the latest model, trained on 2.8B diverse metagenomic sequences, and provides higher-quality representations than ESM-2.</p>
+<p>If you have existing ESM-2 code, ESMC is a drop-in replacement with a similar API.</p>
+<p><strong>Related:</strong> - <a href="./getting-started/model-comparison.html">Model Comparison</a> - <a href="./getting-started/index.html">Getting Started</a></p>
 </section>
+<div class="accordion-item" data-collapse="true">
 <section id="q-whats-the-difference-between-esmc-and-esm2" class="level3">
 <h3 class="anchored" data-anchor-id="q-whats-the-difference-between-esmc-and-esm2">Q: What’s the difference between ESMC and ESM2?</h3>
 <p><strong>A:</strong> - <strong>ESMC:</strong> Newer (2025), trained on 2.8B metagenomic + UniRef sequences, better quality, log-linear scaling - <strong>ESM2:</strong> Older (2023), trained on 50M UniRef sequences, still good for many tasks</p>
@@ -667,7 +660,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

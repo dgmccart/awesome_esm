@@ -338,7 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../getting-started/model-comparison.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Model Comparison</span></a>
+ <span class="menu-text">Choose Your Model</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -373,7 +373,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../use-cases/model-applications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">model-applications.html</span></a>
+ <span class="menu-text">Model Applications</span></a>
   </div>
 </li>
       </ul>
@@ -424,9 +424,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#quickstart" id="toc-quickstart" class="nav-link active" data-scroll-target="#quickstart">Quickstart</a></li>
   <li><a href="#get-started-with-esm" id="toc-get-started-with-esm" class="nav-link" data-scroll-target="#get-started-with-esm">Get Started with ESM</a>
   <ul class="collapse">
-  <li><a href="#model-overview" id="toc-model-overview" class="nav-link" data-scroll-target="#model-overview">Model Overview</a></li>
-  <li><a href="#choose-your-model" id="toc-choose-your-model" class="nav-link" data-scroll-target="#choose-your-model">Choose Your Model</a></li>
   <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#model-overview" id="toc-model-overview" class="nav-link" data-scroll-target="#model-overview">Model Overview</a></li>
+  <li><a href="#models-by-use-case" id="toc-models-by-use-case" class="nav-link" data-scroll-target="#models-by-use-case">Models by Use Case</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#contribute-to-this-page" id="toc-contribute-to-this-page" class="nav-link" data-scroll-target="#contribute-to-this-page">Contribute to This Page</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/dgmccart/awesome_esm/blob/main/getting-started/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
@@ -440,14 +442,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="quickstart" class="level1" style="text-align: center; margin-bottom: 1rem;">
 <h1>Quickstart</h1>
-<p>Choose your ESM model and get started with installation guides.</p>
+<p>Choose your ESM model and install the <code>esm</code> package.</p>
 </section>
 <section id="get-started-with-esm" class="level1">
 <h1>Get Started with ESM</h1>
 <p>Welcome! This section will help you choose the right ESM model for your work and get it installed.</p>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the ESM package to access ESM3, ESMC, ESMFold2, ESMFold2-Fast</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install esm</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or from GitHub for latest version</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install git+https://github.com/Biohub/esm.git@main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For more details on using the <code>esm</code> package, check out our <a href="https://github.com/Biohub/esm">Github</a>.</p>
+</section>
 <section id="model-overview" class="level2">
 <h2 class="anchored" data-anchor-id="model-overview">Model Overview</h2>
-<p>Not sure which model to use? This comparison will help:</p>
+<p>Not sure which model to use? Check out the table below and examples below, or for more details, refer to our <a href="../getting-started/model-comparison.html">Choose Your Model</a> guide.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -510,45 +521,124 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<hr>
 </section>
-<section id="choose-your-model" class="level2">
-<h2 class="anchored" data-anchor-id="choose-your-model">Choose Your Model</h2>
-<div id="decision-tree">
-<section id="what-do-you-want-to-do" class="level3">
-<h3 class="anchored" data-anchor-id="what-do-you-want-to-do">What do you want to do?</h3>
-<p><strong>I need protein sequence embeddings or representations</strong> → Use <strong>ESMC</strong> or <strong>ESM2</strong> (<a href="https://biohub.ai/resources/tutorials">Embeddings Tutorial</a>)</p>
-<p><strong>I want to design new proteins or generate sequences</strong> → Use <strong>ESM3</strong> (<a href="https://biohub.ai/resources/tutorials">Design Tutorial</a>)</p>
-<p><strong>I need to predict protein 3D structure</strong></p>
+<section id="models-by-use-case" class="level2">
+<h2 class="anchored" data-anchor-id="models-by-use-case">Models by Use Case</h2>
+<section id="i-need-protein-sequence-embeddings-or-representations" class="level3">
+<h3 class="anchored" data-anchor-id="i-need-protein-sequence-embeddings-or-representations">I need protein sequence embeddings or representations</h3>
+<p><strong>Recommended:</strong> ESMC - Latest foundation protein language model - Trained on diverse metagenomic protein sequences - Produces improved protein representations - Recommended for new projects</p>
+<p><strong>Alternative:</strong> ESM-2 (for legacy compatibility) - Proven and well documented - Extensively used in published research - Best choice when reproducing existing workflows</p>
+</section>
+<section id="i-want-to-design-new-proteins-or-generate-sequences" class="level3">
+<h3 class="anchored" data-anchor-id="i-want-to-design-new-proteins-or-generate-sequences">I want to design new proteins or generate sequences</h3>
+<p><strong>Recommended:</strong> ESM3</p>
 <ul>
-<li><em>Single chain?</em> → Use <strong>ESMFold</strong> or <strong>ESMFold2</strong> (<a href="https://biohub.ai/resources/tutorials">Structure Tutorial</a>)</li>
-<li><em>Complex (antibody-antigen, multimer)?</em> → Use <strong>ESMFold2</strong> (<a href="https://biohub.ai/resources/tutorials">Complex Prediction Tutorial</a>)</li>
-<li><em>Need maximum speed?</em> → Use <strong>ESMFold2-Fast</strong> (<a href="https://biohub.ai/resources/tutorials">Performance Guide</a>)</li>
+<li>Generates entirely new proteins</li>
+<li>Supports chain-of-thought iterative refinement</li>
+<li>Produces proteins far beyond natural sequence space</li>
+<li>Excellent for:
+<ul>
+<li>Motif scaffolding</li>
+<li>Functional protein design</li>
+<li>Novel protein discovery</li>
+</ul></li>
 </ul>
-<p><strong>I’m working with legacy code</strong> → Use <strong>ESM2</strong> (<a href="docs/get-started/decision-tree.qmd">Migration Guide</a>)</p>
-<p><strong>I want to fine-tune a model</strong> → Use <strong>ESMC</strong> (<a href="https://biohub.ai/resources/tutorials">Fine-tuning Guide</a>)</p>
+<p><strong>Alternative</strong></p>
+<p>If ESM3 isn’t appropriate, use:</p>
+<ul>
+<li><strong>ESMFold2 + ESMC</strong> for inverse protein design workflows.</li>
+</ul>
 </section>
-</div>
-<hr>
+<section id="i-need-to-predict-protein-structure" class="level3">
+<h3 class="anchored" data-anchor-id="i-need-to-predict-protein-structure">I need to predict protein structure</h3>
+<p>Choose the model that best fits your application.</p>
+<p><strong>Single protein</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Goal</th>
+<th>Recommended Model</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Highest accuracy</td>
+<td><strong>ESMFold2</strong></td>
+</tr>
+<tr class="even">
+<td>Fastest prediction</td>
+<td><strong>ESMFold2-Fast</strong></td>
+</tr>
+<tr class="odd">
+<td>Legacy workflows</td>
+<td><strong>ESMFold</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Protein complexes</strong></p>
+<ul>
+<li>Antibody–antigen</li>
+<li>Protein–protein</li>
+<li>Dimers</li>
+<li>Multimers</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 44%">
+<col style="width: 55%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ESMFold2</strong></td>
+<td>Highest accuracy and pptimized for very large-scale prediction</td>
+</tr>
+<tr class="even">
+<td><strong>ESMFold2-Fast</strong></td>
+<td>Faster high-throughput prediction balancing balance of speed and accuracy</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="installation" class="level2">
-<h2 class="anchored" data-anchor-id="installation">Installation</h2>
-<section id="quick-start" class="level3">
-<h3 class="anchored" data-anchor-id="quick-start">Quick Start</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the ESM package</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install esm</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or from GitHub for latest version</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install git+https://github.com/Biohub/esm.git@main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Requirements</p>
-<p>Python 3.10+ PyTorch 2.0+ CUDA 11.8+ (for GPU acceleration)</p>
-<p>For detailed setup instructions, see the Installation Guide.</p>
-<p>Next Steps Once you’ve chosen your model:</p>
-<p>Read the Full Decision Tree for detailed guidance Check the Model Comparison for specs Follow a Tutorial to learn by doing Browse Use Cases to see real examples</p>
-<p>Contribute to This Page Help us improve this guide! 🔗 Suggest improvements{.btn .btn-secondary}</p>
+<section id="i-want-to-fine-tune-or-train-a-model" class="level3">
+<h3 class="anchored" data-anchor-id="i-want-to-fine-tune-or-train-a-model">I want to fine-tune or train a model</h3>
+<p><strong>Recommended:</strong> ESMC</p>
+<ul>
+<li>Modern architecture</li>
+<li>Improved representations</li>
+<li>Designed for downstream model development</li>
+<li>Supports continued pretraining and fine-tuning</li>
+</ul>
+</section>
+<section id="im-working-with-legacy-code-or-published-research" class="level3">
+<h3 class="anchored" data-anchor-id="im-working-with-legacy-code-or-published-research">I’m working with legacy code or published research</h3>
+<p><strong>Recommended:</strong> ESM-2</p>
+<ul>
+<li>Widely used in the literature</li>
+<li>Stable APIs</li>
+<li>Extensive documentation</li>
+<li>Easy comparison with previous work</li>
+</ul>
+</section>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>Once you’ve chosen your model:</p>
+<ul>
+<li>Follow a <a href="../tutorials.html">Tutorial</a> to learn by doing</li>
+<li>Browse <a href="../use-cases/index.html">Use Cases</a> to see real examples</li>
+</ul>
+</section>
+<section id="contribute-to-this-page" class="level2">
+<h2 class="anchored" data-anchor-id="contribute-to-this-page">Contribute to This Page</h2>
+<p>Help us improve this guide! 🔗 Suggest improvements{.btn .btn-secondary}</p>
 
 
-</section>
 </section>
 </section>
 

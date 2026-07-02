@@ -8,7 +8,7 @@
 
 <meta name="description" content="Detailed comparison of ESM models.">
 
-<title>Model Comparison – Awesome ESM</title>
+<title>Choose Your Model – Awesome ESM</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -251,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../getting-started/index.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../getting-started/model-comparison.html">Model Comparison</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../getting-started/index.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../getting-started/model-comparison.html">Choose Your Model</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -304,7 +304,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../getting-started/model-comparison.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Model Comparison</span></a>
+ <span class="menu-text">Choose Your Model</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -339,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../use-cases/model-applications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">model-applications.html</span></a>
+ <span class="menu-text">Model Applications</span></a>
   </div>
 </li>
       </ul>
@@ -387,14 +387,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#model-comparison" id="toc-model-comparison" class="nav-link active" data-scroll-target="#model-comparison">Model Comparison</a>
+  <li><a href="#overview-of-esm-models" id="toc-overview-of-esm-models" class="nav-link active" data-scroll-target="#overview-of-esm-models">Overview of ESM Models</a></li>
+  <li><a href="#quick-decision-guide" id="toc-quick-decision-guide" class="nav-link" data-scroll-target="#quick-decision-guide">Quick Decision Guide</a>
   <ul class="collapse">
-  <li><a href="#sequence-representation-models" id="toc-sequence-representation-models" class="nav-link" data-scroll-target="#sequence-representation-models">Sequence Representation Models</a></li>
-  <li><a href="#structure-prediction-models" id="toc-structure-prediction-models" class="nav-link" data-scroll-target="#structure-prediction-models">Structure Prediction Models</a></li>
-  <li><a href="#multimodal-models" id="toc-multimodal-models" class="nav-link" data-scroll-target="#multimodal-models">Multimodal Models</a></li>
-  <li><a href="#quick-decision-matrix" id="toc-quick-decision-matrix" class="nav-link" data-scroll-target="#quick-decision-matrix">Quick Decision Matrix</a></li>
-  <li><a href="#performance-benchmarks" id="toc-performance-benchmarks" class="nav-link" data-scroll-target="#performance-benchmarks">Performance Benchmarks</a></li>
-  <li><a href="#training-data-comparison" id="toc-training-data-comparison" class="nav-link" data-scroll-target="#training-data-comparison">Training Data Comparison</a></li>
+  <li><a href="#i-want-to-understand-what-my-protein-sequences-mean" id="toc-i-want-to-understand-what-my-protein-sequences-mean" class="nav-link" data-scroll-target="#i-want-to-understand-what-my-protein-sequences-mean">I want to understand what my protein sequences mean</a></li>
+  <li><a href="#i-want-to-generate-a-new-protein" id="toc-i-want-to-generate-a-new-protein" class="nav-link" data-scroll-target="#i-want-to-generate-a-new-protein">I want to generate a new protein</a></li>
+  <li><a href="#i-need-to-predict-protein-structure" id="toc-i-need-to-predict-protein-structure" class="nav-link" data-scroll-target="#i-need-to-predict-protein-structure">I need to predict protein structure</a></li>
+  </ul></li>
+  <li><a href="#structure-prediction-decision-table" id="toc-structure-prediction-decision-table" class="nav-link" data-scroll-target="#structure-prediction-decision-table">Structure Prediction Decision Table</a>
+  <ul class="collapse">
+  <li><a href="#i-already-use-esm-2" id="toc-i-already-use-esm-2" class="nav-link" data-scroll-target="#i-already-use-esm-2">I already use ESM-2</a></li>
+  </ul></li>
+  <li><a href="#example-workflows" id="toc-example-workflows" class="nav-link" data-scroll-target="#example-workflows">Example Workflows</a>
+  <ul class="collapse">
+  <li><a href="#novel-enzyme-discovery" id="toc-novel-enzyme-discovery" class="nav-link" data-scroll-target="#novel-enzyme-discovery">Novel enzyme discovery</a></li>
+  <li><a href="#large-protein-database-analysis" id="toc-large-protein-database-analysis" class="nav-link" data-scroll-target="#large-protein-database-analysis">Large protein database analysis</a></li>
+  <li><a href="#therapeutic-antibody-design" id="toc-therapeutic-antibody-design" class="nav-link" data-scroll-target="#therapeutic-antibody-design">Therapeutic antibody design</a></li>
+  <li><a href="#custom-machine-learning" id="toc-custom-machine-learning" class="nav-link" data-scroll-target="#custom-machine-learning">Custom machine learning</a></li>
+  </ul></li>
+  <li><a href="#practical-tips" id="toc-practical-tips" class="nav-link" data-scroll-target="#practical-tips">Practical Tips</a>
+  <ul class="collapse">
+  <li><a href="#use-the-newest-models" id="toc-use-the-newest-models" class="nav-link" data-scroll-target="#use-the-newest-models">Use the newest models</a></li>
+  <li><a href="#balance-speed-and-accuracy" id="toc-balance-speed-and-accuracy" class="nav-link" data-scroll-target="#balance-speed-and-accuracy">Balance speed and accuracy</a></li>
+  <li><a href="#iterate-during-design" id="toc-iterate-during-design" class="nav-link" data-scroll-target="#iterate-during-design">Iterate during design</a></li>
+  <li><a href="#write-clear-prompts-for-esm3" id="toc-write-clear-prompts-for-esm3" class="nav-link" data-scroll-target="#write-clear-prompts-for-esm3">Write clear prompts for ESM3</a></li>
+  <li><a href="#validate-experimentally" id="toc-validate-experimentally" class="nav-link" data-scroll-target="#validate-experimentally">Validate experimentally</a></li>
+  </ul></li>
+  <li><a href="#confidence-scores" id="toc-confidence-scores" class="nav-link" data-scroll-target="#confidence-scores">Confidence Scores</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting Help</a></li>
+  <li><a href="#key-takeaway" id="toc-key-takeaway" class="nav-link" data-scroll-target="#key-takeaway">Key Takeaway</a>
+  <ul class="collapse">
   <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See Also</a></li>
   </ul></li>
   </ul>
@@ -404,9 +427,9 @@ ul.task-list li input[type="checkbox"] {
 <main class="content column-body" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../getting-started/index.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../getting-started/model-comparison.html">Model Comparison</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../getting-started/index.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../getting-started/model-comparison.html">Choose Your Model</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Model Comparison</h1>
+<h1 class="title">Choose Your Model</h1>
 </div>
 
 <div>
@@ -428,203 +451,417 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="model-comparison" class="level1">
-<h1>Model Comparison</h1>
-<section id="sequence-representation-models" class="level2">
-<h2 class="anchored" data-anchor-id="sequence-representation-models">Sequence Representation Models</h2>
-<section id="esmc-esm-cambrian" class="level3">
-<h3 class="anchored" data-anchor-id="esmc-esm-cambrian">ESMC (ESM Cambrian)</h3>
-<p><strong>Status:</strong> Latest (2025)<br>
-<strong>Parameters:</strong> 300M, 600M, 6B<br>
-<strong>Training Data:</strong> 2.8B metagenomic sequences</p>
-<p><strong>Best For:</strong> - Sequence embeddings and representations - Function prediction - Fine-tuning for custom tasks - Mutation scoring - Zero-shot variant effect prediction</p>
-<p><strong>Key Features:</strong> - Trained on metagenomic data (more diverse) - Log-linear scaling with compute - Better representations than ESM2 - Supported via Biohub API</p>
-<p><strong>Access:</strong> <a href="https://biohub.ai/models/esmc">Biohub</a> | <a href="https://huggingface.co/biohub">HuggingFace</a> | <a href="https://github.com/Biohub/esm">GitHub</a></p>
+<section id="overview-of-esm-models" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-esm-models">Overview of ESM Models</h2>
+<p>Welcome! This guide will help you choose the right ESM model for your research.</p>
+<p>The ESM model family includes three categories:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 29%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Models</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Foundation models</td>
+<td>ESMC, ESM-2</td>
+<td>Understand protein sequences and generate embeddings</td>
+</tr>
+<tr class="even">
+<td>Generative models</td>
+<td>ESM3</td>
+<td>Design entirely new proteins</td>
+</tr>
+<tr class="odd">
+<td>Structure prediction</td>
+<td>ESMFold, ESMFold2, ESMFold2-Fast</td>
+<td>Predict 3D protein structures</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
-<section id="esm2" class="level3">
-<h3 class="anchored" data-anchor-id="esm2">ESM2</h3>
-<p><strong>Status:</strong> Previous generation (2023)<br>
-<strong>Parameters:</strong> 8M - 15B<br>
-<strong>Training Data:</strong> 50M UniProt sequences</p>
-<p><strong>Best For:</strong> - Legacy workflows - Projects using existing ESM2 code - When you have established pipelines</p>
-<p><strong>Key Features:</strong> - Well-established - Large community resources - Lots of published examples</p>
-<p><strong>Migration Note:</strong> ESMC is a drop-in replacement but with some API differences. See <a href="../getting-started/decision-tree.html">Migration Guide</a>.</p>
-<p><strong>Access:</strong> <a href="https://huggingface.co/facebook/esm2">HuggingFace</a> | <a href="https://github.com/facebookresearch/esm">GitHub</a></p>
+<section id="quick-decision-guide" class="level1">
+<h1>Quick Decision Guide</h1>
+<section id="i-want-to-understand-what-my-protein-sequences-mean" class="level2">
+<h2 class="anchored" data-anchor-id="i-want-to-understand-what-my-protein-sequences-mean">I want to understand what my protein sequences mean</h2>
+<section id="use-esmc" class="level3">
+<h3 class="anchored" data-anchor-id="use-esmc">Use ESMC</h3>
+<p>ESMC is the newest foundation protein language model. It was trained on <strong>2.8 billion protein sequences</strong> and produces high-quality representations that capture protein biology from amino acid composition through function.</p>
+</section>
+<section id="best-for" class="level3">
+<h3 class="anchored" data-anchor-id="best-for">Best for</h3>
+<ul>
+<li>Protein embeddings</li>
+<li>Machine learning feature extraction</li>
+<li>Functional analysis</li>
+<li>Representation learning</li>
+<li>New research projects</li>
+</ul>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<blockquote class="blockquote">
+<p>You have 100,000 enzyme sequences and want to predict activity. Use ESMC embeddings as features for your prediction model.</p>
+</blockquote>
 <hr>
 </section>
 </section>
-<section id="structure-prediction-models" class="level2">
-<h2 class="anchored" data-anchor-id="structure-prediction-models">Structure Prediction Models</h2>
+<section id="i-want-to-generate-a-new-protein" class="level2">
+<h2 class="anchored" data-anchor-id="i-want-to-generate-a-new-protein">I want to generate a new protein</h2>
+<section id="use-esm3" class="level3">
+<h3 class="anchored" data-anchor-id="use-esm3">Use ESM3</h3>
+<p>ESM3 is a multimodal generative model that creates entirely new proteins from sequence, structure, and functional prompts.</p>
+</section>
+<section id="best-for-1" class="level3">
+<h3 class="anchored" data-anchor-id="best-for-1">Best for</h3>
+<ul>
+<li>Novel enzyme design</li>
+<li>Protein engineering</li>
+<li>Binder design</li>
+<li>De novo protein generation</li>
+<li>Exploring new regions of protein sequence space</li>
+</ul>
+</section>
+<section id="why-esm3" class="level3">
+<h3 class="anchored" data-anchor-id="why-esm3">Why ESM3?</h3>
+<ul>
+<li>Joint reasoning over sequence, structure, and function</li>
+<li>Prompt-based protein generation</li>
+<li>Supports multiple simultaneous design constraints</li>
+<li>Generates proteins far beyond natural sequence diversity</li>
+</ul>
+</section>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example</h3>
+<blockquote class="blockquote">
+<p>Design a protein that binds a specific therapeutic target while adopting a desired structural fold.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="i-need-to-predict-protein-structure" class="level2">
+<h2 class="anchored" data-anchor-id="i-need-to-predict-protein-structure">I need to predict protein structure</h2>
+<p>Choose one of the three structure prediction models.</p>
+<section id="esmfold" class="level3">
+<h3 class="anchored" data-anchor-id="esmfold">ESMFold</h3>
+<p><strong>Fast single-sequence prediction</strong></p>
+<p><strong>Best for</strong></p>
+<ul>
+<li>Large databases</li>
+<li>Metagenomic studies</li>
+<li>Rapid screening</li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>No MSA required</li>
+<li>6–60× faster than AlphaFold2</li>
+<li>Competitive accuracy</li>
+</ul>
+<hr>
+</section>
 <section id="esmfold2" class="level3">
 <h3 class="anchored" data-anchor-id="esmfold2">ESMFold2</h3>
-<p><strong>Status:</strong> Latest (2025)<br>
-<strong>Architecture:</strong> Stable recurrent folding layers<br>
-<strong>Modes:</strong> Single sequence or MSA-augmented</p>
-<p><strong>Best For:</strong> - Protein complex prediction - Antibody-antigen interactions - Protein-protein interactions - Multi-chain systems - When accuracy is critical</p>
-<p><strong>Key Features:</strong> - State-of-the-art accuracy - Inference-time scaling - Faster than AlphaFold3 - Supports ligand binding</p>
-<p><strong>Input Limits:</strong> - Single sequence: up to 768 residues - Complex mode: sum of chains ≤ 768 residues</p>
-<p><strong>Performance:</strong> - Antibody-antigen: 50-55% DockQ pass rate - Protein-protein: 70-76% pass rate - Protein-ligand: 63-66% pass rate</p>
-<p><strong>Access:</strong> <a href="https://biohub.ai/models/esmfold2">Biohub</a> | <a href="https://biohub.ai/resources/tutorials">Tutorials</a></p>
+<p><strong>Highest accuracy</strong></p>
+<p><strong>Best for</strong></p>
+<ul>
+<li>Therapeutic proteins</li>
+<li>Protein complexes</li>
+<li>Antibody design</li>
+<li>Detailed structural analysis</li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>State-of-the-art accuracy</li>
+<li>Excellent complex prediction</li>
+<li>Strong antibody–antigen performance</li>
+</ul>
 <hr>
 </section>
 <section id="esmfold2-fast" class="level3">
 <h3 class="anchored" data-anchor-id="esmfold2-fast">ESMFold2-Fast</h3>
-<p><strong>Status:</strong> Latest (2025)<br>
-<strong>Architecture:</strong> Simplified, optimized for speed</p>
-<p><strong>Best For:</strong> - High-throughput structure prediction - Screening large sequence sets - When speed matters more than maximum accuracy - Monomer or simple predictions</p>
-<p><strong>Key Features:</strong> - 50% fewer layers than ESMFold2 - No MSA requirement - 1.3x faster than ESMFold2 - Minimal accuracy trade-off</p>
-<p><strong>Performance:</strong> - Antibody-antigen: 50% DockQ pass rate - Protein-protein: 68% pass rate - Protein-ligand: 63% pass rate</p>
-<p><strong>Access:</strong> <a href="https://biohub.ai/models/esmfold2">Biohub</a> | <a href="https://biohub.ai/resources/tutorials">Tutorials</a></p>
-<hr>
-</section>
-<section id="esmfold-original" class="level3">
-<h3 class="anchored" data-anchor-id="esmfold-original">ESMFold (Original)</h3>
-<p><strong>Status:</strong> First generation (2022)</p>
-<p><strong>Best For:</strong> - Legacy workflows - When ESMFold2 is unavailable</p>
-<p><strong>Note:</strong> Use ESMFold2 instead—it’s faster and more accurate.</p>
-<p><strong>Access:</strong> <a href="https://github.com/Biohub/esm">GitHub</a></p>
-<hr>
-</section>
-</section>
-<section id="multimodal-models" class="level2">
-<h2 class="anchored" data-anchor-id="multimodal-models">Multimodal Models</h2>
-<section id="esm3" class="level3">
-<h3 class="anchored" data-anchor-id="esm3">ESM3</h3>
-<p><strong>Status:</strong> Latest (2025)<br>
-<strong>Modalities:</strong> Sequence, structure, function</p>
-<p><strong>Best For:</strong> - De novo protein design - Sequence generation - Conditional structure prediction - Protein engineering</p>
-<p><strong>Key Features:</strong> - Multimodal (seq + structure + function) - Can generate from partial inputs - Great for design workflows</p>
-<p><strong>Access:</strong> <a href="https://biohub.ai/models/esm3">Biohub</a> | <a href="https://www.science.org/doi/10.1126/science.adk2211">Paper</a> | <a href="https://biohub.ai/resources/tutorials">Tutorials</a></p>
+<p><strong>Best balance of speed and accuracy</strong></p>
+<p><strong>Best for</strong></p>
+<ul>
+<li>High-throughput prediction</li>
+<li>Design iteration</li>
+<li>Large screening projects</li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Fastest inference</li>
+<li>Excellent single-sequence performance</li>
+<li>Near ESMFold2 accuracy</li>
+</ul>
 <hr>
 </section>
 </section>
-<section id="quick-decision-matrix" class="level2">
-<h2 class="anchored" data-anchor-id="quick-decision-matrix">Quick Decision Matrix</h2>
+</section>
+<section id="structure-prediction-decision-table" class="level1">
+<h1>Structure Prediction Decision Table</h1>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Task</th>
-<th>ESMC</th>
-<th>ESM2</th>
-<th>ESM3</th>
-<th>ESMFold2</th>
-<th>ESMFold2-Fast</th>
+<th>Your situation</th>
+<th>Recommended model</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Get embeddings</td>
-<td>✅ Best</td>
-<td>✅ Good</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
+<td>More than 100,000 proteins</td>
+<td>ESMFold</td>
 </tr>
 <tr class="even">
-<td>Fine-tune model</td>
-<td>✅ Best</td>
-<td>✅ Good</td>
-<td>⚠️ Limited</td>
-<td>❌</td>
-<td>❌</td>
+<td>Therapeutic protein design</td>
+<td>ESMFold2</td>
 </tr>
 <tr class="odd">
-<td>Predict structure</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>✅ Best</td>
-<td>✅ Fast</td>
+<td>Rapid design iteration</td>
+<td>ESMFold2-Fast</td>
 </tr>
 <tr class="even">
-<td>Design proteins</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅ Best</td>
-<td>❌</td>
-<td>❌</td>
+<td>Antibody–antigen prediction</td>
+<td>ESMFold2</td>
 </tr>
 <tr class="odd">
-<td>Score mutations</td>
-<td>✅ Best</td>
-<td>✅ Good</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
+<td>Budget-conscious large-scale prediction</td>
+<td>ESMFold2-Fast</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<section id="i-already-use-esm-2" class="level2">
+<h2 class="anchored" data-anchor-id="i-already-use-esm-2">I already use ESM-2</h2>
+<section id="keep-esm-2-if" class="level3">
+<h3 class="anchored" data-anchor-id="keep-esm-2-if">Keep ESM-2 if</h3>
+<ul>
+<li>Your production workflow already works.</li>
+<li>You need reproducibility with published work.</li>
+<li>Refactoring isn’t worthwhile.</li>
+</ul>
+</section>
+<section id="upgrade-to-esmc-if" class="level3">
+<h3 class="anchored" data-anchor-id="upgrade-to-esmc-if">Upgrade to ESMC if</h3>
+<ul>
+<li>You’re starting a new project.</li>
+<li>You’re working with metagenomic sequences.</li>
+<li>You want improved representations.</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="example-workflows" class="level1">
+<h1>Example Workflows</h1>
+<section id="novel-enzyme-discovery" class="level2">
+<h2 class="anchored" data-anchor-id="novel-enzyme-discovery">Novel enzyme discovery</h2>
+<pre class="text"><code>ESM3
+    ↓
+Generate candidate proteins
+    ↓
+ESMFold2
+    ↓
+Predict structures
+    ↓
+Experimental validation</code></pre>
+<hr>
+</section>
+<section id="large-protein-database-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="large-protein-database-analysis">Large protein database analysis</h2>
+<pre class="text"><code>ESMFold
+    ↓
+Structure prediction
+    ↓
+ESMC
+    ↓
+Protein embeddings
+    ↓
+Clustering and analysis</code></pre>
+<hr>
+</section>
+<section id="therapeutic-antibody-design" class="level2">
+<h2 class="anchored" data-anchor-id="therapeutic-antibody-design">Therapeutic antibody design</h2>
+<pre class="text"><code>ESMC
+    ↓
+Sequence analysis
+    ↓
+ESM3
+    ↓
+Generate variants
+    ↓
+ESMFold2
+    ↓
+Predict antibody-antigen complexes
+    ↓
+Experimental validation</code></pre>
+<hr>
+</section>
+<section id="custom-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="custom-machine-learning">Custom machine learning</h2>
+<pre class="text"><code>ESMC
+    ↓
+Generate embeddings
+    ↓
+Train custom ML model
+    ↓
+Experimental validation</code></pre>
+<hr>
+</section>
+</section>
+<section id="practical-tips" class="level1">
+<h1>Practical Tips</h1>
+<section id="use-the-newest-models" class="level2">
+<h2 class="anchored" data-anchor-id="use-the-newest-models">Use the newest models</h2>
+<ul>
+<li>Prefer ESMC over ESM-2 for new projects.</li>
+<li>Prefer ESM3 for protein generation.</li>
+</ul>
+<hr>
+</section>
+<section id="balance-speed-and-accuracy" class="level2">
+<h2 class="anchored" data-anchor-id="balance-speed-and-accuracy">Balance speed and accuracy</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Goal</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fastest predictions</td>
+<td>ESMFold</td>
 </tr>
 <tr class="even">
-<td>Predict function</td>
-<td>✅ Best</td>
-<td>✅ Good</td>
-<td>⚠️</td>
-<td>❌</td>
-<td>❌</td>
+<td>Highest accuracy</td>
+<td>ESMFold2</td>
 </tr>
 <tr class="odd">
-<td>High throughput</td>
-<td>✅</td>
-<td>✅</td>
-<td>❌</td>
-<td>⚠️</td>
-<td>✅ Best</td>
-</tr>
-<tr class="even">
-<td>Maximum accuracy</td>
-<td>✅ Good</td>
-<td>✅ Good</td>
-<td>✅</td>
-<td>✅ Best</td>
-<td>✅</td>
+<td>Best compromise</td>
+<td>ESMFold2-Fast</td>
 </tr>
 </tbody>
 </table>
 <hr>
 </section>
-<section id="performance-benchmarks" class="level2">
-<h2 class="anchored" data-anchor-id="performance-benchmarks">Performance Benchmarks</h2>
-<section id="structure-prediction-esmfold2" class="level3">
-<h3 class="anchored" data-anchor-id="structure-prediction-esmfold2">Structure Prediction (ESMFold2)</h3>
-<p><strong>Antibody-Antigen:</strong> - Single sequence: 50% DockQ ≥ 0.23 - With MSA: 53% DockQ ≥ 0.23 - With 20 loops: 55% DockQ ≥ 0.23</p>
-<p><strong>Protein-Protein:</strong> - Single sequence: 70% pass rate - With MSA: 76% pass rate</p>
-<p><strong>Inference Speed (1024 aa):</strong> - ESMFold2: 15.8 seconds - ESMFold2-Fast: 9.4 seconds - AlphaFold3: 20+ seconds</p>
+<section id="iterate-during-design" class="level2">
+<h2 class="anchored" data-anchor-id="iterate-during-design">Iterate during design</h2>
+<ul>
+<li>Use ESMFold2-Fast during rapid design cycles.</li>
+<li>Use ESMFold2 to validate the best candidates.</li>
+</ul>
+<hr>
+</section>
+<section id="write-clear-prompts-for-esm3" class="level2">
+<h2 class="anchored" data-anchor-id="write-clear-prompts-for-esm3">Write clear prompts for ESM3</h2>
+<ul>
+<li>Be specific.</li>
+<li>Combine structural and functional constraints.</li>
+<li>Iterate and refine prompts.</li>
+</ul>
+<hr>
+</section>
+<section id="validate-experimentally" class="level2">
+<h2 class="anchored" data-anchor-id="validate-experimentally">Validate experimentally</h2>
+<p>High-confidence predictions indicate confidence in the predicted structure—not biological activity.</p>
+<p>Experimental validation is always recommended.</p>
 <hr>
 </section>
 </section>
-<section id="training-data-comparison" class="level2">
-<h2 class="anchored" data-anchor-id="training-data-comparison">Training Data Comparison</h2>
+<section id="confidence-scores" class="level1">
+<h1>Confidence Scores</h1>
+<p>All structure prediction models report <strong>pLDDT</strong>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Score</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">&gt;0.90</td>
+<td>Very high confidence</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.70–0.90</td>
+<td>High confidence</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.50–0.70</td>
+<td>Moderate confidence</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">&lt;0.50</td>
+<td>Low confidence</td>
+</tr>
+</tbody>
+</table>
+<p>A low confidence score does not necessarily mean the protein is uninteresting—it indicates greater uncertainty in the predicted structure.</p>
+<hr>
+</section>
+<section id="next-steps" class="level1">
+<h1>Next Steps</h1>
+<ol type="1">
+<li>Choose the model that matches your goal.</li>
+<li>Start with a small example.</li>
+<li>Work through the model tutorial.</li>
+<li>Validate your predictions.</li>
+<li>Refine your workflow.</li>
+</ol>
+<hr>
+</section>
+<section id="getting-help" class="level1">
+<h1>Getting Help</h1>
+<ul>
+<li>Documentation</li>
+<li>Tutorials</li>
+<li>GitHub Discussions</li>
+<li>Research papers</li>
+</ul>
+<hr>
+</section>
+<section id="key-takeaway" class="level1">
+<h1>Key Takeaway</h1>
+<p>The ESM ecosystem provides complementary tools:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Model</th>
-<th>Size</th>
-<th>Source</th>
-<th>Diversity</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>ESMC</td>
-<td>2.8B sequences</td>
-<td>UniRef + JGI + MGnify</td>
-<td>High (metagenomic)</td>
+<td><strong>ESMC</strong></td>
+<td>Understand protein sequences</td>
 </tr>
 <tr class="even">
-<td>ESM2</td>
-<td>50M sequences</td>
-<td>UniRef50</td>
-<td>Medium</td>
+<td><strong>ESM3</strong></td>
+<td>Design new proteins</td>
 </tr>
 <tr class="odd">
-<td>ESM3</td>
-<td>2.8B sequences</td>
-<td>UniRef + metagenomic</td>
-<td>High</td>
+<td><strong>ESMFold</strong></td>
+<td>Fast structure prediction</td>
+</tr>
+<tr class="even">
+<td><strong>ESMFold2</strong></td>
+<td>Highest-accuracy structure prediction</td>
+</tr>
+<tr class="odd">
+<td><strong>ESMFold2-Fast</strong></td>
+<td>High-throughput structure prediction</td>
 </tr>
 </tbody>
 </table>
-<hr>
-</section>
+<p>Many research workflows combine multiple ESM models. For example, you might use ESMC to analyze sequences, ESM3 to design new proteins, and ESMFold2 to predict the structures of your designs.</p>
 <section id="see-also" class="level2">
 <h2 class="anchored" data-anchor-id="see-also">See Also</h2>
 <ul>
