@@ -4,12 +4,6 @@ description: "Archived materials from workshops, seminars, and events."
 format: html
 ---
 
-# Workshops & Events Archive
-
-Access materials from workshops, seminars, and community events.
-
----
-
 **Coming soon...**
 
 We're collecting archived materials from workshops and events. Check back soon for:
@@ -19,8 +13,6 @@ We're collecting archived materials from workshops and events. Check back soon f
 - Office hours archives
 - Hackathon results and code
 - Event photos and summaries
-
----
 
 ## Stay Updated
 
