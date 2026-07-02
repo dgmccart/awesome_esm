@@ -40,3 +40,69 @@ To contribute a tutorial:
 - Check that it's not already listed
 - Open a pull request with the tutorial notebook/script
 - Link to the tutorial from the Tutorials page
+
+## Development Guidelines
+
+### Local Setup
+
+```bash
+git clone https://github.com/Biohub/awesome-esm.git
+cd awesome-esm
+quarto preview
+```
+
+**Making Changes**
+
+Create a new branch: `git checkout -b my-contribution`
+Make your changes
+Preview locally: `quarto preview`
+Commit: `git commit -am` "Add: description of change"
+Push: `git push origin my-contribution`
+Open a pull request
+
+**Style Guide**
+
+Use clear, accessible language
+Include code examples where applicable
+Link to relevant resources
+Use the provided templates for papers and use cases
+
+**Curation Standards**
+We aim for high-quality, accurate content. Contributions are reviewed on:
+
+Relevance: Does it relate to ESM models or applications?
+Accuracy: Is the information correct?
+Clarity: Is it well-written and understandable?
+Originality: Is it not spam or duplicate content?
+
+**Questions?**
+
+GitHub: Open an issue
+Slack: Join the community
+Email: resources@biohub.ai
+
+---
+
+## Initial Commit
+
+```bash
+# Initialize git (if not already done)
+git init
+
+# Add all files
+git add .
+
+# Commit
+git commit -m "Initial commit: Quarto site structure"
+
+# Push to GitHub
+git push -u origin main
+
+# Preview site locally
+quarto preview
+
+# Render for production
+quarto render
+
+# Check that _site/ was created with HTML files
+ls _site/
