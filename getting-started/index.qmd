@@ -1,26 +1,16 @@
 ---
-title: "Get Started"
-description: "Choose your ESM model and get started with installation guides."
 format: html
 ---
+:::{style="text-align: center; margin-bottom: 1rem;"}
+# Quickstart
+
+Choose your ESM model and get started with installation guides.
+:::
 
 # Get Started with ESM
 
 Welcome! This section will help you choose the right ESM model for your work and get it installed.
 
-## Quick Links
-
-:::{.quick-links}
-[🌐 **Biohub**<br/>biohub.ai](https://biohub.ai)
-
-[🤗 **Hugging Face**<br/>biohub models](https://huggingface.co/biohub)
-
-[💻 **GitHub**<br/>ESM Package](https://github.com/Biohub/esm)
-
-[📚 **Tutorials**<br/>Learn by doing](https://biohub.ai/resources/tutorials)
-:::
-
----
 
 ## Model Overview
 
@@ -28,12 +18,12 @@ Not sure which model to use? This comparison will help:
 
 | Model | Purpose | Best For | Input Limit | Speed | Links |
 |-------|---------|----------|-------------|-------|-------|
-| **ESMC** | Sequence representation | Embeddings, function prediction, fine-tuning | 2,048 aa | Fast | [Card](https://biohub.ai/models/esmc) \| [Paper](https://www.biorxiv.org/content/10.1101/2025.01.09.632079v1) \| [HuggingFace](https://huggingface.co/biohub) |
-| **ESM3** | Multimodal design | Sequence generation, structure prediction | 2,048 aa | Medium | [Card](https://biohub.ai/models/esm3) \| [Paper](https://www.science.org/doi/10.1126/science.adk2211) |
-| **ESM2** | Sequence representation | Legacy code, established workflows | 2,048 aa | Fast | [Card](https://biohub.ai/models/esm2) \| [Paper](https://www.biorxiv.org/content/10.1101/2022.07.20.500902v1) |
-| **ESMFold** | Structure prediction | Quick structure predictions | Single chain | Very Fast | [Card](https://biohub.ai/models/esmfold) |
-| **ESMFold2** | Complex prediction | Antibody-antigen, multimers | Up to 768 aa | Fast | [Card](https://biohub.ai/models/esmfold2) |
-| **ESMFold2-Fast** | Fast structure prediction | High-throughput screening | Single chain | Fastest | [Card](https://biohub.ai/models/esmfold2) |
+| **ESMC** | Sequence representation | Embeddings, function prediction, fine-tuning | 2,048 aa | Fast | [Model Details](https://biohub.ai/models/esmc) |
+| **ESM3** | Multimodal design | Sequence generation, structure prediction | 2,048 aa | Medium | [Model Details](https://biohub.ai/models/esm3)|
+| **ESM2** | Sequence representation | Legacy code, established workflows | 2,048 aa | Fast |  |
+| **ESMFold** | Structure prediction | Quick structure predictions | Single chain | Very Fast |  |
+| **ESMFold2** | Complex prediction | Antibody-antigen, multimers | 768 aa | Fast | [Model Details](https://biohub.ai/models/esmfold2) |
+| **ESMFold2-Fast** | Fast structure prediction | High-throughput screening | Single chain | Fastest | [Model Details](https://biohub.ai/models/esmfold2) |
 
 ---
 

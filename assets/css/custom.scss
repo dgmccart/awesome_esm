@@ -1,0 +1,380 @@
+/*-- scss:rules --*/
+
+/* ==========================================================================
+   Biohub Theme
+   Custom component styling
+   ========================================================================== */
+
+/*-- scss:rules --*/
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+body {
+  background: var(--biohub-bg);
+  color: var(--biohub-text);
+}
+
+.page-layout-article,
+.page-layout-full {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main.content {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.content {
+  max-width: 860px;
+}
+
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.sidebar {
+  background: #F5F5F5;
+  border-right: 1px solid #DFDFDF;
+}
+
+.sidebar nav a {
+  color: #767676;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sidebar nav a:hover {
+  color: #6E4FF9;
+}
+
+.sidebar nav .active {
+  color: #6E4FF9;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Images
+   ========================================================================== */
+
+img {
+  border-radius: 10px;
+}
+
+/* ==========================================================================
+   Code
+   ========================================================================== */
+
+pre {
+  background: #F5F5F5;
+  border: 1px solid #DFDFDF;
+  border-radius: 10px;
+}
+
+code {
+  border-radius: 6px;
+}
+
+/* ==========================================================================
+   Right sidebar (Table of Contents)
+   ========================================================================== */
+
+/* Remove the divider between the content and TOC */
+
+#quarto-margin-sidebar {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any border on the TOC */
+
+#TOC {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove the column divider */
+
+.margin-sidebar {
+  border-left: none !important;
+  box-shadow: none !important;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+/* (Coming next) */
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.nav-footer {
+
+  background: #000000 !important;
+
+  border: none !important;
+
+  color: rgba(255,255,255,.72);
+
+  padding: 0.6rem 2rem;
+}
+
+.nav-footer p {
+  margin: 0;
+}
+
+.footer-logo {
+  height: 32px;
+  width: auto;
+}
+
+.nav-footer a {
+
+  color: #CDCDCD;
+
+  text-decoration: none !important;
+
+  transition: color .15s ease;
+}
+
+.nav-footer a:hover {
+
+  color: #FFFFFF;
+
+  text-decoration: none !important;
+}
+
+/* ==========================================================================
+   Resource Cards
+   ========================================================================== */
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.tile {
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 125px;
+
+  padding: 1.25rem;
+
+  background: #FAFAFA;
+
+  border: 1px solid var(--biohub-border);
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition:
+    border-color .15s ease,
+    box-shadow .15s ease,
+    transform .15s ease;
+}
+
+.tile:hover {
+
+  border-color: var(--biohub-primary);
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+
+  transform: translateY(-2px);
+}
+
+.tile h3 {
+
+  margin: 0 0 .45rem 0;
+
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+
+  color: var(--biohub-text);
+
+  transition: color .15s ease;
+}
+
+.tile:hover h3 {
+  color: var(--biohub-primary);
+}
+
+.tile p {
+
+  margin: 0;
+
+  flex-grow: 1;
+
+  font-size: .95rem;
+  line-height: 1.55;
+
+  color: var(--biohub-text-secondary);
+}
+
+/* Make the entire card clickable */
+
+.tile a {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 10;
+
+  overflow: hidden;
+
+  text-indent: -9999px;
+
+  white-space: nowrap;
+
+  background: transparent;
+
+  text-decoration: none;
+}
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+  border-radius: 8px !important;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  padding: 0.65rem 1.2rem;
+
+  transition:
+    background-color .15s ease,
+    border-color .15s ease,
+    transform .15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background-color: var(--biohub-primary);
+  border-color: var(--biohub-primary);
+}
+
+.btn-primary:hover {
+  background-color: #5A3EF0;
+  border-color: #5A3EF0;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--biohub-primary);
+  border: 1px solid var(--biohub-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--biohub-primary-light);
+  color: var(--biohub-primary);
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/* (Coming later) */
+
+
+/* ==========================================================================
+   Theme colors
+   ========================================================================== */
+
+:root,
+body.quarto-light {
+  --biohub-bg: #FFFFFF;
+  --biohub-surface: #FFFFFF;
+  --biohub-text: #000000;
+  --biohub-text-secondary: #767676;
+  --biohub-border: #DFDFDF;
+  --biohub-primary: #6E4FF9;
+  --biohub-primary-light: #F1F0FF;
+}
+
+body.quarto-dark {
+  --biohub-bg: #181818;
+  --biohub-surface: #242424;
+  --biohub-text: #F5F5F5;
+  --biohub-text-secondary: #CDCDCD;
+  --biohub-border: #494949;
+  --biohub-primary: #6E4FF9;
+  --biohub-primary-light: #1D004D;
+}
+
+/* ==========================================================================
+   Apply theme
+   ========================================================================== */
+
+body,
+#quarto-content,
+main.content,
+.content {
+  background: var(--biohub-bg);
+  color: var(--biohub-text);
+}
+
+.sidebar {
+  background: var(--biohub-surface);
+}
+
+#quarto-margin-sidebar {
+  background: transparent;
+}
+
+/* ==========================================================================
+   Mobile
+   ========================================================================== */
+
+/* (Coming later) */
+
+/* ==========================================================================
+   Sidebar footer links
+   ========================================================================== */
+
+.sidebar-links {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--biohub-border);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  font-size: 13px;
+}
+
+.sidebar-links a {
+  color: var(--biohub-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sidebar-links a:hover {
+  color: var(--biohub-primary);
+}
+
+/* ==========================================================================
+   Hide built-in theme toggle
+   ========================================================================== */
+
+.quarto-color-scheme-toggle {
+  display: none !important;
+}

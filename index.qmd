@@ -1,11 +1,9 @@
 ---
-title: "Awesome ESM"
-description: "A curated collection of resources, papers, tutorials, and community examples for the ESM family of protein language models."
 format: html
 page-layout: full
 ---
 
-:::{style="text-align: center; margin-bottom: 3rem;"}
+:::{style="text-align: center; margin-bottom: 1rem;"}
 # Awesome ESM
 
 A curated collection of resources, papers, tutorials, and community examples for the ESM family of protein language models.
@@ -13,72 +11,50 @@ A curated collection of resources, papers, tutorials, and community examples for
 [Get Started](#get-started){.btn .btn-primary} [Explore Use Cases](#use-cases){.btn .btn-secondary}
 :::
 
----
-
-## Quick Links
-
-:::{.quick-links}
-[🌐 **Biohub**<br/>biohub.ai](https://biohub.ai)
-
-[🤗 **Hugging Face**<br/>biohub models](https://huggingface.co/biohub)
-
-[💻 **GitHub**<br/>ESM Package](https://github.com/Biohub/esm)
-
-[📚 **Tutorials**<br/>biohub.ai](https://biohub.ai/resources/tutorials)
-:::
-
----
-
 ## Featured Sections
 
 :::{.tile-grid}
 
 :::{.tile}
-🚀
-
 ### Get Started
 Choose your model and get up and running with installation guides and decision trees.
-[Explore →](docs/get-started/index.qmd)
+
+[](getting-started/index.qmd)
 :::
 
 :::{.tile}
-📖
-
 ### Use Cases
 Discover papers and applications showing how ESM is being used in research.
-[Browse →](docs/use-cases/index.qmd)
+
+[](use-cases/index.qmd)
 :::
 
 :::{.tile}
-🎓
-
 ### Tutorials
 Learn practical skills with hands-on tutorials and code examples.
-[View →](docs/tutorials.qmd)
+
+[](tutorials.qmd)
 :::
 
 :::{.tile}
-❓
-
 ### FAQ
 Get answers to common questions about ESM, models, and usage.
-[Read →](docs/faq.qmd)
+
+[](faq.qmd)
 :::
 
 :::{.tile}
-🤝
-
 ### Get Involved
 Join our community and contribute papers, use cases, and more.
-[Contribute →](docs/get-involved.qmd)
+
+[](get-involved.qmd)
 :::
 
 :::{.tile}
-📺
-
 ### Workshops
 Access archived materials from workshops, seminars, and events.
-[Archive →](docs/workshops.qmd)
+
+[](workshops.qmd)
 :::
 
 :::

@@ -30,3 +30,6 @@ Thumbs.db
 
 # Node (if using)
 node_modules/
+
+/.quarto/
+**/*.quarto_ipynb
