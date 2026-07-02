@@ -188,7 +188,7 @@
     "href": "CONTRIBUTING.html",
     "title": "Contributing to Awesome ESM",
     "section": "",
-    "text": "We’re excited to have you contribute! This resource is built by and for the ESM community.\n\n\n\n\nFound a great paper using ESM? Share it!\nOpen an issue with: - Title - Link to paper - Brief summary (2-3 sentences) - Which ESM model(s) were used - Your name/affiliation\n\n\n\nIs something confusing? Help us improve documentation.\nOpen an issue with: - Your question (in user language) - Suggested answer - Code example (if applicable)\n\n\n\nFound a typo, broken link, or outdated info?\nOpen an issue and let us know what needs fixing.\n\n\n\nWant to see a tutorial on a specific topic?\nOpen an issue to request one.\nTo contribute a tutorial: - Check that it’s not already listed - Open a pull request with the tutorial notebook/script - Link to the tutorial from the Tutorials page"
+    "text": "We’re excited to have you contribute! This resource is built by and for the ESM community.\n\n\n\n\nFound a great paper using ESM? Share it!\nOpen an issue with: - Title - Link to paper - Brief summary (2-3 sentences) - Which ESM model(s) were used - Your name/affiliation\n\n\n\nIs something confusing? Help us improve documentation.\nOpen an issue with: - Your question (in user language) - Suggested answer - Code example (if applicable)\n\n\n\nFound a typo, broken link, or outdated info?\nOpen an issue and let us know what needs fixing.\n\n\n\nWant to see a tutorial on a specific topic?\nOpen an issue to request one.\nTo contribute a tutorial: - Check that it’s not already listed - Open a pull request with the tutorial notebook/script - Link to the tutorial from the Tutorials page\n\n\n\n\n\n\ngit clone https://github.com/Biohub/awesome-esm.git\ncd awesome-esm\nquarto preview\nMaking Changes\nCreate a new branch: git checkout -b my-contribution Make your changes Preview locally: quarto preview Commit: git commit -am “Add: description of change” Push: git push origin my-contribution Open a pull request\nStyle Guide\nUse clear, accessible language Include code examples where applicable Link to relevant resources Use the provided templates for papers and use cases\nCuration Standards We aim for high-quality, accurate content. Contributions are reviewed on:\nRelevance: Does it relate to ESM models or applications? Accuracy: Is the information correct? Clarity: Is it well-written and understandable? Originality: Is it not spam or duplicate content?\nQuestions?\nGitHub: Open an issue Slack: Join the community Email: resources@biohub.ai\n\n\n\n\n\n```bash # Initialize git (if not already done) git init"
   },
   {
     "objectID": "CONTRIBUTING.html#ways-to-contribute",
@@ -196,6 +196,20 @@
     "title": "Contributing to Awesome ESM",
     "section": "",
     "text": "Found a great paper using ESM? Share it!\nOpen an issue with: - Title - Link to paper - Brief summary (2-3 sentences) - Which ESM model(s) were used - Your name/affiliation\n\n\n\nIs something confusing? Help us improve documentation.\nOpen an issue with: - Your question (in user language) - Suggested answer - Code example (if applicable)\n\n\n\nFound a typo, broken link, or outdated info?\nOpen an issue and let us know what needs fixing.\n\n\n\nWant to see a tutorial on a specific topic?\nOpen an issue to request one.\nTo contribute a tutorial: - Check that it’s not already listed - Open a pull request with the tutorial notebook/script - Link to the tutorial from the Tutorials page"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#development-guidelines",
+    "href": "CONTRIBUTING.html#development-guidelines",
+    "title": "Contributing to Awesome ESM",
+    "section": "",
+    "text": "git clone https://github.com/Biohub/awesome-esm.git\ncd awesome-esm\nquarto preview\nMaking Changes\nCreate a new branch: git checkout -b my-contribution Make your changes Preview locally: quarto preview Commit: git commit -am “Add: description of change” Push: git push origin my-contribution Open a pull request\nStyle Guide\nUse clear, accessible language Include code examples where applicable Link to relevant resources Use the provided templates for papers and use cases\nCuration Standards We aim for high-quality, accurate content. Contributions are reviewed on:\nRelevance: Does it relate to ESM models or applications? Accuracy: Is the information correct? Clarity: Is it well-written and understandable? Originality: Is it not spam or duplicate content?\nQuestions?\nGitHub: Open an issue Slack: Join the community Email: resources@biohub.ai"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#initial-commit",
+    "href": "CONTRIBUTING.html#initial-commit",
+    "title": "Contributing to Awesome ESM",
+    "section": "",
+    "text": "```bash # Initialize git (if not already done) git init"
   },
   {
     "objectID": "use-cases/model-development.html",

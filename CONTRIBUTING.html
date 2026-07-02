@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -318,7 +353,15 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#contributing-to-awesome-esm" id="toc-contributing-to-awesome-esm" class="nav-link active" data-scroll-target="#contributing-to-awesome-esm">Contributing to Awesome ESM</a>
   <ul class="collapse">
   <li><a href="#ways-to-contribute" id="toc-ways-to-contribute" class="nav-link" data-scroll-target="#ways-to-contribute">Ways to Contribute</a></li>
+  <li><a href="#development-guidelines" id="toc-development-guidelines" class="nav-link" data-scroll-target="#development-guidelines">Development Guidelines</a></li>
+  <li><a href="#initial-commit" id="toc-initial-commit" class="nav-link" data-scroll-target="#initial-commit">Initial Commit</a></li>
   </ul></li>
+  <li><a href="#add-all-files" id="toc-add-all-files" class="nav-link" data-scroll-target="#add-all-files">Add all files</a></li>
+  <li><a href="#commit" id="toc-commit" class="nav-link" data-scroll-target="#commit">Commit</a></li>
+  <li><a href="#push-to-github" id="toc-push-to-github" class="nav-link" data-scroll-target="#push-to-github">Push to GitHub</a></li>
+  <li><a href="#preview-site-locally" id="toc-preview-site-locally" class="nav-link" data-scroll-target="#preview-site-locally">Preview site locally</a></li>
+  <li><a href="#render-for-production" id="toc-render-for-production" class="nav-link" data-scroll-target="#render-for-production">Render for production</a></li>
+  <li><a href="#check-that-_site-was-created-with-html-files" id="toc-check-that-_site-was-created-with-html-files" class="nav-link" data-scroll-target="#check-that-_site-was-created-with-html-files">Check that _site/ was created with HTML files</a></li>
   </ul>
 </nav>
     </div>
@@ -354,10 +397,56 @@ ul.task-list li input[type="checkbox"] {
 <p>Want to see a tutorial on a specific topic?</p>
 <p><strong><a href="https://github.com/Biohub/awesome-esm/issues/new?template=tutorial-request.md">Open an issue</a></strong> to request one.</p>
 <p>To contribute a tutorial: - Check that it’s not already listed - Open a pull request with the tutorial notebook/script - Link to the tutorial from the Tutorials page</p>
-
-
 </section>
 </section>
+<section id="development-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="development-guidelines">Development Guidelines</h2>
+<section id="local-setup" class="level3">
+<h3 class="anchored" data-anchor-id="local-setup">Local Setup</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/Biohub/awesome-esm.git</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> awesome-esm</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Making Changes</strong></p>
+<p>Create a new branch: <code>git checkout -b my-contribution</code> Make your changes Preview locally: <code>quarto preview</code> Commit: <code>git commit -am</code> “Add: description of change” Push: <code>git push origin my-contribution</code> Open a pull request</p>
+<p><strong>Style Guide</strong></p>
+<p>Use clear, accessible language Include code examples where applicable Link to relevant resources Use the provided templates for papers and use cases</p>
+<p><strong>Curation Standards</strong> We aim for high-quality, accurate content. Contributions are reviewed on:</p>
+<p>Relevance: Does it relate to ESM models or applications? Accuracy: Is the information correct? Clarity: Is it well-written and understandable? Originality: Is it not spam or duplicate content?</p>
+<p><strong>Questions?</strong></p>
+<p>GitHub: Open an issue Slack: Join the community Email: resources@biohub.ai</p>
+<hr>
+</section>
+</section>
+<section id="initial-commit" class="level2">
+<h2 class="anchored" data-anchor-id="initial-commit">Initial Commit</h2>
+<p>```bash # Initialize git (if not already done) git init</p>
+</section>
+</section>
+<section id="add-all-files" class="level1">
+<h1>Add all files</h1>
+<p>git add .</p>
+</section>
+<section id="commit" class="level1">
+<h1>Commit</h1>
+<p>git commit -m “Initial commit: Quarto site structure”</p>
+</section>
+<section id="push-to-github" class="level1">
+<h1>Push to GitHub</h1>
+<p>git push -u origin main</p>
+</section>
+<section id="preview-site-locally" class="level1">
+<h1>Preview site locally</h1>
+<p>quarto preview</p>
+</section>
+<section id="render-for-production" class="level1">
+<h1>Render for production</h1>
+<p>quarto render</p>
+</section>
+<section id="check-that-_site-was-created-with-html-files" class="level1">
+<h1>Check that _site/ was created with HTML files</h1>
+<p>ls _site/</p>
+
+
 </section>
 
 </main> <!-- /main -->
