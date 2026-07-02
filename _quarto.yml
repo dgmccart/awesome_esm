@@ -19,7 +19,7 @@ website:
     collapse-level: 1
     alignment: left
 
-    logo: assets/images/esm_header.png
+    logo: assets/images/esm_header_new.png
     logo-alt: Awesome ESM
 
     contents:
