@@ -4,66 +4,72 @@ project:
 
 website:
   title: "Awesome ESM"
-  description: "A curated collection of ESM resources, papers, and community examples"
+  description: "A curated collection of ESM resources, papers, tutorials, and community examples"
+
   site-url: https://dgmccart.github.io/awesome_esm/
-  
-  # Favicon
-  favicon: assets/images/biohub-favicon.png
-  
-  # Search
-  search: true
-  
-  # Navigation bar
-  navbar:
-    background: "#FFFFFF"
-    logo: assets/images/esm_header.png
-    logo-alt: "Awesome ESM Logo"
-    
-    left:
-      - text: "Get Started"
-        href: getting-started/index.qmd
-      - text: "Use Cases"
-        href: use-cases/index.qmd
-      - text: "Tutorials"
-        href: tutorials.qmd
-      - text: "Workshops"
-        href: workshops.qmd
-      - text: "FAQ"
-        href: faq.qmd
-      - text: "Get Involved"
-        href: get-involved.qmd
-    
-    right:
-      - icon: github
-        href: https://github.com/dgmccart/awesome_esm
-        aria-label: GitHub
-      - icon: twitter
-        href: https://twitter.com/biohubcz
-        aria-label: Twitter
 
-  # Footer
-  page-footer:
-    background: "#F9FAFB"
-    left: |
-      © 2025 Biohub. Made with ❤️ by the community.
-    center: |
-      Part of the [ESM project](https://biohub.ai) • [License](https://github.com/Biohub/awesome-esm/blob/main/LICENSE)
-    right: |
-      [GitHub](https://github.com/Biohub/awesome-esm) • [Slack](https://biohub.slack.com) • [Contact](https://biohub.ai/contact)
+  favicon: assets/images/biohub_favicon.png
 
-  # Sidebar for nested pages
+  repo-url: https://github.com/dgmccart/awesome_esm
+  repo-actions: [source]
+
   sidebar:
-    - id: getting-started
-      contents:
-        - getting-started/index.qmd
-        - getting-started/model-comparison.qmd
-        - getting-started/decision-tree.qmd
-    
-    - id: use-cases
-      contents:
-        - use-cases/index.qmd
-        - use-cases/model-development.qmd
-        - use-cases/model-applications.qmd
+    style: "docked"
+    search: true
+    collapse-level: 1
+    alignment: left
+
+    logo: assets/images/esm_header.png
+    logo-alt: Awesome ESM
+
+    contents:
+      - href: index.qmd
+        text: Home
+
+      - section: Getting Started
+        contents:
+          - getting-started/index.qmd
+          - getting-started/model-comparison.qmd
+          - getting-started/decision-tree.qmd
+
+      - section: Use Cases
+        contents:
+          - use-cases/index.qmd
+          - use-cases/model-development.qmd
+          - use-cases/model-applications.qmd
+
+      - href: tutorials.qmd
+        text: Tutorials
+
+      - href: workshops.qmd
+        text: Workshops
+
+      - href: faq.qmd
+        text: FAQ
+
+      - href: get-involved.qmd
+        text: Get Involved
+
+      - text: |
+          <div class="sidebar-links">
+            <a href="https://biohub.ai" target="_blank">🌐 Biohub</a>
+            <a href="https://huggingface.co/biohub" target="_blank">🤗 Hugging Face</a>
+            <a href="https://github.com/Biohub/esm" target="_blank">💻 GitHub</a>
+            <a href="https://biohub.ai/resources/tutorials" target="_blank">📚 Tutorials</a>
+          </div>
+
+  page-footer:
+    left: |
+      [Privacy Policy](https://biohub.org/privacy-policy/) |
+      [Terms of Use](https://biohub.org/terms-of-use/) |
+      [DMCA Policy](https://biohub.org/dmca-policy/) |
+      [Ethics](https://biohub.org/ethics/) |
+      [Acceptable Use Policy](https://biohub.org/acceptable-use-policy/)
+
+    right: |
+      <img src="assets/images/biohub_white_text.png"
+          alt="Biohub"
+          class="footer-logo">
 
 # Styling
 format:
@@ -77,6 +83,9 @@ format:
         - darkly
         - assets/css/styles.scss
         - assets/css/custom.scss
+    
+    include-after-body:
+      - assets/js/cards.js
         
     # Layout
     page-layout: full
@@ -91,7 +100,6 @@ format:
     
     # Font Size
     fontsize: 14px
-    # mainfont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
     
     # Spacing
     margin-top: 1rem

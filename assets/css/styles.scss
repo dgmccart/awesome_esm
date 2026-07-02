@@ -1,17 +1,10 @@
 /* ==========================================================================
-   Biohub Design System
+   Biohub Design Tokens
    ========================================================================== */
 
 /*-- scss:defaults --*/
 
-/* Typography */
-$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont,
-  "Segoe UI", Helvetica, Arial, sans-serif;
-
-$headings-font-family: $font-family-sans-serif;
-$headings-font-weight: 600;
-
-/* Biohub colors */
+/* Colors */
 $primary: #6E4FF9;
 $secondary: #F1F0FF;
 
@@ -21,81 +14,56 @@ $body-color: #000000;
 $border-color: #DFDFDF;
 
 $link-color: $primary;
-$link-hover-color: darken($primary, 8%);
 
-/* Code */
-$code-bg: #F5F5F5;
-$code-color: #000000;
+/* Typography */
 
-/* Border radius */
+$font-family-sans-serif:
+  "Inter",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Helvetica,
+  Arial,
+  sans-serif;
+
+$headings-font-family: $font-family-sans-serif;
+$headings-font-weight: 600;
+
+/* Components */
+
 $border-radius: 10px;
 
-/* Buttons */
-$btn-font-weight: 600;
-$btn-border-radius: 10px;
-
-/* Navbar */
-$navbar-bg: #F5F5F5;
-$navbar-light-color: #767676;
-$navbar-light-hover-color: #000000;
-$navbar-light-active-color: #6E4FF9;
-
-/* Cards */
-$card-border-color: #DFDFDF;
 $card-border-radius: 12px;
 
+$btn-border-radius: 10px;
+$btn-font-weight: 600;
 /*-- scss:rules --*/
-
-/* Body */
 
 body {
   font-size: 14px;
   line-height: 24px;
 }
 
-/* H1 */
-
 h1 {
   font-size: 26px;
-  font-weight: 600;
   line-height: 34px;
-
-  margin-bottom: 1rem;
+  font-weight: 600;
 }
-
-/* H2 */
 
 h2 {
   font-size: 18px;
-  font-weight: 600;
   line-height: 28px;
-
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
+  font-weight: 600;
 }
-
-/* H3 */
 
 h3 {
   font-size: 16px;
-  font-weight: 600;
   line-height: 24px;
+  font-weight: 600;
 }
-
-/* H4 */
 
 h4 {
   font-size: 14px;
-  font-weight: 600;
   line-height: 20px;
-}
-
-/* Links */
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  font-weight: 600;
 }

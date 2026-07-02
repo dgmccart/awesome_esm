@@ -1,14 +1,11 @@
 ---
-title: "Tutorials"
-description: "Learn how to use ESM models with step-by-step guides and code examples."
 format: html
 ---
-
+:::{style="text-align: center; margin-bottom: 1rem;"}
 # Tutorials
 
-Learn how to use ESM models with hands-on tutorials and code examples.
-
----
+Learn how to use ESM models with step-by-step guides and code examples.
+:::
 
 ## All Tutorials
 
