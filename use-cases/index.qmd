@@ -5,11 +5,6 @@ format: html
 page-layout: full
 ---
 
-# Use Cases & Research
-
-Discover how ESM models are being used in real research and applications.
-
----
 
 ## Model Development
 
@@ -92,19 +87,8 @@ Designing proteins with improved thermal stability.
 
 :::
 
----
-
-## Browse by Model
-
-- **ESMC:** [View papers](model-applications.qmd) using ESMC for embeddings, design, and analysis
-- **ESM3:** [View papers](model-applications.qmd) using ESM3 for design and generation
-- **ESM2:** [View papers](model-applications.qmd) using ESM2 (established workflows)
-- **ESMFold2:** [View papers](model-applications.qmd) using ESMFold2 for structure prediction
-- **Multiple Models:** [View papers](model-applications.qmd) combining multiple ESM models
-
----
-
-## Contribute Your Paper
+:::{.cta-section}
+### Missing Your Favorite Paper?
 
 Found a great paper using ESM? Help us build this collection!
 
@@ -112,25 +96,4 @@ Found a great paper using ESM? Help us build this collection!
 
 Or [submit a pull request](https://github.com/Biohub/awesome-esm/blob/main/CONTRIBUTING.md) if you prefer.
 
----
-
-## How Papers Are Organized
-
-Each paper includes:
-- **Title & authors**
-- **Publication details** (journal, prestige, lab validation status)
-- **Summary** (2-3 sentences)
-- **ESM model(s) used** (specific techniques)
-- **Impact** (why it matters)
-- **Tags** (research areas)
-- **Links** (paper, code, data if available)
-
----
-
-:::{.cta-section}
-### Missing Your Favorite Paper?
-
-Help us grow this collection by suggesting papers and use cases from your research.
-
-[✨ Add a paper](https://github.com/Biohub/awesome-esm/issues/new?template=add-paper.md){.btn .btn-light}
 :::

@@ -4,23 +4,23 @@ description: "Frequently asked questions about ESM models."
 format: html
 ---
 
-# Frequently Asked Questions
-
----
-
 ## Model Selection
 
-::: {.accordion}
+::: {.accordion open="false"}
 
-### Q: Which model should I use for getting protein embeddings?
+### Which model should I use for getting protein embeddings?
 
-**A:** Use **ESMC** for new projects. It's the latest, trained on 2.8B diverse metagenomic sequences, and provides higher-quality representations than ESM2.
+Use **ESMC** for new projects. It's the latest model, trained on 2.8B diverse metagenomic sequences, and provides higher-quality representations than ESM-2.
 
-If you have existing ESM2 code, ESMC is a drop-in replacement with similar API. See our [Decision Tree](docs/get-started/decision-tree.qmd) for detailed guidance.
+If you have existing ESM-2 code, ESMC is a drop-in replacement with a similar API.
 
-**Related:** [Model Comparison](docs/get-started/model-comparison.qmd) | [Getting Started](docs/get-started/index.qmd)
+**Related:**
+- [Model Comparison](getting-started/model-comparison.qmd)
+- [Getting Started](getting-started/index.qmd)
 
----
+:::
+
+::: {.accordion-item collapse="true"}
 
 ### Q: What's the difference between ESMC and ESM2?
 

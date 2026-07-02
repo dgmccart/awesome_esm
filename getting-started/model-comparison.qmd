@@ -1,198 +1,315 @@
 ---
-title: "Model Comparison"
+title: "Choose Your Model"
 description: "Detailed comparison of ESM models."
 format: html
 ---
+## Overview of ESM Models
 
-# Model Comparison
+Welcome! This guide will help you choose the right ESM model for your research.
 
-## Sequence Representation Models
+The ESM model family includes three categories:
 
-### ESMC (ESM Cambrian)
-
-**Status:** Latest (2025)  
-**Parameters:** 300M, 600M, 6B  
-**Training Data:** 2.8B metagenomic sequences  
-
-**Best For:**
-- Sequence embeddings and representations
-- Function prediction
-- Fine-tuning for custom tasks
-- Mutation scoring
-- Zero-shot variant effect prediction
-
-**Key Features:**
-- Trained on metagenomic data (more diverse)
-- Log-linear scaling with compute
-- Better representations than ESM2
-- Supported via Biohub API
-
-**Access:** [Biohub](https://biohub.ai/models/esmc) | [HuggingFace](https://huggingface.co/biohub) | [GitHub](https://github.com/Biohub/esm)
+| Category | Models | Purpose |
+|----------|--------|---------|
+| Foundation models | ESMC, ESM-2 | Understand protein sequences and generate embeddings |
+| Generative models | ESM3 | Design entirely new proteins |
+| Structure prediction | ESMFold, ESMFold2, ESMFold2-Fast | Predict 3D protein structures |
 
 ---
 
-### ESM2
+# Quick Decision Guide
 
-**Status:** Previous generation (2023)  
-**Parameters:** 8M - 15B  
-**Training Data:** 50M UniProt sequences  
+## I want to understand what my protein sequences mean
 
-**Best For:**
-- Legacy workflows
-- Projects using existing ESM2 code
-- When you have established pipelines
+### Use ESMC
 
-**Key Features:**
-- Well-established
-- Large community resources
-- Lots of published examples
+ESMC is the newest foundation protein language model. It was trained on **2.8 billion protein sequences** and produces high-quality representations that capture protein biology from amino acid composition through function.
 
-**Migration Note:** ESMC is a drop-in replacement but with some API differences. See [Migration Guide](decision-tree.qmd).
+### Best for
 
-**Access:** [HuggingFace](https://huggingface.co/facebook/esm2) | [GitHub](https://github.com/facebookresearch/esm)
+- Protein embeddings
+- Machine learning feature extraction
+- Functional analysis
+- Representation learning
+- New research projects
+
+### Example
+
+> You have 100,000 enzyme sequences and want to predict activity. Use ESMC embeddings as features for your prediction model.
 
 ---
 
-## Structure Prediction Models
+## I want to generate a new protein
+
+### Use ESM3
+
+ESM3 is a multimodal generative model that creates entirely new proteins from sequence, structure, and functional prompts.
+
+### Best for
+
+- Novel enzyme design
+- Protein engineering
+- Binder design
+- De novo protein generation
+- Exploring new regions of protein sequence space
+
+### Why ESM3?
+
+- Joint reasoning over sequence, structure, and function
+- Prompt-based protein generation
+- Supports multiple simultaneous design constraints
+- Generates proteins far beyond natural sequence diversity
+
+### Example
+
+> Design a protein that binds a specific therapeutic target while adopting a desired structural fold.
+
+---
+
+## I need to predict protein structure
+
+Choose one of the three structure prediction models.
+
+### ESMFold
+
+**Fast single-sequence prediction**
+
+**Best for**
+
+- Large databases
+- Metagenomic studies
+- Rapid screening
+
+**Advantages**
+
+- No MSA required
+- 6–60× faster than AlphaFold2
+- Competitive accuracy
+
+---
 
 ### ESMFold2
 
-**Status:** Latest (2025)  
-**Architecture:** Stable recurrent folding layers  
-**Modes:** Single sequence or MSA-augmented  
+**Highest accuracy**
 
-**Best For:**
-- Protein complex prediction
-- Antibody-antigen interactions
-- Protein-protein interactions
-- Multi-chain systems
-- When accuracy is critical
+**Best for**
 
-**Key Features:**
+- Therapeutic proteins
+- Protein complexes
+- Antibody design
+- Detailed structural analysis
+
+**Advantages**
+
 - State-of-the-art accuracy
-- Inference-time scaling
-- Faster than AlphaFold3
-- Supports ligand binding
-
-**Input Limits:**
-- Single sequence: up to 768 residues
-- Complex mode: sum of chains ≤ 768 residues
-
-**Performance:**
-- Antibody-antigen: 50-55% DockQ pass rate
-- Protein-protein: 70-76% pass rate
-- Protein-ligand: 63-66% pass rate
-
-**Access:** [Biohub](https://biohub.ai/models/esmfold2) | [Tutorials](https://biohub.ai/resources/tutorials)
+- Excellent complex prediction
+- Strong antibody–antigen performance
 
 ---
 
 ### ESMFold2-Fast
 
-**Status:** Latest (2025)  
-**Architecture:** Simplified, optimized for speed  
+**Best balance of speed and accuracy**
 
-**Best For:**
-- High-throughput structure prediction
-- Screening large sequence sets
-- When speed matters more than maximum accuracy
-- Monomer or simple predictions
+**Best for**
 
-**Key Features:**
-- 50% fewer layers than ESMFold2
-- No MSA requirement
-- 1.3x faster than ESMFold2
-- Minimal accuracy trade-off
+- High-throughput prediction
+- Design iteration
+- Large screening projects
 
-**Performance:**
-- Antibody-antigen: 50% DockQ pass rate
-- Protein-protein: 68% pass rate
-- Protein-ligand: 63% pass rate
+**Advantages**
 
-**Access:** [Biohub](https://biohub.ai/models/esmfold2) | [Tutorials](https://biohub.ai/resources/tutorials)
+- Fastest inference
+- Excellent single-sequence performance
+- Near ESMFold2 accuracy
 
 ---
 
-### ESMFold (Original)
+# Structure Prediction Decision Table
 
-**Status:** First generation (2022)  
-
-**Best For:**
-- Legacy workflows
-- When ESMFold2 is unavailable
-
-**Note:** Use ESMFold2 instead—it's faster and more accurate.
-
-**Access:** [GitHub](https://github.com/Biohub/esm)
+| Your situation | Recommended model |
+|---------------|-------------------|
+| More than 100,000 proteins | ESMFold |
+| Therapeutic protein design | ESMFold2 |
+| Rapid design iteration | ESMFold2-Fast |
+| Antibody–antigen prediction | ESMFold2 |
+| Budget-conscious large-scale prediction | ESMFold2-Fast |
 
 ---
 
-## Multimodal Models
+## I already use ESM-2
 
-### ESM3
+### Keep ESM-2 if
 
-**Status:** Latest (2025)  
-**Modalities:** Sequence, structure, function  
+- Your production workflow already works.
+- You need reproducibility with published work.
+- Refactoring isn't worthwhile.
 
-**Best For:**
-- De novo protein design
-- Sequence generation
-- Conditional structure prediction
-- Protein engineering
+### Upgrade to ESMC if
 
-**Key Features:**
-- Multimodal (seq + structure + function)
-- Can generate from partial inputs
-- Great for design workflows
-
-**Access:** [Biohub](https://biohub.ai/models/esm3) | [Paper](https://www.science.org/doi/10.1126/science.adk2211) | [Tutorials](https://biohub.ai/resources/tutorials)
+- You're starting a new project.
+- You're working with metagenomic sequences.
+- You want improved representations.
 
 ---
 
-## Quick Decision Matrix
+# Example Workflows
 
-| Task | ESMC | ESM2 | ESM3 | ESMFold2 | ESMFold2-Fast |
-|------|------|------|------|----------|---------------|
-| Get embeddings | ✅ Best | ✅ Good | ❌ | ❌ | ❌ |
-| Fine-tune model | ✅ Best | ✅ Good | ⚠️ Limited | ❌ | ❌ |
-| Predict structure | ❌ | ❌ | ✅ | ✅ Best | ✅ Fast |
-| Design proteins | ❌ | ❌ | ✅ Best | ❌ | ❌ |
-| Score mutations | ✅ Best | ✅ Good | ❌ | ❌ | ❌ |
-| Predict function | ✅ Best | ✅ Good | ⚠️ | ❌ | ❌ |
-| High throughput | ✅ | ✅ | ❌ | ⚠️ | ✅ Best |
-| Maximum accuracy | ✅ Good | ✅ Good | ✅ | ✅ Best | ✅ |
+## Novel enzyme discovery
 
----
-
-## Performance Benchmarks
-
-### Structure Prediction (ESMFold2)
-
-**Antibody-Antigen:**
-- Single sequence: 50% DockQ ≥ 0.23
-- With MSA: 53% DockQ ≥ 0.23
-- With 20 loops: 55% DockQ ≥ 0.23
-
-**Protein-Protein:**
-- Single sequence: 70% pass rate
-- With MSA: 76% pass rate
-
-**Inference Speed (1024 aa):**
-- ESMFold2: 15.8 seconds
-- ESMFold2-Fast: 9.4 seconds
-- AlphaFold3: 20+ seconds
+```text
+ESM3
+    ↓
+Generate candidate proteins
+    ↓
+ESMFold2
+    ↓
+Predict structures
+    ↓
+Experimental validation
+```
 
 ---
 
-## Training Data Comparison
+## Large protein database analysis
 
-| Model | Size | Source | Diversity |
-|-------|------|--------|-----------|
-| ESMC | 2.8B sequences | UniRef + JGI + MGnify | High (metagenomic) |
-| ESM2 | 50M sequences | UniRef50 | Medium |
-| ESM3 | 2.8B sequences | UniRef + metagenomic | High |
+```text
+ESMFold
+    ↓
+Structure prediction
+    ↓
+ESMC
+    ↓
+Protein embeddings
+    ↓
+Clustering and analysis
+```
 
 ---
+
+## Therapeutic antibody design
+
+```text
+ESMC
+    ↓
+Sequence analysis
+    ↓
+ESM3
+    ↓
+Generate variants
+    ↓
+ESMFold2
+    ↓
+Predict antibody-antigen complexes
+    ↓
+Experimental validation
+```
+
+---
+
+## Custom machine learning
+
+```text
+ESMC
+    ↓
+Generate embeddings
+    ↓
+Train custom ML model
+    ↓
+Experimental validation
+```
+
+---
+
+# Practical Tips
+
+## Use the newest models
+
+- Prefer ESMC over ESM-2 for new projects.
+- Prefer ESM3 for protein generation.
+
+---
+
+## Balance speed and accuracy
+
+| Goal | Model |
+|------|-------|
+| Fastest predictions | ESMFold |
+| Highest accuracy | ESMFold2 |
+| Best compromise | ESMFold2-Fast |
+
+---
+
+## Iterate during design
+
+- Use ESMFold2-Fast during rapid design cycles.
+- Use ESMFold2 to validate the best candidates.
+
+---
+
+## Write clear prompts for ESM3
+
+- Be specific.
+- Combine structural and functional constraints.
+- Iterate and refine prompts.
+
+---
+
+## Validate experimentally
+
+High-confidence predictions indicate confidence in the predicted structure—not biological activity.
+
+Experimental validation is always recommended.
+
+---
+
+# Confidence Scores
+
+All structure prediction models report **pLDDT**.
+
+| Score | Interpretation |
+|-------:|----------------|
+| >0.90 | Very high confidence |
+| 0.70–0.90 | High confidence |
+| 0.50–0.70 | Moderate confidence |
+| <0.50 | Low confidence |
+
+A low confidence score does not necessarily mean the protein is uninteresting—it indicates greater uncertainty in the predicted structure.
+
+---
+
+# Next Steps
+
+1. Choose the model that matches your goal.
+2. Start with a small example.
+3. Work through the model tutorial.
+4. Validate your predictions.
+5. Refine your workflow.
+
+---
+
+# Getting Help
+
+- Documentation
+- Tutorials
+- GitHub Discussions
+- Research papers
+
+---
+
+# Key Takeaway
+
+The ESM ecosystem provides complementary tools:
+
+| Model | Purpose |
+|--------|---------|
+| **ESMC** | Understand protein sequences |
+| **ESM3** | Design new proteins |
+| **ESMFold** | Fast structure prediction |
+| **ESMFold2** | Highest-accuracy structure prediction |
+| **ESMFold2-Fast** | High-throughput structure prediction |
+
+Many research workflows combine multiple ESM models. For example, you might use ESMC to analyze sequences, ESM3 to design new proteins, and ESMFold2 to predict the structures of your designs.
 
 ## See Also
 

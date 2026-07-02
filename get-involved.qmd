@@ -4,43 +4,46 @@ description: "Contribute to Awesome ESM and join the community."
 format: html
 ---
 
-# Get Involved
+## Join our Community
 
-Awesome ESM is built by and for the community. We welcome contributions of all kinds!
+### Slack
 
----
+- **[Join the Biohub Slack](https://biohub.slack.com)** for real-time discussion and community
+
+### Email
+
+- **[resources@biohub.ai](mailto:resources@biohub.ai)** for questions or suggestions
 
 ## Why Contribute?
 
+Awesome ESM is built by and for the community. We welcome contributions of all kinds!
+
 By contributing, you help:
-- **Researchers** discover new papers and use cases
-- **Developers** find code examples and best practices
-- **Everyone** build better understanding of protein language models
 
----
+* **Researchers** discover new papers and use cases
+* **Developers** find code examples and best practices
+* **Everyone** build better understanding of protein language models
 
-## Ways to Contribute
-
-### 📝 Add a Paper
+## 📝 Add a Paper
 
 Found a great paper using ESM models? Help us build our collection!
 
 **What to include:**
+
 - Paper title and link
 - Brief summary (2-3 sentences)
 - Which ESM model(s) were used
 - How ESM was used (technique/application)
 - Your name and affiliation
 
-[**📝 Add a paper**](https://github.com/Biohub/awesome-esm/issues/new?template=add-paper.md){.btn .btn-primary}
+[**Add a paper**](https://github.com/Biohub/awesome-esm/issues/new?template=add-paper.md){.btn .btn-primary}
 
----
-
-### 💡 Share a Use Case
+## 💡 Share a Use Case
 
 Have you built something interesting with ESM? Tell us about it!
 
 **What to include:**
+
 - Title of your project/analysis
 - Brief description
 - ESM model(s) used
@@ -48,54 +51,51 @@ Have you built something interesting with ESM? Tell us about it!
 - Code/notebooks if you'd like to share
 - Your contact info
 
-[**💡 Share a use case**](https://github.com/Biohub/awesome-esm/issues/new?template=add-use-case.md){.btn .btn-primary}
+[**Share a use case**](https://github.com/Biohub/awesome-esm/issues/new?template=add-use-case.md){.btn .btn-primary}
 
----
-
-### ❓ Suggest an FAQ Entry
+## ❓ Suggest an FAQ Entry
 
 Is something confusing? Help us improve documentation!
 
 **What to include:**
+
 - Your question (in plain language)
 - Suggested answer
 - Code example (if applicable)
 - Links to relevant resources
 
-[**❓ Suggest FAQ entry**](https://github.com/Biohub/awesome-esm/issues/new?template=add-faq.md){.btn .btn-primary}
+[**Suggest FAQ entry**](https://github.com/Biohub/awesome-esm/issues/new?template=add-faq.md){.btn .btn-primary}
 
----
-
-### 📺 Request or Contribute a Tutorial
+## 📺 Request or Contribute a Tutorial
 
 Want to see a tutorial on a specific topic?
 
 **To request:**
-[📺 Request a tutorial](https://github.com/Biohub/awesome-esm/issues/new?template=tutorial-request.md){.btn .btn-secondary}
+[Request a tutorial](https://github.com/Biohub/awesome-esm/issues/new?template=tutorial-request.md){.btn .btn-secondary}
 
 **To contribute:**
+
 - Create a Jupyter notebook or script
 - Include clear documentation
 - Test your code thoroughly
 - Submit a pull request
 
-[📤 Contribute a tutorial](https://github.com/Biohub/awesome-esm/blob/main/CONTRIBUTING.md){.btn .btn-secondary}
+[Contribute a tutorial](https://github.com/Biohub/awesome-esm/blob/main/CONTRIBUTING.md){.btn .btn-secondary}
 
----
 
-### 🐛 Report Issues
+## 🐛 Report Issues
 
 Found a typo, broken link, or error?
 
 [**🐛 Report an issue**](https://github.com/Biohub/awesome-esm/issues/new?template=bug-report.md){.btn .btn-secondary}
 
----
 
-### 💻 Improve the Site
+## 💻 Improve the Site
 
 Want to contribute code, design, or documentation improvements?
 
 **Get started:**
+
 1. Fork the [repository](https://github.com/Biohub/awesome-esm)
 2. Create a branch for your changes
 3. Submit a pull request
@@ -104,9 +104,13 @@ See [CONTRIBUTING.md](https://github.com/Biohub/awesome-esm/blob/main/CONTRIBUTI
 
 [**💻 View guidelines**](https://github.com/Biohub/awesome-esm/blob/main/CONTRIBUTING.md){.btn .btn-secondary}
 
----
-
 ## Contribution Guidelines
+
+### Code of Conduct
+
+We're committed to providing a welcoming and inclusive environment. Please treat all community members with respect and kindness.
+
+[**📋 Full Code of Conduct**](https://github.com/Biohub/awesome-esm/blob/main/CODE_OF_CONDUCT.md)
 
 ### Be Respectful
 
@@ -129,42 +133,14 @@ See [CONTRIBUTING.md](https://github.com/Biohub/awesome-esm/blob/main/CONTRIBUTI
 ### Lightweight Curation
 
 We review contributions to ensure they're:
+
 - ✅ Relevant to ESM
 - ✅ Accurate and well-sourced
 - ✅ Not spam or duplicates
 
 We don't review for scientific merit—just quality and relevance.
 
----
-
-## Recognition
-
-Contributors are recognized in:
-- Pull request comments (GitHub)
-- Paper table contributor column
-- Monthly contributor highlights (coming soon)
-
----
-
-## Community Channels
-
-### GitHub
-
-- **[Issues](https://github.com/Biohub/awesome-esm/issues)** - Report bugs, request features, ask questions
-- **[Discussions](https://github.com/Biohub/awesome-esm/discussions)** - General discussion, ideas, feedback
-- **[Pull Requests](https://github.com/Biohub/awesome-esm/pulls)** - Submit code contributions
-
-### Slack
-
-- **[Join the Biohub Slack](https://biohub.slack.com)** for real-time discussion and community
-
-### Email
-
-- **[resources@biohub.ai](mailto:resources@biohub.ai)** for questions or suggestions
-
----
-
-## Contribution Templates
+### Contribution Templates
 
 Use these templates to make contributing easier:
 
@@ -174,21 +150,7 @@ Use these templates to make contributing easier:
 - **[Request tutorial](https://github.com/Biohub/awesome-esm/issues/new?template=tutorial-request.md)**
 - **[Report bug](https://github.com/Biohub/awesome-esm/issues/new?template=bug-report.md)**
 
----
-
-## Code of Conduct
-
-We're committed to providing a welcoming and inclusive environment. Please treat all community members with respect and kindness.
-
-[**📋 Full Code of Conduct**](https://github.com/Biohub/awesome-esm/blob/main/CODE_OF_CONDUCT.md)
-
----
-
-## Thank You! 🙏
-
-Every contribution—big or small—helps grow this resource for the entire ESM community.
-
-**Ready to get started?** Pick a contribution type above and click the button!
+Every contribution big or small helps grow this resource for the entire ESM community.
 
 :::{.cta-section}
 ### Join the Community

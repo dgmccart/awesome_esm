@@ -4,17 +4,27 @@ format: html
 :::{style="text-align: center; margin-bottom: 1rem;"}
 # Quickstart
 
-Choose your ESM model and get started with installation guides.
+Choose your ESM model and install the `esm` package.
 :::
 
 # Get Started with ESM
 
 Welcome! This section will help you choose the right ESM model for your work and get it installed.
 
+## Installation
+
+```bash
+# Install the ESM package to access ESM3, ESMC, ESMFold2, ESMFold2-Fast
+pip install esm
+
+# Or from GitHub for latest version
+pip install git+https://github.com/Biohub/esm.git@main
+```
+For more details on using the `esm` package, check out our [Github](https://github.com/Biohub/esm).
 
 ## Model Overview
 
-Not sure which model to use? This comparison will help:
+Not sure which model to use? Check out the table below and examples below, or for more details, refer to our [Choose Your Model](model-comparison.qmd) guide.
 
 | Model | Purpose | Best For | Input Limit | Speed | Links |
 |-------|---------|----------|-------------|-------|-------|
@@ -25,65 +35,90 @@ Not sure which model to use? This comparison will help:
 | **ESMFold2** | Complex prediction | Antibody-antigen, multimers | 768 aa | Fast | [Model Details](https://biohub.ai/models/esmfold2) |
 | **ESMFold2-Fast** | Fast structure prediction | High-throughput screening | Single chain | Fastest | [Model Details](https://biohub.ai/models/esmfold2) |
 
----
+## Models by Use Case
 
-## Choose Your Model
+### I need protein sequence embeddings or representations
 
-:::{#decision-tree}
+**Recommended:** ESMC
+- Latest foundation protein language model
+- Trained on diverse metagenomic protein sequences
+- Produces improved protein representations
+- Recommended for new projects
 
-### What do you want to do?
+**Alternative:** ESM-2 (for legacy compatibility)
+- Proven and well documented
+- Extensively used in published research
+- Best choice when reproducing existing workflows
 
-**I need protein sequence embeddings or representations**
-→ Use **ESMC** or **ESM2** ([Embeddings Tutorial](https://biohub.ai/resources/tutorials))
 
-**I want to design new proteins or generate sequences**
-→ Use **ESM3** ([Design Tutorial](https://biohub.ai/resources/tutorials))
+### I want to design new proteins or generate sequences
 
-**I need to predict protein 3D structure**
+**Recommended:** ESM3
 
-- *Single chain?* → Use **ESMFold** or **ESMFold2** ([Structure Tutorial](https://biohub.ai/resources/tutorials))
-- *Complex (antibody-antigen, multimer)?* → Use **ESMFold2** ([Complex Prediction Tutorial](https://biohub.ai/resources/tutorials))
-- *Need maximum speed?* → Use **ESMFold2-Fast** ([Performance Guide](https://biohub.ai/resources/tutorials))
+- Generates entirely new proteins
+- Supports chain-of-thought iterative refinement
+- Produces proteins far beyond natural sequence space
+- Excellent for:
+  - Motif scaffolding
+  - Functional protein design
+  - Novel protein discovery
 
-**I'm working with legacy code**
-→ Use **ESM2** ([Migration Guide](docs/get-started/decision-tree.qmd))
+**Alternative**
 
-**I want to fine-tune a model**
-→ Use **ESMC** ([Fine-tuning Guide](https://biohub.ai/resources/tutorials))
+If ESM3 isn't appropriate, use:
 
-:::
+- **ESMFold2 + ESMC** for inverse protein design workflows.
 
----
+### I need to predict protein structure
 
-## Installation
+Choose the model that best fits your application.
 
-### Quick Start
+**Single protein**
 
-```bash
-# Install the ESM package
-pip install esm
+| Goal | Recommended Model |
+|------|-------------------|
+| Highest accuracy | **ESMFold2** |
+| Fastest prediction | **ESMFold2-Fast** |
+| Legacy workflows | **ESMFold** |
 
-# Or from GitHub for latest version
-pip install git+https://github.com/Biohub/esm.git@main
-```
+**Protein complexes**
 
-Requirements
+- Antibody–antigen
+- Protein–protein
+- Dimers
+- Multimers
 
-Python 3.10+
-PyTorch 2.0+
-CUDA 11.8+ (for GPU acceleration)
+| Model | Best For |
+|--------|----------|
+| **ESMFold2** | Highest accuracy and pptimized for very large-scale prediction |
+| **ESMFold2-Fast** | Faster high-throughput prediction balancing balance of speed and accuracy |
 
-For detailed setup instructions, see the Installation Guide.
 
-Next Steps
+### I want to fine-tune or train a model
+
+**Recommended:** ESMC
+
+- Modern architecture
+- Improved representations
+- Designed for downstream model development
+- Supports continued pretraining and fine-tuning
+
+
+### I'm working with legacy code or published research
+
+**Recommended:** ESM-2
+
+- Widely used in the literature
+- Stable APIs
+- Extensive documentation
+- Easy comparison with previous work
+
+## Next Steps
 Once you've chosen your model:
 
-Read the Full Decision Tree for detailed guidance
-Check the Model Comparison for specs
-Follow a Tutorial to learn by doing
-Browse Use Cases to see real examples
+- Follow a [Tutorial](../tutorials.qmd) to learn by doing
+- Browse [Use Cases](../use-cases/index.qmd) to see real examples
 
-
-Contribute to This Page
+## Contribute to This Page
 Help us improve this guide!
 🔗 Suggest improvements{.btn .btn-secondary}
